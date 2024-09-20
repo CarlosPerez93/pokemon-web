@@ -1,7 +1,9 @@
-import auth from "./auth";
+import auth from './auth'
+import pokemon from './pokemon'
 
 const api = {
-  auth,
-};
+    auth,
+    pokemon,
+}
 
-export default api;
+export default api

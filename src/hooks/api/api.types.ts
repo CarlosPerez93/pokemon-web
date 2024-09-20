@@ -1,31 +1,23 @@
-import { ResponseFetch } from '../../utils/api/api.util'
 import {
     ApiResponseError,
     ApiResponseSuccess,
 } from '../../utils/types/response.type'
 
-export type ResponseState<T> = {
+export type state<T> = {
     loading: boolean
     error?: boolean
-    data: ResponseFetch<T>
+    data: T
 }
 
-export type MutationType = {
+export type mutationType = {
     cancelError?: boolean
-    onCompleted: <T = unknown, V = unknown>({
-        data,
-        variables,
-    }: ApiResponseSuccess<T, V>) => void
+    onCompleted: ({ data, variables }: ApiResponseSuccess) => void
     onError?: ({ message, status, statusCode }: ApiResponseError) => void
 }
 
-export type QueryType<T> = Omit<MutationType, 'onCompleted'> & {
+export type queryType<T> = Omit<mutationType, 'onCompleted'> & {
     variables?: T
     cancelFirstEffect?: boolean
 }
 
-export type Func<T> = {
-    functionFetch: (variables: any) => Promise<ResponseFetch<T>>
-}
-
-export type ExecFunction = <N>(variables: N) => void
+export type func = { functionFetch: Function }

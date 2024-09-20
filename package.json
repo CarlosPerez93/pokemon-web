@@ -3,6 +3,18 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "contributors": [
+        {
+            "name": "Julio Alfredo Vásquez Lievano",
+            "email": "jualvalitube@gmail.com",
+            "url": "https://github.com/Julio-Vasquez"
+        },
+        {
+            "name": "Julio Alfredo Vásquez Lievano",
+            "email": "jualvalitube@gmail.com",
+            "url": "https://github.com/Julio-Vasquez"
+        }
+    ],
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
@@ -20,6 +32,7 @@
         "@mui/material": "^6.1.0",
         "@reduxjs/toolkit": "^2.2.7",
         "antd": "^5.20.6",
+        "axios": "^1.7.7",
         "i18next": "^23.15.1",
         "jwt-decode": "^4.0.0",
         "react": "^17.0.0 || ^18.0.0",

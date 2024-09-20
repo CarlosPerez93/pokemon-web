@@ -1,0 +1,32 @@
+.poke-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 5px 0;
+  box-shadow: 4px 4px 4px #21212120;
+  cursor: pointer;
+
+  .img-poke {
+    width: 150px;
+    height: 150px;
+    margin: 5px 0;
+  }
+  .poke-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4c4c4c;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 10px;
+    width: 50%;
+  }
+}
+
+.poke-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 15px 0 #21212170;
+}

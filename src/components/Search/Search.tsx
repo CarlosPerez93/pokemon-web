@@ -1,22 +1,23 @@
+import { ButtonApp } from '../ButtonApp/ButtonApp'
 import { IconSearch } from '../Icons/Icons'
 
 import './Search.css'
 
 export const Search = () => {
     return (
-        <>
-            <h3 className='title'>Mas de 800 Pokemons, elige tu favorito</h3>
+        <div className='search'>
+            <h3 className='title'>Mas de 800 Pokemons</h3>
             <section className='search-container'>
                 <input
                     type='text'
                     placeholder='Encuentra tu pokemon'
                     className='search-input'
                 />
-                <button className='search-btn'>
+                <ButtonApp className='search-btn'>
                     <IconSearch /> Buscar pokemon
-                </button>
+                </ButtonApp>
             </section>
-        </>
+        </div>
     )
 }
 export default Search

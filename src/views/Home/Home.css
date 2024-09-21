@@ -1,0 +1,23 @@
+.home {
+    background-repeat: no-repeat;
+    background-image: radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        hsl(210, 100%, 90%),
+        transparent
+    );
+    display: flex;
+    flex-direction: column;
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+}
+
+.home > svg {
+    height: 10rem;
+    width: auto;
+    margin-top: 200px;
+}

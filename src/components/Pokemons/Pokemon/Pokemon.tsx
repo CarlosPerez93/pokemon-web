@@ -18,10 +18,8 @@ export const Pokemon = ({ url }: PokemonsProps) => {
     return (
         <div className='poke-card'>
             <img src={objPoke.img} alt={objPoke.name} className='img-poke' />
-            <p className='poke-title'>
-                <span>#{objPoke.id}</span>
-                <span>{objPoke.name}</span>
-            </p>
+            <div className='mid-line' />
+            <p className='poke-title'>{objPoke.name}</p>
         </div>
     )
 }

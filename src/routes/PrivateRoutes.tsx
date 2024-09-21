@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 
-import Home from '../views/Private/Home/Home'
+import { Home } from '../views/Home'
 import { Error404 } from '../views/Error404'
 
 import { ROUTES_PRIVATE as RP } from '../utils/constants/routes.constants'

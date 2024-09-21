@@ -1,44 +1,51 @@
-nav {
-  background-color: #f4db13;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem 0;
-  box-shadow: 4px 4px 8px #00000020;
-  svg {
-    height: 3rem;
-    width: auto;
-  }
+.nav-s {
+    position: fixed;
+    width: 100%;
+    .first-nav {
+        margin: 0 auto;
+        background-color: hsl(220, 35%, 97%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        box-shadow: 4px 4px 8px #00000020;
+        .switch {
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+            gap: 10px;
+            svg {
+                height: 1.5rem;
+                width: auto;
+            }
+            label {
+                background-color: #ccc;
+                width: 4rem;
+                height: 1.5rem;
+                border-radius: 1rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                padding: 2px;
 
-  .switch {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    svg {
-      height: 1.5rem;
-      width: auto;
+                .slider {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 1.5rem;
+                    background-color: #fff;
+                    transition: 0.5s;
+                }
+
+                .check-switch:checked + .slider {
+                    transform: translateX(2.5rem);
+                }
+            }
+        }
     }
-    label {
-      background-color: #ccc;
-      width: 4rem;
-      height: 1.5rem;
-      border-radius: 1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      padding: 2px;
 
-      .slider {
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 1.5rem;
-        background-color: #fff;
-        transition: 0.5s;
-      }
-
-      .check-switch:checked + .slider {
-        transform: translateX(2.5rem);
-      }
+    nav > svg {
+        height: 3rem;
+        width: auto;
+        margin-left: 50px;
     }
-  }
 }

@@ -1,1 +1,1 @@
-export { IconLogo, IconMoon, IconSearch, IconSun } from './Icons'
+export { IconLogo, IconMoon, IconSearch, IconSun, IconPokeBall } from './Icons'

@@ -1,8 +1,7 @@
 .pokemons-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  padding: 10px;
-  max-width: 1200px;
-  margin: 1rem auto;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 1rem auto;
 }

@@ -1,14 +1,18 @@
+import { ComponentProps } from 'react'
+
+import { Menu } from './Menu'
+import { FooterApp } from '../Footer'
 import { IconLogo, IconMoon, IconSun } from '../Icons'
-import Menu from './Menu'
 
 import './NavBar.css'
 
-export const NavBar = () => {
+type PropsNavBar = ComponentProps<'div'>
+
+export const NavBar = ({ children }: PropsNavBar) => {
     return (
         <div className='nav-s'>
             <nav className='first-nav'>
                 <IconLogo />
-
                 <div className='switch'>
                     <IconSun />
                     <label>
@@ -19,6 +23,8 @@ export const NavBar = () => {
                 </div>
             </nav>
             <Menu />
+            {children}
+            <FooterApp />
         </div>
     )
 }

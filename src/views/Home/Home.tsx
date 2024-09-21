@@ -18,18 +18,22 @@ export const Home = () => {
     })
 
     return (
-        <div className='home'>
-            <NavBar />
-            <IconLogo />
-            <Spin style={{ minHeight: '450px' }} spinning={loading} tip='loading..'>
-                <Carousel autoplay>
-                    {data?.results?.map((poke, index) => (
-                        <Pokemon key={index} {...poke} />
-                    ))}
-                </Carousel>
-            </Spin>
-            <FooterApp />
-        </div>
+        <NavBar>
+            <div className='home'>
+                <IconLogo />
+                <Spin
+                    style={{ minHeight: '450px' }}
+                    spinning={loading}
+                    tip='loading..'
+                >
+                    <Carousel autoplay>
+                        {data?.results?.map((poke, index) => (
+                            <Pokemon key={index} {...poke} />
+                        ))}
+                    </Carousel>
+                </Spin>
+            </div>
+        </NavBar>
     )
 }
 

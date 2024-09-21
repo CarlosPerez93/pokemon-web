@@ -10,10 +10,9 @@
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
     border: 1px solid;
-    border-color: hsla(220, 20%, 80%, 0.4);
-    background-color: hsla(0, 0%, 99%, 0.4);
-    box-shadow: hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px,
-        hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px;
+    border-color: var(--border-color);
+    background-color: var(--bg-color-menu);
+    box-shadow: var(--box-shadow-primary);
     padding: 8px 12px;
     .container-items {
         display: flex;
@@ -26,12 +25,12 @@
         justify-content: end;
         gap: 10px;
         .auth-btn {
-            background-color: #05070a;
-            color: #f2f2f2;
+            background-color: var(--btn-bg-color-primary);
+            color: var(--font-color);
             border-radius: 10px;
             padding: 12px;
             border: none;
-            box-shadow: 4px 4px 16px #00000020;
+            box-shadow: var(--box-shadow-btn);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,9 +38,10 @@
             gap: 5px;
             font-size: 16px;
             transition: 0.4s;
+
             svg {
                 width: 18px;
-                fill: #f2f2f2;
+                fill: var(--font-color);
             }
         }
     }

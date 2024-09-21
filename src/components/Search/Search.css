@@ -2,7 +2,7 @@
     .title {
         font-size: 36px;
         font-weight: 400;
-        color: #000;
+        color: var(--color-title);
         text-align: center;
         margin: 0rem 0 1.5rem 0;
     }

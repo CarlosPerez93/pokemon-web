@@ -4,7 +4,7 @@
     align-items: center;
     border-radius: 20px;
     padding: 5px 0;
-    box-shadow: 4px 4px 4px #21212120;
+    box-shadow: var(--box-shadow-card);
     cursor: pointer;
 
     .img-poke {
@@ -16,7 +16,7 @@
     .mid-line {
         width: 0.5rem;
         height: 450px;
-        background-color: #47536b;
+        background-color: var(--bg-color-line);
     }
     .poke-title {
         display: flex;
@@ -32,5 +32,5 @@
 
 .poke-card:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 15px 0 #21212170;
+    box-shadow: var(--box-shadow-card-hover);
 }

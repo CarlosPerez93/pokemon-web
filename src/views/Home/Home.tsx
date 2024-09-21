@@ -1,4 +1,4 @@
-import { Carousel } from 'antd'
+import { Carousel, Spin } from 'antd'
 
 import NavBar from '../../components/NavBar'
 import { IconLogo } from '../../components/Icons'
@@ -13,7 +13,7 @@ import { PokemonsProps } from '../../components/Pokemons/pokemons.types'
 import './Home.css'
 
 export const Home = () => {
-    const { data } = useGet<ResponseFetch<PokemonsProps[]>>({
+    const { data, loading } = useGet<ResponseFetch<PokemonsProps[]>>({
         functionFetch: api.pokemon.pokemonList,
     })
 
@@ -23,7 +23,9 @@ export const Home = () => {
             <IconLogo />
             <Carousel autoplay>
                 {data?.results?.map((poke, index) => (
-                    <Pokemon key={index} {...poke} />
+                    <Spin spinning={loading} tip='loading..'>
+                        <Pokemon key={index} {...poke} />
+                    </Spin>
                 ))}
             </Carousel>
 

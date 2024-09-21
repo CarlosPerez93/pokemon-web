@@ -2,7 +2,7 @@
     border-radius: 10px;
     padding: 12px;
     border: none;
-    box-shadow: 4px 4px 16px #00000020;
+    box-shadow: var(--box-shadow-btn);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,6 @@
 
     svg {
         width: 18px;
-        fill: #f2f2f2;
+        fill: var(--font-color);
     }
 }

@@ -3,12 +3,12 @@
     width: 100%;
     .first-nav {
         margin: 0 auto;
-        background-color: hsl(220, 35%, 97%);
+        background-color: var(--nav-bg-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.5rem 0;
-        box-shadow: 4px 4px 8px #00000020;
+        box-shadow: var(--box-shadow-secondary);
         .switch {
             display: flex;
             align-items: center;
@@ -19,7 +19,7 @@
                 width: auto;
             }
             label {
-                background-color: #ccc;
+                background-color: var(--bg-color-label);
                 width: 4rem;
                 height: 1.5rem;
                 border-radius: 1rem;
@@ -32,7 +32,7 @@
                     width: 1.5rem;
                     height: 1.5rem;
                     border-radius: 1.5rem;
-                    background-color: #fff;
+                    background-color: var(--bg-color-slider);
                     transition: 0.5s;
                 }
 

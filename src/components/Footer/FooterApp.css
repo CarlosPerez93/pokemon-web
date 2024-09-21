@@ -5,6 +5,14 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        > svg {
+            width: 2rem;
+        }
+    }
 }
 
 .footer-app > svg {

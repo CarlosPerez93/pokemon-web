@@ -21,14 +21,13 @@ export const Home = () => {
         <div className='home'>
             <NavBar />
             <IconLogo />
-            <Carousel autoplay>
-                {data?.results?.map((poke, index) => (
-                    <Spin spinning={loading} tip='loading..'>
+            <Spin style={{ minHeight: '450px' }} spinning={loading} tip='loading..'>
+                <Carousel autoplay>
+                    {data?.results?.map((poke, index) => (
                         <Pokemon key={index} {...poke} />
-                    </Spin>
-                ))}
-            </Carousel>
-
+                    ))}
+                </Carousel>
+            </Spin>
             <FooterApp />
         </div>
     )

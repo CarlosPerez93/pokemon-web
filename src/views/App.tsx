@@ -10,7 +10,7 @@ function App() {
     const { authentication } = useData({ reducer: AUTH })
     return (
         <I18nextProvider i18n={i18n}>
-            {!authentication ? <PrivateRoutes /> : <PublicRoutes />}
+            {authentication ? <PrivateRoutes /> : <PublicRoutes />}
         </I18nextProvider>
     )
 }

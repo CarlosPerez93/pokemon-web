@@ -1,17 +1,18 @@
 .home {
     display: flex;
+    height: 70vh;
     flex-direction: column;
-    .carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        margin: 50px auto;
-    }
+    margin-top: 200px;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    height: 100%;
 }
 
 .home > svg {
-    height: 10rem;
+    height: 8rem;
     width: auto;
-    margin-top: 25px;
 }

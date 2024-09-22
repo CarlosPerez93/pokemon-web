@@ -3,5 +3,5 @@
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin: 1rem auto;
+    height: 100vh;
 }

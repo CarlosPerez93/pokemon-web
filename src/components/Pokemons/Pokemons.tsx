@@ -1,5 +1,3 @@
-import { Carousel } from 'antd'
-
 import { Pokemon } from './Pokemon'
 
 import api from '../../api'

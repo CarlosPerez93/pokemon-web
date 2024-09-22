@@ -1,5 +1,4 @@
 type PokemonsProps = {
-    name: string
     url: string
 }
 

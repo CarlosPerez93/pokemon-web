@@ -3,7 +3,6 @@ import { Carousel, Spin } from 'antd'
 import NavBar from '../../components/NavBar'
 import { IconLogo } from '../../components/Icons'
 import Pokemon from '../../components/Pokemons/Pokemon'
-import { FooterApp } from '../../components/Footer/FooterApp'
 
 import api from '../../api'
 import { useGet } from '../../hooks/api'
@@ -26,7 +25,7 @@ export const Home = () => {
                     spinning={loading}
                     tip='loading..'
                 >
-                    <Carousel autoplay>
+                    <Carousel className='carousel' autoplay>
                         {data?.results?.map((poke, index) => (
                             <Pokemon key={index} {...poke} />
                         ))}

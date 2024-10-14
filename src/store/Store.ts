@@ -8,15 +8,14 @@ import { IS_DEV } from '../utils/constants/environment.constant'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const middleware2: Array<SagaMiddleware | typeof logger> = IS_DEV
+const middleware: Array<SagaMiddleware | typeof logger> = IS_DEV
     ? [sagaMiddleware, logger]
     : [sagaMiddleware]
 
 const Store = configureStore({
     reducer: appReducer,
     devTools: true,
-    middleware: getDefaultMiddleware =>
-        getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(middleware),
 })
 
 export default Store

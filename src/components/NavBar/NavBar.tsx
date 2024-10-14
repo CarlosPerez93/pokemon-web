@@ -1,14 +1,11 @@
 import { ComponentProps } from 'react'
 
-import { Menu } from './Menu'
 import { FooterApp } from '../Footer'
 import { IconLogo, IconMoon, IconSun } from '../Icons'
 
 import './NavBar.css'
 
-type PropsNavBar = ComponentProps<'div'>
-
-export const NavBar = ({ children }: PropsNavBar) => {
+export const NavBar = ({ children }: ComponentProps<'div'>) => {
     return (
         <div className='nav-s'>
             <nav className='first-nav'>
@@ -17,12 +14,12 @@ export const NavBar = ({ children }: PropsNavBar) => {
                     <IconSun />
                     <label>
                         <input type='checkbox' className='check-switch' hidden />
-                        <span className='slider'></span>
+                        <span className='slider' />
                     </label>
                     <IconMoon />
                 </div>
             </nav>
-            <Menu />
+
             {children}
             <FooterApp />
         </div>

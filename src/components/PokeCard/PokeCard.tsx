@@ -1,11 +1,14 @@
-import api from '../../../api'
-import { useGet } from '../../../hooks/api/useGet'
-import { ResponseFetch1 } from '../../../utils/api/api.util'
-import { PokemonsProps, PokemonProps } from '../pokemons.types'
+import api from '../../api'
+import { useGet } from '../../hooks/api/useGet'
+import { ResponseFetch1 } from '../../utils/api/api.util'
+import {
+    PokemonsProps,
+    PokemonProps,
+} from '../PokePresentation/pokePresentation.types'
 
-import './Pokemon.css'
+import './PokeCard.css'
 
-export const Pokemon = ({ url }: PokemonsProps) => {
+export const PokeCard = ({ url }: PokemonsProps) => {
     const newUrl: string = url.slice(25, url.length)
     const { data } = useGet<ResponseFetch1<PokemonProps>>({
         functionFetch: () => api.pokemon.pokemon(newUrl),
@@ -24,4 +27,4 @@ export const Pokemon = ({ url }: PokemonsProps) => {
     )
 }
 
-export default Pokemon
+export default PokeCard

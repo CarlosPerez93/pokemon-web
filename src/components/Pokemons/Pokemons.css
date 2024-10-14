@@ -1,7 +1,0 @@
-.pokemons-container {
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    height: 100vh;
-}

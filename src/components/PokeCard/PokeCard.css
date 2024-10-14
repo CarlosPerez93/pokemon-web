@@ -1,0 +1,22 @@
+.poke-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 0;
+    box-shadow: var(--box-shadow-card);
+    cursor: pointer;
+
+    .img-poke {
+        width: 50%;
+        height: 150px;
+        margin: 5px 0;
+    }
+}
+
+.poke-card:hover {
+    transform: scale(1.01);
+    box-shadow: var(--box-shadow-card-hover);
+}

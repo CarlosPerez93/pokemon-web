@@ -1,7 +1,12 @@
-import { ButtonApp } from '../../ButtonApp/ButtonApp'
+import { Link } from 'react-router-dom'
+
 import { IconPokeBall } from '../../Icons'
+import { ButtonApp } from '../../ButtonApp/ButtonApp'
+
+import { ROUTES_PUBLIC as RP } from '../../../utils/constants/routes.constants'
 
 import './Menu.css'
+
 export const Menu = () => {
     return (
         <nav className='menu'>
@@ -9,9 +14,24 @@ export const Menu = () => {
                 <IconPokeBall />
             </div>
             <div className='container-auth-btn'>
-                <ButtonApp style={{ color: '#47536B' }}>Sign in</ButtonApp>
+                <ButtonApp
+                    className='btn'
+                    style={{ backgroundColor: '#05070a', color: 'white' }}
+                >
+                    <Link
+                        to={RP.home}
+                        style={{ color: 'white', textDecoration: 'none' }}
+                    >
+                        Home
+                    </Link>
+                </ButtonApp>
                 <ButtonApp style={{ backgroundColor: '#05070a', color: 'white' }}>
-                    Sign up
+                    <Link
+                        to={RP.pokemons}
+                        style={{ color: 'white', textDecoration: 'none' }}
+                    >
+                        View all Pokémons
+                    </Link>
                 </ButtonApp>
             </div>
         </nav>

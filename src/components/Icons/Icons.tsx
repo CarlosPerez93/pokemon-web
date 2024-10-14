@@ -1,10 +1,15 @@
-export const IconLogo = () => (
+type dimensions = {
+    width?: number
+    height?: number
+}
+
+export const IconLogo = ({ height = 120, width = 350 }: dimensions) => (
     <svg
         id='Layer_1'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 269.5 98.8'
-        width='2500'
-        height='917'
+        width={width}
+        height={height}
     >
         <style>{`.st0{fill:url(#polygon16_1_)}.st1{fill:#0071b9}.st2{fill:url(#polygon25_1_)}.st3{fill:#1d2c5e}.st4{fill:url(#polygon36_1_)}.st5{fill:url(#polygon43_1_)}.st6{fill:#312370}.st7{fill:#21386e}.st8{fill:url(#polygon56_1_)}.st9{fill:url(#path69_1_)}.st10{fill:url(#polygon78_1_)}.st11{fill:#ffcb05}.st12{fill:#7d7f68}.st13{fill:#c7a008}.st14{fill:#3c5aa6}.st15{fill:#3567b0}.st16{fill:#1e2d5f}.st17{fill:#3466af}.st18{fill:url(#path183_1_)}.st19{fill:url(#path196_1_)}}`}</style>
         <linearGradient

@@ -57,22 +57,24 @@ export enum Methods {
     put = 'PUT',
 }
 
-interface BaseResponse {
-    message: string
-    statusCode: HttpStatus
+interface BaseResponse<T> {
+    count: number
+    previous?: string
+    next: string
+    results: T
 }
 
 interface Success<T> {
     payload: T
-    status: 'success'
+    status: 'success' | string
 }
 
 interface Error {
-    status: 'error'
+    status: 'error' | string
 }
 
-export type ApiResponseError = BaseResponse & Error
-export type ApiResponse<T = unknown> = BaseResponse & Success<T>
+export type ApiResponseError<T = unknown> = BaseResponse<T> & Error
+export type ApiResponse<T = unknown> = BaseResponse<T> & Success<T>
 
 export type ApiResponseSuccess<T = unknown, V = unknown> = {
     data: ApiResponse<T>

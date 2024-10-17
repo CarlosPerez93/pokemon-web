@@ -1,23 +1,31 @@
+import { ResponseGeneric } from '../../utils/api/api.util'
 import {
     ApiResponseError,
     ApiResponseSuccess,
 } from '../../utils/types/response.type'
 
-export type state<T> = {
+export type ResponseState<T> = {
     loading: boolean
     error?: boolean
-    data: T
+    data: ResponseGeneric<T>
 }
 
-export type mutationType = {
+export type MutationType = {
     cancelError?: boolean
-    onCompleted: ({ data, variables }: ApiResponseSuccess) => void
-    onError?: ({ message, status, statusCode }: ApiResponseError) => void
+    onCompleted: <T = unknown, V = unknown>({
+        data,
+        variables,
+    }: ApiResponseSuccess<T, V>) => void
+    onError?: ({ count, next, previous, status }: ApiResponseError) => void
 }
 
-export type queryType<T> = Omit<mutationType, 'onCompleted'> & {
+export type QueryType<T> = Omit<MutationType, 'onCompleted'> & {
     variables?: T
     cancelFirstEffect?: boolean
 }
 
-export type func = { functionFetch: Function }
+export type Func<T> = {
+    functionFetch: (variables: any) => Promise<ResponseGeneric<T>>
+}
+
+export type ExecFunction = <N>(variables: N) => void

@@ -25,14 +25,27 @@ export const getUrl = ({ url, params }: query): URL => {
 
 export const validateResponse = (status: string) => status
 
-export interface ResponseFetch<T = unknown> {
-    count: number
-    next: string
-    previous?: string
-    results: T
+export type ResponseGeneric<T = unknown> = T
+
+export type CardPoke = {
+    id: number
+    name: string
+    sprites: string
 }
 
-export interface ResponseFetch1<T = unknown> {
+export type PokeList = {
+    name?: string
+    url: string
+}
+
+export interface ResponseFetch {
+    count: number
+    next: string
+    previous: string
+    results: PokeList[]
+}
+
+export interface ResponsePoke<T = unknown> {
     abilities: T
     base_experience: number
     cries: T
@@ -53,4 +66,5 @@ export interface ResponseFetch1<T = unknown> {
     stats: T
     types: T
     weight: number
+    url: string
 }

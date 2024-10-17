@@ -1,29 +1,29 @@
+import { Spin } from 'antd'
 import api from '../../api'
 import { useGet } from '../../hooks/api/useGet'
-import { ResponseFetch1 } from '../../utils/api/api.util'
-import {
-    PokemonsProps,
-    PokemonProps,
-} from '../PokePresentation/pokePresentation.types'
+import { CardPoke, PokeList, ResponsePoke } from '../../utils/api/api.util'
 
 import './PokeCard.css'
 
-export const PokeCard = ({ url }: PokemonsProps) => {
+export const PokeCard = ({ url }: PokeList) => {
     const newUrl: string = url.slice(25, url.length)
-    const { data } = useGet<ResponseFetch1<PokemonProps>>({
+    const { data, loading } = useGet<ResponsePoke>({
         functionFetch: () => api.pokemon.pokemon(newUrl),
     })
-    const objPoke: PokemonProps = {
-        id: data.id,
-        name: data.name,
-        img: data?.sprites?.other.dream_world.front_default,
+
+    const objPoke: CardPoke = {
+        id: data?.id,
+        name: data?.name,
+        sprites: data?.sprites?.other?.dream_world?.front_default,
     }
+
     return (
-        <div className='poke-card'>
-            <img src={objPoke.img} alt={objPoke.name} className='img-poke' />
-            <div className='mid-line' />
-            <p className='poke-title'>{objPoke.name}</p>
-        </div>
+        <Spin spinning={loading}>
+            <div className='poke-card'>
+                <img src={objPoke.sprites} alt={objPoke.name} className='img-poke' />
+                <p className='poke-title'>{objPoke.name}</p>
+            </div>
+        </Spin>
     )
 }
 

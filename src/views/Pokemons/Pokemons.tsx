@@ -13,14 +13,13 @@ import { ResponseFetch } from '../../utils/api/api.util'
 import './Pokemons.css'
 
 export const Pokemons = () => {
-    const { data } = useGet<ResponseFetch<any[]>>({
+    const { data } = useGet<ResponseFetch>({
         functionFetch: api.pokemon.pokemonList,
     })
 
     const [pokemon, setPokemon] = useState<string>('')
 
     const handleSearch = (e: any) => {
-        console.log('Search:', e.target.value)
         setPokemon(e.target.value)
     }
     return (

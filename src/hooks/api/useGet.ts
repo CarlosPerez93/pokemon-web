@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react'
 
-import { state, queryType, func } from './api.types'
+import { ResponseGeneric } from '../../utils/api/api.util'
+import { ResponseState, QueryType, Func } from './api.types'
 import { errorNotification } from '../../utils/notifications/notification.action'
 
 export const useGet = <T>(
-    { functionFetch }: func,
-    { cancelFirstEffect, cancelError, onError, variables }: queryType<T> = {}
+    { functionFetch }: Func<T>,
+    { cancelFirstEffect, cancelError, onError, variables }: QueryType<T> = {}
 ) => {
-    const [req, setReq] = useState<state<T>>({
-        data: {} as T,
+    const [req, setReq] = useState<ResponseState<T>>({
+        data: {} as ResponseGeneric<T>,
         loading: false,
         error: false,
     })
@@ -20,20 +21,20 @@ export const useGet = <T>(
     const getData = async (newVariables?: T) => {
         const fetchVariables = !newVariables ? variables : newVariables
 
-        setReq({ data: {} as T, loading: true, error: false })
+        setReq({ data: {} as ResponseGeneric<T>, loading: true, error: false })
         try {
             const data = await functionFetch(fetchVariables)
 
-            if ((data && data.count > 0) || data) {
+            if (data) {
                 setReq({ data, loading: false })
                 return data
             } else {
-                setReq({ data: {} as T, loading: false, error: true })
+                setReq({ data, loading: false, error: true })
                 return undefined
             }
         } catch (error: any) {
             if (!cancelError) errorNotification(error)
-            setReq({ data: {} as T, loading: false, error: true })
+            setReq({ data: {} as ResponseGeneric<T>, loading: false, error: true })
 
             if (onError) onError(error)
         }

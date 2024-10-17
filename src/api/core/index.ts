@@ -1,4 +1,4 @@
-import { Query, Mutation } from "./api";
+import { Query } from './api'
 
-export { Query, Mutation };
-export default { Query, Mutation };
+export { Query }
+export default { Query }

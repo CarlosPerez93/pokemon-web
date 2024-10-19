@@ -1,28 +1,35 @@
+import { Layout, Switch } from 'antd'
 import { ComponentProps } from 'react'
+import { useDispatch } from 'react-redux'
+import { MoonOutlined, SunOutlined } from '@ant-design/icons'
 
+import { IconLogo } from '../Icons'
 import { FooterApp } from '../Footer'
-import { IconLogo, IconMoon, IconSun } from '../Icons'
+
+import { toggleTheme } from '../../services/Theme/theme.slice'
 
 import './NavBar.css'
 
 export const NavBar = ({ children }: ComponentProps<'div'>) => {
+    const dispatch = useDispatch()
     return (
-        <div className='nav-s'>
+        <Layout className='nav-s'>
             <nav className='first-nav'>
                 <IconLogo />
                 <div className='switch'>
-                    <IconSun />
-                    <label>
-                        <input type='checkbox' className='check-switch' hidden />
-                        <span className='slider' />
-                    </label>
-                    <IconMoon />
+                    <SunOutlined />
+                    <Switch
+                        onClick={() => dispatch(toggleTheme())}
+                        checkedChildren='Dark'
+                        unCheckedChildren='Light'
+                    />
+                    <MoonOutlined />
                 </div>
             </nav>
 
             {children}
             <FooterApp />
-        </div>
+        </Layout>
     )
 }
 

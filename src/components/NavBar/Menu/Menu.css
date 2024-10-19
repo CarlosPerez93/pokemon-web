@@ -3,6 +3,7 @@
     height: 50px;
     top: 100px;
     position: fixed;
+    z-index: 1;
     max-width: 1200px;
     display: flex;
     margin: auto;

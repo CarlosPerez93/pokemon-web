@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom'
-import { IconPokeBall, IconGitHub, IconLinkedIn } from '../Icons'
+import { IconPokeBall } from '../Icons'
 
 import './FooterApp.css'
+import { Layout } from 'antd'
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons'
 
 export const FooterApp = () => {
     return (
-        <footer className='footer-app'>
+        <Layout.Footer className='footer-app'>
             <Link
-                children={<IconGitHub />}
+                children={<GithubOutlined />}
                 className='links'
                 to={'https://github.com/CarlosPerez93'}
             />
@@ -15,11 +17,11 @@ export const FooterApp = () => {
             <IconPokeBall />
             LinkInd
             <Link
-                children={<IconLinkedIn />}
+                children={<LinkedinOutlined />}
                 className='links'
                 to={'https://www.linkedin.com/in/carlos-perez93/'}
             ></Link>
-        </footer>
+        </Layout.Footer>
     )
 }
 

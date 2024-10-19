@@ -14,24 +14,11 @@ export const Menu = () => {
                 <IconPokeBall />
             </div>
             <div className='container-auth-btn'>
-                <ButtonApp
-                    className='btn'
-                    style={{ backgroundColor: '#05070a', color: 'white' }}
-                >
-                    <Link
-                        to={RP.home}
-                        style={{ color: 'white', textDecoration: 'none' }}
-                    >
-                        Home
-                    </Link>
+                <ButtonApp>
+                    <Link to={RP.home}>Home</Link>
                 </ButtonApp>
-                <ButtonApp style={{ backgroundColor: '#05070a', color: 'white' }}>
-                    <Link
-                        to={RP.pokemons}
-                        style={{ color: 'white', textDecoration: 'none' }}
-                    >
-                        View all Pokémons
-                    </Link>
+                <ButtonApp>
+                    <Link to={RP.pokemons}>View all Pokémons</Link>
                 </ButtonApp>
             </div>
         </nav>

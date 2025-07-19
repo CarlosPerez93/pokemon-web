@@ -1,11 +1,12 @@
 import { Card, Spin, Typography } from 'antd'
 
-import api from '../../../api'
-import { useGet } from '../../../hooks/api/useGet'
-import { CardPoke, PokeList, ResponsePoke } from '../../../utils/api/api.util'
+import Actions from './components/Actions'
+
+import api from '../../api'
+import { useGet } from '../../hooks/api/useGet'
+import { CardPoke, PokeList, ResponsePoke } from '../../utils/api/api.util'
 
 import './PokeCard.css'
-import Actions from './components/Actions/Actions'
 
 export const PokeCard = ({ url }: PokeList) => {
     const { Meta } = Card

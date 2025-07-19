@@ -2,7 +2,7 @@ import { Input } from 'antd'
 import { ChangeEvent, useState } from 'react'
 
 import Menu from '../../components/NavBar/Menu'
-import PokeCard from '../../components/PokeCard'
+import PokeCard from '../../components/Card/PokeCard'
 
 import api from '../../api'
 import { useGet } from '../../hooks/api/useGet'

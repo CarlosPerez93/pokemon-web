@@ -29,6 +29,14 @@
                 height: 1.5rem;
                 width: auto;
             }
+            .slider {
+                width: 4rem;
+                height: 1.5rem;
+                border-radius: 1.5rem;
+                background: var(--bg-color-slider);
+
+                transition: 0.5s;
+            }
             label {
                 background-color: var(--bg-color-label);
                 width: 4rem;
@@ -38,14 +46,6 @@
                 display: flex;
                 align-items: center;
                 padding: 2px;
-
-                .slider {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    border-radius: 1.5rem;
-                    background-color: var(--bg-color-slider);
-                    transition: 0.5s;
-                }
 
                 .check-switch:checked + .slider {
                     transform: translateX(2.5rem);

@@ -22,6 +22,7 @@ export const NavBar = ({ children }: ComponentProps<'div'>) => {
                         onClick={() => dispatch(toggleTheme())}
                         checkedChildren='Dark'
                         unCheckedChildren='Light'
+                        className='slider'
                     />
                     <MoonOutlined />
                 </div>

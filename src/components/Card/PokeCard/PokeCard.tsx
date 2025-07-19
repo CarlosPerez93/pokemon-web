@@ -1,10 +1,11 @@
-import { Button, Card, Spin, Typography } from 'antd'
+import { Card, Spin, Typography } from 'antd'
 
-import api from '../../api'
-import { useGet } from '../../hooks/api/useGet'
-import { CardPoke, PokeList, ResponsePoke } from '../../utils/api/api.util'
+import api from '../../../api'
+import { useGet } from '../../../hooks/api/useGet'
+import { CardPoke, PokeList, ResponsePoke } from '../../../utils/api/api.util'
 
 import './PokeCard.css'
+import Actions from './components/Actions/Actions'
 
 export const PokeCard = ({ url }: PokeList) => {
     const { Meta } = Card
@@ -32,7 +33,10 @@ export const PokeCard = ({ url }: PokeList) => {
                         className='img-poke'
                     />
                 }
-                actions={[<Button>Favorite</Button>]}
+                actions={[
+                    <Actions onView={() => {}} />,
+                    <Actions onFavorite={() => {}} />,
+                ]}
             >
                 <Meta description={<Text>{objPoke.name}</Text>} />
             </Card>

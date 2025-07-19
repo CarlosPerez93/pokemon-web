@@ -2,12 +2,15 @@ import { ConfigProvider } from 'antd'
 import { useSelector } from 'react-redux'
 import { I18nextProvider } from 'react-i18next'
 
-import { PublicRoutes } from '../routes'
-
 import i18n from '../i18n/config'
+import { PublicRoutes } from '../routes'
 import { DARK_THEME, LIGHT_THEME } from '../utils/constants/theme.constants'
+
 function App() {
-    const currentTheme = useSelector((state: any) => state.theme.currentTheme)
+    const currentTheme = useSelector(
+        (state: { theme: { currentTheme: string } }) => state.theme.currentTheme
+    )
+    console.log(currentTheme)
 
     return (
         <I18nextProvider i18n={i18n}>

@@ -18,7 +18,7 @@ export const Menu = () => {
                     <Link to={RP.home}>Home</Link>
                 </ButtonApp>
                 <ButtonApp>
-                    <Link to={RP.pokemons}>View all Pokémons</Link>
+                    <Link to={RP.listPokemon}>View all Pokémon</Link>
                 </ButtonApp>
             </div>
         </nav>

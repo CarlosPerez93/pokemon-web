@@ -1,4 +1,4 @@
-.pokemons {
+.pokemon {
     width: 100%;
     margin-top: 190px;
     display: flex;
@@ -11,5 +11,8 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 50px;
+    }
+    .search {
+        width: 300px;
     }
 }

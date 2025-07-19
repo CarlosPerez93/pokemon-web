@@ -1,16 +1,16 @@
 const LIGHT_THEME = {
-    colorBgBase: 'white',
-    colorTextBase: 'black',
-    colorLink: 'black',
-    colorPrimary: 'black',
-    colorTextSecondary: 'black',
+    colorBgBase: '#fff',
+    colorTextBase: '#000',
+    colorPrimary: '#1677ff',
+    colorLink: '#1677ff',
+    colorTextSecondary: '#595959',
 }
 const DARK_THEME = {
-    colorBgBase: 'black',
-    colorTextBase: 'white',
-    colorLink: 'white',
-    colorPrimary: 'white',
-    colorTextSecondary: 'white',
+    colorBgBase: '#141414',
+    colorTextBase: '#fff',
+    colorPrimary: '#177ddc',
+    colorLink: '#177ddc',
+    colorTextSecondary: '#bfbfbf',
 }
 
 export { LIGHT_THEME, DARK_THEME }

@@ -1,0 +1,31 @@
+@media (max-width: 480px) {
+    .catalog-title-row h1 {
+        font-size: 28px;
+    }
+
+    .catalog-control-row {
+        gap: 6px;
+    }
+
+    .catalog-region {
+        display: none;
+    }
+
+    .catalog-control-row .favorites-filter span {
+        display: none;
+    }
+
+    .catalog-control-row .favorites-filter strong {
+        display: inline-block;
+    }
+
+    .pokemon-grid .pokemon-card {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 350px) {
+    .pokemon-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1,0 +1,47 @@
+.catalog-sort select {
+    min-height: 29px;
+    padding: 0 7px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font: 600 9px var(--font-body);
+}
+
+.catalog-region {
+    color: var(--color-muted);
+    font: 700 8px var(--font-display);
+    letter-spacing: 0.05em;
+}
+
+.catalog-control-row__spacer {
+    flex: 1;
+}
+
+.catalog-control-row .favorites-filter {
+    min-height: 30px;
+    border-color: transparent;
+    padding: 0 7px;
+    font-size: 9px;
+}
+
+.view-mode {
+    display: inline-flex;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: var(--color-surface-inset);
+}
+
+.view-mode button {
+    width: 27px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+}

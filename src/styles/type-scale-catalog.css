@@ -1,0 +1,33 @@
+.catalog-title-row p,
+.catalog-search input {
+    font-size: 15px;
+}
+
+.catalog-search-submit,
+.catalog-sort,
+.catalog-results__heading,
+.favorites-filter {
+    font-size: 12px;
+}
+
+.type-option,
+.catalog-region,
+.catalog-count span {
+    font-size: 11px;
+}
+
+.pokemon-grid .pokemon-card__details h2 {
+    font-size: 16px;
+}
+
+.pokemon-grid .pokemon-card .type-badge {
+    font-size: 11px;
+}
+
+.pokemon-grid .pokemon-card__stat {
+    font-size: 10px;
+}
+
+.pokemon-grid .pokemon-card__stat strong {
+    font-size: 11px;
+}

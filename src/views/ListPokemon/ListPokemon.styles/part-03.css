@@ -1,0 +1,48 @@
+.catalog-search kbd {
+    min-width: 20px;
+    padding: 3px 5px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: var(--color-muted);
+    font: 600 10px var(--font-display);
+    text-align: center;
+}
+
+.favorites-filter {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        color 150ms ease,
+        border-color 150ms ease,
+        background-color 150ms ease;
+}
+
+.favorites-filter strong {
+    min-width: 20px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background: var(--color-surface-inset);
+    color: var(--color-muted);
+    font: 700 10px var(--font-display);
+    text-align: center;
+}
+
+.favorites-filter:hover,
+.favorites-filter.is-active {
+    border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+    color: var(--color-primary);
+}
+
+.favorites-filter.is-active {
+    background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+}

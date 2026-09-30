@@ -1,0 +1,46 @@
+.pokemon-page {
+    padding-top: 54px;
+    animation: page-enter 420ms ease both;
+}
+
+.catalog-intro {
+    margin-bottom: 28px;
+}
+
+.catalog-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.catalog-title-row h1 {
+    color: var(--color-text);
+    font: 700 38px/1.1 var(--font-display);
+}
+
+.catalog-title-row p {
+    margin-top: 8px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.catalog-count {
+    display: grid;
+    justify-items: end;
+    gap: 3px;
+}
+
+.catalog-count strong {
+    color: var(--color-text);
+    font: 700 25px/1 var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+
+.catalog-count span {
+    color: var(--color-muted);
+    font: 700 9px/1.5 var(--font-display);
+    letter-spacing: 0.08em;
+}

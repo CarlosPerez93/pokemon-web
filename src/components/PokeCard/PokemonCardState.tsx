@@ -5,8 +5,14 @@ type PokemonCardStateProps = {
     onRetry: () => void
 }
 
-export const PokemonCardSkeleton = ({ name }: Pick<PokemonCardStateProps, 'name'>) => (
-    <div className='pokemon-card-skeleton' aria-busy='true' aria-label={`Loading ${name}`} />
+export const PokemonCardSkeleton = ({
+    name,
+}: Pick<PokemonCardStateProps, 'name'>) => (
+    <div
+        className='pokemon-card-skeleton'
+        aria-busy='true'
+        aria-label={`Loading ${name}`}
+    />
 )
 
 export const PokemonCardError = ({ name, onRetry }: PokemonCardStateProps) => (

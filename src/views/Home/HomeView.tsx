@@ -11,16 +11,25 @@ import { PrioritySpecimens } from './PrioritySpecimens'
 import './Home.css'
 
 export const HomeView = () => {
-    const { data } = useGet<ResponseFetch>({ functionFetch: api.pokemon.pokemonList })
+    const { data } = useGet<ResponseFetch>({
+        functionFetch: api.pokemon.pokemonList,
+    })
     const { favorites, toggleFavorite } = useFavorites()
 
     return (
         <main className='home-page page-container'>
             <HomeBreadcrumb queueSize={data?.count} />
             <PokePresentation name='charizard' />
-            <PrioritySpecimens favorites={favorites} onToggleFavorite={toggleFavorite} />
+            <PrioritySpecimens
+                favorites={favorites}
+                onToggleFavorite={toggleFavorite}
+            />
             <ExpeditionBanner />
-            <ArchiveTelemetry speciesCount={data?.count} favoriteCount={favorites.length} typeCount={POKEMON_TYPE_NAMES.length} />
+            <ArchiveTelemetry
+                speciesCount={data?.count}
+                favoriteCount={favorites.length}
+                typeCount={POKEMON_TYPE_NAMES.length}
+            />
         </main>
     )
 }

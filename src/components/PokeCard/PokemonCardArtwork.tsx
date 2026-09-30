@@ -11,6 +11,8 @@ export const PokemonCardArtwork = ({ name, artwork }: PokemonCardArtworkProps) =
             <Link to={`/dossier/${name}`} aria-label={`Open ${name} dossier`}>
                 <img src={artwork} alt={name} loading='lazy' />
             </Link>
-        ) : <span aria-hidden='true'>?</span>}
+        ) : (
+            <span aria-hidden='true'>?</span>
+        )}
     </div>
 )

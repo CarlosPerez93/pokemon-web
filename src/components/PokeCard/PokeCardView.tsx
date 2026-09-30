@@ -14,14 +14,32 @@ export const PokeCardView = (props: PokeCardProps) => {
         return <PokemonCardSkeleton name={record.pokemonName} />
     }
     if (record.error || !record.data?.id) {
-        return <PokemonCardError name={record.pokemonName} onRetry={() => record.refetch()} />
+        return (
+            <PokemonCardError
+                name={record.pokemonName}
+                onRetry={() => record.refetch()}
+            />
+        )
     }
 
     return (
-        <article className='pokemon-card' data-type={record.primaryType} style={{ '--type-color': record.typeColor } as CSSProperties}>
-            <PokemonCardHeader id={record.data.id} name={record.pokemonName} isFavorite={props.isFavorite} onToggleFavorite={props.onToggleFavorite} />
+        <article
+            className='pokemon-card'
+            data-type={record.primaryType}
+            style={{ '--type-color': record.typeColor } as CSSProperties}
+        >
+            <PokemonCardHeader
+                id={record.data.id}
+                name={record.pokemonName}
+                isFavorite={props.isFavorite}
+                onToggleFavorite={props.onToggleFavorite}
+            />
             <PokemonCardArtwork name={record.pokemonName} artwork={record.artwork} />
-            <PokemonCardDetails name={record.pokemonName} types={record.types} stats={record.data.stats} />
+            <PokemonCardDetails
+                name={record.pokemonName}
+                types={record.types}
+                stats={record.data.stats}
+            />
         </article>
     )
 }

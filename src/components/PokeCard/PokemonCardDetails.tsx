@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 
-import { PokemonTypeSlot, PokemonStatSlot } from '../../utils/api/pokemon-record.types'
+import {
+    PokemonTypeSlot,
+    PokemonStatSlot,
+} from '../../utils/api/pokemon-record.types'
 import { PokemonCardStats } from './PokemonCardStats'
 
 type PokemonCardDetailsProps = {
@@ -9,11 +12,25 @@ type PokemonCardDetailsProps = {
     stats: PokemonStatSlot[]
 }
 
-export const PokemonCardDetails = ({ name, types, stats }: PokemonCardDetailsProps) => (
+export const PokemonCardDetails = ({
+    name,
+    types,
+    stats,
+}: PokemonCardDetailsProps) => (
     <div className='pokemon-card__details'>
-        <h2><Link to={`/dossier/${name}`}>{name}</Link></h2>
+        <h2>
+            <Link to={`/dossier/${name}`}>{name}</Link>
+        </h2>
         <div className='type-badges' aria-label={`${name} types`}>
-            {types.map(({ type }) => <span className={`type-badge type-badge--${type.name}`} key={type.name}><span aria-hidden='true' />{type.name}</span>)}
+            {types.map(({ type }) => (
+                <span
+                    className={`type-badge type-badge--${type.name}`}
+                    key={type.name}
+                >
+                    <span aria-hidden='true' />
+                    {type.name}
+                </span>
+            ))}
         </div>
         <PokemonCardStats stats={stats} />
     </div>

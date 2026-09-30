@@ -19,5 +19,7 @@
 }
 
 @media (max-width: 1050px) {
-    .feature-slide__stats .combat-radar { height: 180px; }
+    .feature-slide__stats .combat-radar {
+        height: 180px;
+    }
 }

@@ -1,16 +1,16 @@
 const LIGHT_THEME = {
-    colorBgBase: '#fff',
-    colorTextBase: '#000',
-    colorPrimary: '#1677ff',
-    colorLink: '#1677ff',
-    colorTextSecondary: '#595959',
+    colorBgBase: '#faf8ff',
+    colorTextBase: '#131b2e',
+    colorPrimary: '#b80035',
+    colorLink: '#b80035',
+    colorTextSecondary: '#5c3f40',
 }
 const DARK_THEME = {
-    colorBgBase: '#141414',
-    colorTextBase: '#fff',
-    colorPrimary: '#177ddc',
-    colorLink: '#177ddc',
-    colorTextSecondary: '#bfbfbf',
+    colorBgBase: '#0f172a',
+    colorTextBase: '#f8fafc',
+    colorPrimary: '#fb7185',
+    colorLink: '#fb7185',
+    colorTextSecondary: '#94a3b8',
 }
 
 export { LIGHT_THEME, DARK_THEME }

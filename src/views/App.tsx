@@ -11,7 +11,6 @@ function App() {
     const currentTheme = useSelector(
         (state: { theme: { currentTheme: string } }) => state.theme.currentTheme,
     )
-    console.log(currentTheme)
 
     return (
         <I18nextProvider i18n={i18n}>

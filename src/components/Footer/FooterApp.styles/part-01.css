@@ -18,7 +18,7 @@
     align-items: center;
     gap: 8px;
     color: var(--color-text);
-    font: 700 10px var(--font-display);
+    font: 700 12px var(--font-display);
     letter-spacing: 0.03em;
 }
 
@@ -32,7 +32,7 @@
     max-width: 410px;
     margin-top: 9px;
     color: var(--color-muted);
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.65;
 }
 

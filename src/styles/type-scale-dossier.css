@@ -13,7 +13,7 @@
 .dossier-stat strong,
 .dossier-data-strip span,
 .dossier-record-nav {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .dossier-note,
@@ -28,5 +28,5 @@
 }
 
 .footer-app__bottom {
-    font-size: 9px;
+    font-size: 12px;
 }

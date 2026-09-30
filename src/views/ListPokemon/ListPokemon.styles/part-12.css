@@ -8,7 +8,7 @@
     border-radius: 999px;
     background: transparent;
     color: var(--color-muted);
-    font: 700 8px/1 var(--font-display);
+    font: 700 12px/1 var(--font-display);
     transition:
         background-color 140ms ease,
         color 140ms ease,
@@ -39,5 +39,5 @@
     align-items: center;
     gap: 6px;
     color: var(--color-muted);
-    font-size: 9px;
+    font-size: 12px;
 }

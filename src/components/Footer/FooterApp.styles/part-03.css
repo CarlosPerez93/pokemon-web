@@ -1,6 +1,6 @@
 .footer-app__metadata strong {
     color: var(--color-text);
-    font: 700 8px var(--font-display);
+    font: 700 12px var(--font-display);
 }
 
 .footer-app__bottom {
@@ -11,7 +11,7 @@
     gap: 16px;
     border-top: 1px solid var(--color-border);
     color: var(--color-muted);
-    font: 600 7px/1.5 var(--font-display);
+    font: 600 12px/1.5 var(--font-display);
     letter-spacing: 0.04em;
 }
 

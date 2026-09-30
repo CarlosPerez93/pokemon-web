@@ -5,7 +5,7 @@
 
 .feature-telemetry-caption {
     color: var(--color-muted);
-    font: 700 10px var(--font-display);
+    font: 700 12px var(--font-display);
 }
 
 .feature-peak-stats {
@@ -14,7 +14,7 @@
 }
 
 .feature-peak-stats .metric-row {
-    font-size: 11px;
+    font-size: 12px;
     grid-template-columns: 1fr 70px 28px;
 }
 

@@ -11,7 +11,7 @@
     min-height: 44px;
     margin-top: 12px;
     color: var(--color-muted);
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.55;
 }
 
@@ -35,7 +35,7 @@
         var(--color-surface)
     );
     color: var(--type-color, #64748b);
-    font: 700 10px/1 var(--font-display);
+    font: 700 12px/1 var(--font-display);
     text-transform: uppercase;
 }
 

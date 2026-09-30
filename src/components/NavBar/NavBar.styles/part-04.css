@@ -4,7 +4,7 @@
     border-radius: 4px;
     background: var(--color-surface-inset);
     color: var(--color-muted);
-    font: 600 10px var(--font-display);
+    font: 600 12px var(--font-display);
 }
 
 .theme-toggle {

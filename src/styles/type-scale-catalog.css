@@ -13,7 +13,7 @@
 .type-option,
 .catalog-region,
 .catalog-count span {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .pokemon-grid .pokemon-card__details h2 {
@@ -21,13 +21,13 @@
 }
 
 .pokemon-grid .pokemon-card .type-badge {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .pokemon-grid .pokemon-card__stat {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .pokemon-grid .pokemon-card__stat strong {
-    font-size: 11px;
+    font-size: 12px;
 }

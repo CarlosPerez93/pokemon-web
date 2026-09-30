@@ -10,7 +10,7 @@
     align-items: center;
     gap: 9px;
     color: var(--color-muted);
-    font: 700 9px/1.5 var(--font-display);
+    font: 700 12px/1.5 var(--font-display);
     letter-spacing: 0.05em;
 }
 
@@ -27,7 +27,7 @@
 .dossier-breadcrumb__sector {
     margin-left: auto;
     color: var(--color-muted);
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .dossier-hero {

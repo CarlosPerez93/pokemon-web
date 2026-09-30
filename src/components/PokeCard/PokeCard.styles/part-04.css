@@ -14,7 +14,7 @@
 
 .pokemon-card .type-badge {
     padding: 5px 8px;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .pokemon-card__stats {
@@ -30,13 +30,13 @@
     align-items: center;
     gap: 6px;
     color: var(--color-muted);
-    font-size: 8px;
+    font-size: 12px;
     text-transform: capitalize;
 }
 
 .pokemon-card__stat strong {
     color: var(--color-text);
-    font: 700 9px var(--font-display);
+    font: 700 12px var(--font-display);
     font-variant-numeric: tabular-nums;
     text-align: right;
 }

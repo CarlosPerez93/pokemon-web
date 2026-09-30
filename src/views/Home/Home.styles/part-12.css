@@ -21,7 +21,7 @@
 .home-telemetry span,
 .home-telemetry i {
     color: var(--color-muted);
-    font: 700 7px/1.4 var(--font-display);
+    font: 700 12px/1.4 var(--font-display);
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }

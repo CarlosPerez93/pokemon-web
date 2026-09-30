@@ -5,7 +5,7 @@
 .dossier-number {
     margin-top: 18px;
     color: var(--color-primary);
-    font: 700 10px var(--font-display);
+    font: 700 12px var(--font-display);
     letter-spacing: 0.08em;
 }
 
@@ -19,7 +19,7 @@
 .dossier-species {
     margin-top: 7px;
     color: var(--color-muted);
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .dossier-copy .type-badges {
@@ -43,6 +43,6 @@
 
 .dossier-morphometrics span {
     color: var(--color-muted);
-    font: 700 8px var(--font-display);
+    font: 700 12px var(--font-display);
     letter-spacing: 0.06em;
 }

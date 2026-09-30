@@ -8,7 +8,7 @@
     border-radius: 6px;
     background: color-mix(in srgb, var(--color-surface) 88%, transparent);
     color: var(--color-text);
-    font: 700 8px var(--font-display);
+    font: 700 12px var(--font-display);
     text-decoration: none;
     backdrop-filter: blur(8px);
 }
@@ -43,6 +43,6 @@
     align-items: center;
     gap: 7px;
     color: var(--color-muted);
-    font-size: 9px;
+    font-size: 12px;
     text-transform: capitalize;
 }

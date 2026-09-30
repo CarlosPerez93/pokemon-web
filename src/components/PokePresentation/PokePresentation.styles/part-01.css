@@ -27,7 +27,7 @@
     align-items: center;
     gap: 12px;
     color: var(--color-muted);
-    font: 700 9px/1.5 var(--font-display);
+    font: 700 12px/1.5 var(--font-display);
     letter-spacing: 0.08em;
 }
 

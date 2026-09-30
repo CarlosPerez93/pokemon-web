@@ -1,6 +1,6 @@
 .metric-row strong {
     color: var(--color-text);
-    font: 700 10px var(--font-display);
+    font: 700 12px var(--font-display);
     text-align: right;
     font-variant-numeric: tabular-nums;
 }

@@ -19,7 +19,7 @@
 
 .brand__copy small {
     color: var(--color-muted);
-    font: 700 9px/1.3 var(--font-display);
+    font: 700 12px/1.3 var(--font-display);
     letter-spacing: 0.08em;
 }
 

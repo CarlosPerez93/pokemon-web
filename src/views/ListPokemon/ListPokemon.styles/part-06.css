@@ -5,7 +5,7 @@
     justify-content: space-between;
     gap: 12px;
     color: var(--color-muted);
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .catalog-results__heading > span:last-child {

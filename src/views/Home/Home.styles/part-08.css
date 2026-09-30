@@ -2,7 +2,7 @@
     .eyebrow-line {
         flex-wrap: wrap;
         row-gap: 6px;
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .home-intro h1 {
@@ -39,7 +39,7 @@
     align-items: center;
     gap: 8px;
     color: var(--color-muted);
-    font: 700 8px/1.5 var(--font-display);
+    font: 700 12px/1.5 var(--font-display);
     letter-spacing: 0.06em;
 }
 

@@ -20,6 +20,6 @@
     .pokemon-card__stat {
         grid-template-columns: 1fr 28px 20px;
         gap: 4px;
-        font-size: 7px;
+        font-size: 12px;
     }
 }

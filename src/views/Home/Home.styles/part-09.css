@@ -28,7 +28,7 @@
     align-items: center;
     gap: 14px;
     color: var(--color-muted);
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .priority-heading__actions a {

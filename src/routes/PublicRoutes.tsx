@@ -1,9 +1,11 @@
 import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom'
 
-import { ROUTES_PUBLIC as RP } from '../utils/constants/routes.constants'
-import Home from '../views/Home'
-import NavBar from '../components/NavBar'
-import ListPokemon from '../views/ListPokemon'
+import Home from '@views/Home'
+import NavBar from '@components/NavBar'
+import ListPokemon from '@views/ListPokemon'
+import { Error404 } from '@components/Error404'
+
+import { ROUTES_PUBLIC as RP } from '@utils/constants/routes.constants'
 
 export const PublicRoutes = () => {
     return (
@@ -12,8 +14,10 @@ export const PublicRoutes = () => {
                 <Routes>
                     <Route path={RP.home} element={<Home />} />
                     <Route path={RP.listPokemon} element={<ListPokemon />} />
+                    <Route path={RP.error404} element={<Error404 />} />
+
                     <Route
-                        path={RP.default}
+                        path={RP.error404}
                         element={<Navigate replace to={RP.error404} />}
                     />
                 </Routes>

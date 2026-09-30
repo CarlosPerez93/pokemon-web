@@ -1,13 +1,13 @@
 import { Input } from 'antd'
 import { ChangeEvent, useState } from 'react'
 
-import Menu from '../../components/NavBar/Menu'
-import PokeCard from '../../components/PokeCard'
+import Menu from '@components/NavBar/Menu'
+import PokeCard from '@components/PokeCard'
 
 import api from '../../api'
-import { useGet } from '../../hooks/api/useGet'
-import { useSearch } from '../../hooks/useSearch'
-import { PokeList, ResponseFetch } from '../../utils/api/api.util'
+import { useGet } from '@hooks/api/useGet'
+import { useSearch } from '@hooks/useSearch'
+import { PokeList, ResponseFetch } from '@utils/api/api.util'
 
 import './ListPokemon.css'
 

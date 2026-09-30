@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 
-import { ResponseGeneric } from '../../utils/api/api.util'
+import { ResponseGeneric } from '@utils/api/api.util'
 import { ResponseState, QueryType, Func } from './api.types'
-import { errorNotification } from '../../utils/notifications/notification.action'
+import { errorNotification } from '@utils/notifications/notification.action'
 
 export const useGet = <T>(
     { functionFetch }: Func<T>,
-    { cancelFirstEffect, cancelError, onError, variables }: QueryType<T> = {}
+    { cancelFirstEffect, cancelError, onError, variables }: QueryType<T> = {},
 ) => {
     const [req, setReq] = useState<ResponseState<T>>({
         data: {} as ResponseGeneric<T>,

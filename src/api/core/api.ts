@@ -1,6 +1,6 @@
-import { query } from './api.types'
-import { GetItem } from '../../utils/storage'
-import { getHeader, getUrl } from '../../utils/api/api.util'
+import { GetItem } from '@utils/storage'
+import { query } from '@api/core/api.types'
+import { getHeader, getUrl } from '@utils/api/api.util'
 
 const Query = async ({ url, params }: query) => {
     const newUrl = getUrl({ url, params })

@@ -1,1 +1,1 @@
-export { PublicRoutes } from './PublicRoutes'
+export { PublicRoutes, default } from './PublicRoutes'

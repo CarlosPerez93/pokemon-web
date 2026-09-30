@@ -1,5 +1,5 @@
-import { query } from '../../api/core/api.types'
-import { URL_API } from '../constants/environment.constant'
+import { query } from '@api/core/api.types'
+import { URL_API } from '@utils/constants/environment.constant'
 
 export const getHeader = (token: string | null) => {
     const exists = token !== null && { Authorization: `Bearer ${token}` }
@@ -17,7 +17,7 @@ export const getUrl = ({ url, params }: query): URL => {
     const _url = new URL(`${URL_API}${url}`)
     if (params)
         Object.keys(params).forEach(key =>
-            _url.searchParams.append(key, params[key])
+            _url.searchParams.append(key, params[parseInt(key)]),
         )
 
     return _url

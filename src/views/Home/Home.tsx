@@ -1,6 +1,6 @@
 import { Carousel, Spin } from 'antd'
 
-import Menu from '../../components/NavBar/Menu'
+import Menu from '@components/NavBar/Menu'
 import { IconLogo } from '../../components/Icons'
 import PokePresentation from '../../components/PokePresentation'
 

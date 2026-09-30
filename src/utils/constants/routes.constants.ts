@@ -1,6 +1,6 @@
 export const ROUTES_PUBLIC = {
-    default: '/home',
-    error404: '/404',
+    home: '/',
+    default: '/',
+    error404: '*',
     listPokemon: '/list-pokemon',
-    home: '/home',
 }

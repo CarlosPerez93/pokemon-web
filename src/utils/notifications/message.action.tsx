@@ -1,15 +1,12 @@
-import { message } from "antd";
+import { message } from 'antd'
+import { getErrorDescription } from './notification.action'
 
-const infoMessage = (description: string) => message.info(description);
+const infoMessage = (description: string) => message.info(description)
 
-const successMessage = (description: string) => message.success(description);
+const successMessage = (description: string) => message.success(description)
 
-const warningMessage = (description: string) => message.warning(description);
+const warningMessage = (description: string) => message.warning(description)
 
-const errorMessage = (error: any) =>
-  message.error(
-    error?.response ? error.response.data.message : error?.message || error,
-    5
-  );
+const errorMessage = (error: unknown) => message.error(getErrorDescription(error), 5)
 
-export { infoMessage, successMessage, warningMessage, errorMessage };
+export { infoMessage, successMessage, warningMessage, errorMessage }

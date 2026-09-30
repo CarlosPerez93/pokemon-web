@@ -19,10 +19,11 @@ export type MutationType = {
 export type QueryType<T> = Omit<MutationType, 'onCompleted'> & {
     variables?: T
     cancelFirstEffect?: boolean
+    onError?: (error: unknown) => void
 }
 
 export type Func<T> = {
-    functionFetch: (variables: any) => Promise<ResponseGeneric<T>>
+    functionFetch: (variables?: unknown) => Promise<ResponseGeneric<T>>
 }
 
 export type ExecFunction = <N>(variables: N) => void

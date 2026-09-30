@@ -10,7 +10,11 @@ export const CombatStatList = ({ stats }: CombatStatListProps) => (
             <div className='dossier-stat' key={stat.name}>
                 <span>{stat.name.replace('-', ' ')}</span>
                 <span className='dossier-stat__track'>
-                    <span style={{ width: `${Math.min(100, base_stat / 150 * 100)}%` }} />
+                    <span
+                        style={{
+                            width: `${Math.min(100, (base_stat / 150) * 100)}%`,
+                        }}
+                    />
                 </span>
                 <strong>{base_stat}</strong>
             </div>

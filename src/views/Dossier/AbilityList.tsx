@@ -9,7 +9,8 @@ export const AbilityList = ({ abilities }: AbilityListProps) => (
         <span className='section-kicker'>INTRINSIC ABILITIES</span>
         {abilities.map(({ ability, is_hidden }) => (
             <span key={ability.name}>
-                {ability.name.replace('-', ' ')}{is_hidden ? ' · hidden' : ''}
+                {ability.name.replace('-', ' ')}
+                {is_hidden ? ' · hidden' : ''}
             </span>
         ))}
     </div>

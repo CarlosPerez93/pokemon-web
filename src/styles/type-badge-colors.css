@@ -1,0 +1,54 @@
+.type-badge--normal {
+    --type-color: #8b95a7;
+}
+.type-badge--fire {
+    --type-color: #f97316;
+}
+.type-badge--water {
+    --type-color: #0ea5e9;
+}
+.type-badge--electric {
+    --type-color: #ca8a04;
+}
+.type-badge--grass {
+    --type-color: #10b981;
+}
+.type-badge--ice {
+    --type-color: #0891b2;
+}
+.type-badge--fighting {
+    --type-color: #dc2626;
+}
+.type-badge--poison {
+    --type-color: #a855f7;
+}
+.type-badge--ground {
+    --type-color: #d97706;
+}
+.type-badge--flying {
+    --type-color: #6366f1;
+}
+.type-badge--psychic {
+    --type-color: #db2777;
+}
+.type-badge--bug {
+    --type-color: #65a30d;
+}
+.type-badge--rock {
+    --type-color: #78716c;
+}
+.type-badge--ghost {
+    --type-color: #7c3aed;
+}
+.type-badge--dragon {
+    --type-color: #4f46e5;
+}
+.type-badge--dark {
+    --type-color: #475569;
+}
+.type-badge--steel {
+    --type-color: #64748b;
+}
+.type-badge--fairy {
+    --type-color: #ec4899;
+}

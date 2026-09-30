@@ -1,0 +1,33 @@
+@keyframes shimmer {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes specimen-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes radar-sweep {
+    to {
+        transform: rotate(360deg);
+    }
+}

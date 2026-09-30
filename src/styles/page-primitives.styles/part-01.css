@@ -1,0 +1,29 @@
+.page-container {
+    width: min(100% - 64px, 1440px);
+    margin: 0 auto;
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-muted);
+    font: 700 12px/1.5 var(--font-display);
+    letter-spacing: 0.08em;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .page-container {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (max-width: 639px) {
+    .page-container {
+        width: calc(100% - 32px);
+    }
+}
+
+.type-sidebar__heading .section-kicker {
+    font-size: 12px;
+}

@@ -1,6 +1,10 @@
 @import './index.styles/part-01.css';
 @import './index.styles/part-02.css';
+@import './styles/page-primitives.css';
 @import './styles/type-scale-base.css';
 @import './styles/type-scale-home.css';
 @import './styles/type-scale-catalog.css';
 @import './styles/type-scale-dossier.css';
+@import './styles/type-badges.css';
+@import './styles/type-badge-colors.css';
+@import './styles/motion.css';

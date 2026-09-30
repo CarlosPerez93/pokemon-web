@@ -1,0 +1,40 @@
+.feature-slide__copy {
+    position: relative;
+    z-index: 1;
+}
+.specimen-index {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-muted);
+    font: 700 12px/1.5 var(--font-display);
+}
+.specimen-index strong {
+    color: var(--color-text);
+    font: 700 13px/1 var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+.feature-slide__copy h1 {
+    margin-top: 20px;
+    color: var(--color-text);
+    font: 700 36px/1.05 var(--font-display);
+    text-transform: uppercase;
+}
+.feature-slide__description,
+.feature-slide__note {
+    max-width: 300px;
+    margin-top: 10px;
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.65;
+}
+.feature-slide__note {
+    min-height: 44px;
+    margin-top: 12px;
+}
+@media (max-width: 620px) {
+    .feature-slide__copy h1 {
+        margin-top: 14px;
+        font-size: 34px;
+    }
+}

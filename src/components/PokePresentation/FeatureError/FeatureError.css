@@ -1,0 +1,44 @@
+.feature-skeleton {
+    min-height: 420px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: linear-gradient(
+        110deg,
+        var(--color-surface) 8%,
+        var(--color-surface-inset) 18%,
+        var(--color-surface) 33%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+}
+.feature-error {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 24px;
+    border: 1px solid rgb(217 119 6 / 35%);
+    border-radius: var(--radius-control);
+    background: color-mix(in srgb, #f59e0b 7%, var(--color-surface));
+}
+.feature-error span {
+    color: var(--color-text);
+    font-size: 13px;
+}
+.feature-error button {
+    min-height: 36px;
+    padding: 0 13px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media (max-width: 620px) {
+    .feature-skeleton {
+        min-height: 540px;
+    }
+}

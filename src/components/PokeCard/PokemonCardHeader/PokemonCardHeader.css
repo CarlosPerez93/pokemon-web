@@ -1,0 +1,39 @@
+.pokemon-card__topline {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon-card__index {
+    color: var(--color-muted);
+    font: 700 12px/1.4 var(--font-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+}
+
+.favorite-button {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--color-surface) 85%, transparent);
+    color: var(--color-muted);
+    cursor: pointer;
+    transition:
+        color 150ms ease,
+        border-color 150ms ease,
+        transform 150ms ease;
+}
+
+.favorite-button:hover,
+.favorite-button.is-active {
+    border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+    color: var(--color-primary);
+}
+.favorite-button:active {
+    transform: scale(0.92);
+}

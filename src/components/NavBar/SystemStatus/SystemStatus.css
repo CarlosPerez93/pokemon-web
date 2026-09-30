@@ -1,0 +1,15 @@
+.system-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #15803d;
+    font: 700 12px/1.4 var(--font-display);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    .system-status {
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+.home-page {
+    padding-top: 62px;
+    animation: page-enter 420ms ease both;
+}
+
+@media (max-width: 760px) {
+    .home-page {
+        padding-top: 42px;
+    }
+}
+
+.home-page {
+    padding-top: 18px;
+}
+
+@media (max-width: 640px) {
+    .home-page {
+        padding-top: 10px;
+    }
+}

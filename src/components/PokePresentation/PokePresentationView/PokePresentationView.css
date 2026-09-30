@@ -1,0 +1,32 @@
+.feature-slide {
+    min-height: 390px;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(250px, 0.95fr) minmax(260px, 1.1fr) minmax(
+            170px,
+            0.72fr
+        );
+    align-items: center;
+    gap: 26px;
+    overflow: hidden;
+    padding: 34px 36px 42px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 1050px) {
+    .feature-slide {
+        grid-template-columns: minmax(230px, 1fr) minmax(230px, 1fr);
+        padding-bottom: 46px;
+    }
+}
+
+@media (max-width: 620px) {
+    .feature-slide {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px 20px 44px;
+    }
+}

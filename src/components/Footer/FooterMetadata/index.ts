@@ -1,0 +1,1 @@
+export { FooterMetadata } from './FooterMetadata'

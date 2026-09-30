@@ -1,0 +1,23 @@
+.footer-app__group {
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: 7px;
+}
+
+.footer-app__group h2 {
+    margin-bottom: 2px;
+    color: var(--color-text);
+    font: 600 12px var(--font-display);
+}
+
+.footer-app__group a,
+.footer-app__group span {
+    color: var(--color-muted);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-app__group a:hover {
+    color: var(--color-primary);
+}

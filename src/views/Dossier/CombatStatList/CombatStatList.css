@@ -1,0 +1,47 @@
+.dossier-stat-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.dossier-stat {
+    display: grid;
+    grid-template-columns: 60px 1fr 24px;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-muted);
+    font: 600 12px var(--font-display);
+    text-transform: uppercase;
+}
+
+.dossier-stat strong {
+    color: var(--color-text);
+    font: 700 12px var(--font-display);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.dossier-stat__track {
+    height: 4px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--color-border);
+}
+
+.dossier-stat__track span {
+    height: 100%;
+    display: block;
+    border-radius: inherit;
+    background: var(--type-color);
+}
+@media (max-width: 960px) {
+    .dossier-stat-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .dossier-stat-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

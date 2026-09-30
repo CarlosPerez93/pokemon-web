@@ -1,0 +1,1 @@
+export { PokemonResultsGrid } from './PokemonResultsGrid'

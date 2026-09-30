@@ -1,0 +1,7 @@
+.catalog-toolbar-stack {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+    gap: 0;
+}

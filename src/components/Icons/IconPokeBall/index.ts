@@ -1,0 +1,1 @@
+export { IconPokeBall } from './IconPokeBall'

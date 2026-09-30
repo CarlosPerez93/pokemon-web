@@ -1,0 +1,26 @@
+.view-mode {
+    display: inline-flex;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: var(--color-surface-inset);
+}
+
+.view-mode button {
+    width: 27px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+}
+
+.view-mode button.is-active {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-card);
+}

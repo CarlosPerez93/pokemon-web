@@ -1,0 +1,30 @@
+.pokemon-card-skeleton {
+    min-height: 410px;
+}
+
+.pokemon-card--error {
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    background: color-mix(in srgb, #f59e0b 6%, var(--color-surface));
+}
+
+.pokemon-card--error strong {
+    color: var(--color-text);
+    font: 600 15px var(--font-display);
+    text-transform: capitalize;
+}
+.pokemon-card--error button {
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}

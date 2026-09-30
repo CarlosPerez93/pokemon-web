@@ -1,0 +1,1 @@
+export { PokemonCardArtwork } from './PokemonCardArtwork'

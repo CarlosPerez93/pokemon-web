@@ -1,0 +1,5 @@
+.combat-radar .recharts-polar-angle-axis-tick text,
+.combat-radar .recharts-polar-radius-axis-tick text {
+    fill: var(--color-muted);
+    font-size: 12px;
+}

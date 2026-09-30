@@ -1,0 +1,30 @@
+.pokemon-card {
+    min-width: 0;
+    min-height: 410px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--type-color) 28%, var(--color-border));
+    box-shadow: var(--shadow-raised);
+}
+
+@media (max-width: 480px) {
+    .pokemon-card {
+        min-height: 320px;
+        padding: 10px;
+    }
+}

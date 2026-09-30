@@ -1,0 +1,14 @@
+.type-matrix {
+    padding: 13px 0 11px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.type-matrix__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+    color: var(--color-muted);
+    font-size: 12px;
+}

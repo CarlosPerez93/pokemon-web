@@ -1,0 +1,4 @@
+.combat-radar .recharts-polygon {
+    stroke-linejoin: round;
+    transition: fill-opacity 160ms ease;
+}

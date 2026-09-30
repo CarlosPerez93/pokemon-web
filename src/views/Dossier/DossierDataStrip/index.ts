@@ -1,0 +1,1 @@
+export { DossierDataStrip } from './DossierDataStrip'

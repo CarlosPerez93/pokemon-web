@@ -1,0 +1,10 @@
+.pokemon-page {
+    padding-top: 54px;
+    animation: page-enter 420ms ease both;
+}
+
+@media (max-width: 760px) {
+    .pokemon-page {
+        padding-top: 38px;
+    }
+}

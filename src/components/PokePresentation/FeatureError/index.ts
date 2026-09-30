@@ -1,0 +1,1 @@
+export { FeatureError } from './FeatureError'

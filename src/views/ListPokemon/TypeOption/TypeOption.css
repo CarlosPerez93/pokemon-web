@@ -1,0 +1,129 @@
+.type-options {
+    max-height: min(60vh, 540px);
+    display: grid;
+    gap: 2px;
+    overflow-y: auto;
+    padding-top: 8px;
+}
+
+.type-option {
+    min-height: 34px;
+    display: grid;
+    grid-template-columns: 8px 1fr;
+    align-items: center;
+    gap: 9px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-muted);
+    font-size: 12px;
+    text-align: left;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition:
+        background-color 140ms ease,
+        color 140ms ease;
+}
+
+.type-option:hover {
+    background: var(--color-surface-inset);
+    color: var(--color-text);
+}
+
+.type-option.is-active {
+    background: var(--color-surface-inset);
+    color: var(--color-text);
+}
+
+.type-option.is-active {
+    font-weight: 700;
+}
+.type-option__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-border-strong);
+}
+
+.type-option__dot--all {
+    background: linear-gradient(135deg, #e11d48 0 50%, #4f46e5 50% 100%);
+}
+
+@media (max-width: 760px) {
+    .type-options {
+        max-height: none;
+        display: flex;
+        gap: 7px;
+        overflow-x: auto;
+        padding: 10px 1px 2px;
+        scrollbar-width: thin;
+    }
+}
+
+@media (max-width: 760px) {
+    .type-option {
+        min-height: 32px;
+        flex: 0 0 auto;
+        grid-template-columns: 7px auto;
+        padding: 0 9px;
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+    }
+}
+
+.type-options {
+    max-height: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow: visible;
+    padding: 0;
+}
+.type-option {
+    min-height: 27px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-muted);
+    font: 700 12px/1 var(--font-display);
+    transition:
+        background-color 140ms ease,
+        color 140ms ease,
+        border-color 140ms ease;
+}
+
+.type-option:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+    color: var(--color-primary);
+}
+
+.type-option.is-active {
+    border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+    color: var(--color-primary);
+}
+
+.type-option.is-active {
+    font-weight: 700;
+}
+
+@media (max-width: 760px) {
+    .type-options {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 2px 0 4px;
+        scrollbar-width: thin;
+    }
+}
+
+@media (max-width: 760px) {
+    .type-option {
+        flex: 0 0 auto;
+    }
+}

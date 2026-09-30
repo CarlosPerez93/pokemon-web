@@ -1,0 +1,34 @@
+.dossier-breadcrumb {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--color-muted);
+    font: 700 12px/1.5 var(--font-display);
+    letter-spacing: 0.05em;
+}
+
+.dossier-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dossier-breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.dossier-breadcrumb strong {
+    color: var(--color-primary);
+}
+
+.dossier-breadcrumb__sector {
+    margin-left: auto;
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+@media (max-width: 640px) {
+    .dossier-breadcrumb__sector {
+        display: none;
+    }
+}

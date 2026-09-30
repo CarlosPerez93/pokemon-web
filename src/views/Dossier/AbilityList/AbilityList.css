@@ -1,0 +1,10 @@
+.dossier-abilities {
+    display: grid;
+    gap: 6px;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 12px;
+    text-transform: capitalize;
+}

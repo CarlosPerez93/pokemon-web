@@ -1,0 +1,49 @@
+.feature-slide__stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface-inset);
+}
+.feature-telemetry-score {
+    color: var(--color-primary);
+    font: 700 22px/1 var(--font-display);
+}
+.feature-telemetry-caption {
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+}
+.feature-peak-stats {
+    display: grid;
+    gap: 8px;
+}
+.metric-row {
+    display: grid;
+    grid-template-columns: 1fr 70px 28px;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-muted);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.metric-row strong {
+    color: var(--color-text);
+    font: 700 12px var(--font-display);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.metric-track {
+    height: 4px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: var(--color-surface);
+}
+.metric-track span {
+    height: 100%;
+    display: block;
+    border-radius: inherit;
+    background: var(--type-color);
+}

@@ -1,0 +1,36 @@
+.dossier-telemetry {
+    min-width: 0;
+    align-self: stretch;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface-inset);
+}
+
+.telemetry-score {
+    display: block;
+    margin-top: 7px;
+    color: var(--color-primary);
+    font: 700 30px/1 var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+
+.telemetry-caption {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+    letter-spacing: 0.07em;
+}
+
+@media (max-width: 1100px) {
+    .dossier-telemetry {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .dossier-telemetry {
+        grid-column: auto;
+    }
+}

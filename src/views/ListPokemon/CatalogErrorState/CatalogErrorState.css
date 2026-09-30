@@ -1,0 +1,4 @@
+.catalog-state[role='alert'] button:hover,
+.catalog-state[role='alert'] button:focus-visible {
+    border-color: var(--color-primary);
+}

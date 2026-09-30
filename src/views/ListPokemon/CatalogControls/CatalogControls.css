@@ -1,0 +1,115 @@
+.favorites-filter {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        color 150ms ease,
+        border-color 150ms ease,
+        background-color 150ms ease;
+}
+
+.favorites-filter strong {
+    min-width: 20px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background: var(--color-surface-inset);
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+    text-align: center;
+}
+
+.favorites-filter:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+    color: var(--color-primary);
+}
+
+.favorites-filter.is-active {
+    border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+    color: var(--color-primary);
+}
+
+.favorites-filter.is-active {
+    background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+}
+@media (max-width: 480px) {
+    .favorites-filter {
+        gap: 6px;
+        padding: 0 9px;
+        font-size: 12px;
+    }
+}
+
+.catalog-control-row {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.catalog-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-muted);
+    font-size: 12px;
+}
+
+.catalog-sort select {
+    min-height: 29px;
+    padding: 0 7px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font: 600 12px var(--font-body);
+}
+
+.catalog-region {
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+    letter-spacing: 0.05em;
+}
+
+.catalog-control-row__spacer {
+    flex: 1;
+}
+.catalog-control-row .favorites-filter {
+    min-height: 30px;
+    border-color: transparent;
+    padding: 0 7px;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .catalog-control-row {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-region {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-control-row .favorites-filter span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-control-row .favorites-filter strong {
+        display: inline-block;
+    }
+}

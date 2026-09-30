@@ -1,0 +1,28 @@
+.dossier-record-nav {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 14px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+}
+
+.dossier-record-nav > span:first-child {
+    margin-right: auto;
+    letter-spacing: 0.08em;
+}
+
+.dossier-record-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.dossier-record-nav__current {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: var(--color-surface-inset);
+    color: var(--color-primary);
+}

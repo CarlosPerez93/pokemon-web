@@ -1,0 +1,36 @@
+.dossier-state {
+    min-height: 320px;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+}
+.dossier-state h1 {
+    font: 700 24px var(--font-display);
+}
+.dossier-state p {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+.dossier-state > div {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+.dossier-state button,
+.dossier-state a {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}

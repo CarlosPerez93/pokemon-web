@@ -1,0 +1,1 @@
+export { FooterAbout } from './FooterAbout'

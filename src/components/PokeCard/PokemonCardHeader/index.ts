@@ -1,0 +1,1 @@
+export { PokemonCardHeader } from './PokemonCardHeader'

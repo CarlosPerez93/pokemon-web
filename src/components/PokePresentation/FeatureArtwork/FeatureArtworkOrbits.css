@@ -1,0 +1,13 @@
+.art-orbit {
+    position: absolute;
+    z-index: -1;
+    width: 82%;
+    aspect-ratio: 1;
+    border: 1px dashed color-mix(in srgb, var(--type-color) 25%, transparent);
+    border-radius: 50%;
+}
+.art-orbit--inner {
+    width: 63%;
+    border-style: solid;
+    opacity: 0.45;
+}

@@ -1,0 +1,1 @@
+export { DossierPage } from './DossierPage'

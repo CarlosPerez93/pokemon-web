@@ -9,12 +9,22 @@ export const useCatalogSearchShortcut = () => {
     useEffect(() => {
         const handleKey = (event: KeyboardEvent) => {
             const target = event.target
-            const editing = target instanceof HTMLElement && (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
-            const shortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k'
+            const editing =
+                target instanceof HTMLElement &&
+                (target.isContentEditable ||
+                    ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+            const shortcut =
+                (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k'
             if (editing || (!shortcut && event.key !== '/')) return
             event.preventDefault()
             if (location.pathname !== '/list-pokemon') navigate('/list-pokemon')
-            window.setTimeout(() => document.querySelector<HTMLInputElement>('.catalog-search input')?.focus(), 0)
+            window.setTimeout(
+                () =>
+                    document
+                        .querySelector<HTMLInputElement>('.catalog-search input')
+                        ?.focus(),
+                0,
+            )
         }
         window.addEventListener('keydown', handleKey)
         return () => window.removeEventListener('keydown', handleKey)

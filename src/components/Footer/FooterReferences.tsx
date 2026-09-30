@@ -10,6 +10,10 @@ const REFERENCES = [
 export const FooterReferences = () => (
     <section className='footer-app__group'>
         <h2>Taxonomy Reference</h2>
-        {REFERENCES.map(reference => <Link key={reference} to='/list-pokemon'>{reference}</Link>)}
+        {REFERENCES.map(reference => (
+            <Link key={reference} to='/list-pokemon'>
+                {reference}
+            </Link>
+        ))}
     </section>
 )

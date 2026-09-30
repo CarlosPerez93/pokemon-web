@@ -6,7 +6,12 @@ type SearchTriggerProps = {
 }
 
 export const SearchTrigger = ({ shortcut }: SearchTriggerProps) => (
-    <Link className='quick-search' to='/list-pokemon' aria-label='Search Pokémon' aria-keyshortcuts='Control+K Meta+K /'>
+    <Link
+        className='quick-search'
+        to='/list-pokemon'
+        aria-label='Search Pokémon'
+        aria-keyshortcuts='Control+K Meta+K /'
+    >
         <SearchOutlined />
         <span className='quick-search__label'>Search Pokémon</span>
         <kbd>{shortcut}</kbd>

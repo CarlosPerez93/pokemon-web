@@ -5,8 +5,14 @@ const activeClass = ({ isActive }: { isActive: boolean }) =>
 
 export const PrimaryNavigation = () => (
     <nav className='primary-nav' aria-label='Primary navigation'>
-        <NavLink to='/' end className={activeClass}>Home</NavLink>
-        <NavLink to='/list-pokemon' className={activeClass}>Pokédex</NavLink>
-        <NavLink to='/dossier' className={activeClass}>Dossier</NavLink>
+        <NavLink to='/' end className={activeClass}>
+            Home
+        </NavLink>
+        <NavLink to='/list-pokemon' className={activeClass}>
+            Pokédex
+        </NavLink>
+        <NavLink to='/dossier' className={activeClass}>
+            Dossier
+        </NavLink>
     </nav>
 )

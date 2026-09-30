@@ -1,0 +1,50 @@
+@media (max-width: 640px) {
+    .dossier-page {
+        padding-top: 14px;
+    }
+
+    .dossier-breadcrumb__sector {
+        display: none;
+    }
+
+    .dossier-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .dossier-artwork {
+        min-height: 280px;
+        grid-row: 1;
+    }
+
+    .dossier-artwork img {
+        max-height: 230px;
+    }
+
+    .dossier-copy h1 {
+        font-size: 32px;
+    }
+
+    .dossier-telemetry {
+        grid-column: auto;
+    }
+
+    .dossier-stat-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dossier-data-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .dossier-data-strip > div {
+        min-height: 58px;
+        padding: 8px;
+    }
+
+    .dossier-data-strip strong {
+        font-size: 16px;
+    }
+}

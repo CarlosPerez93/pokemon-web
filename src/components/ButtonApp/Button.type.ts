@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 export type PropsBtn = {
-    className: string
+    className?: string
     onClick?: () => void
     children: ReactNode
 }

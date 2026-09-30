@@ -1,10 +1,12 @@
 import { useSearchT } from './useSearch/useSearch.type'
 
-type PokemonItem = { name: string; [key: string]: string }
+type PokemonItem = { name?: string }
 
 export const useSearch = ({ data, stateFilter }: useSearchT) =>
     data?.results?.filter((item: PokemonItem) =>
-        stateFilter.toString().toLowerCase() === ''
+        stateFilter.toString().trim().toLowerCase() === ''
             ? item
-            : item.name.toLowerCase().includes(stateFilter)
+            : (item.name ?? '')
+                  .toLowerCase()
+                  .includes(stateFilter.toString().trim().toLowerCase()),
     )

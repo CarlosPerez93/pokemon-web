@@ -1,5 +1,7 @@
+import { ResponseFetch } from '@utils/api/api.util'
+
 export type useSearchT = {
-    data: any
-    stateFilter: any
+    data?: ResponseFetch
+    stateFilter: string
     key?: string
 }

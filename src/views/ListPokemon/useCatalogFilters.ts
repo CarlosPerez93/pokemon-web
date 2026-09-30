@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
 import { useSearch } from '../../hooks/useSearch'
-import { PokeList, ResponseFetch } from '../../utils/api/pokemon-list.types'
+import { ResponseFetch } from '../../utils/api/pokemon-list.types'
+import { matchesPokemonType, sortPokemon } from './catalog-sort.util'
 
 export const useCatalogFilters = (
     data: ResponseFetch | undefined,
@@ -17,13 +18,9 @@ export const useCatalogFilters = (
         useSearch({ data, stateFilter: searchTerm })?.filter(
             ({ name }) => !favoritesOnly || favorites.includes(name ?? ''),
         ) ?? []
-    const sorted = [...searchResults].sort((a, b) =>
-        sortBy === 'name'
-            ? (a.name ?? '').localeCompare(b.name ?? '')
-            : dexNumber(a) - dexNumber(b),
-    )
+    const sorted = sortPokemon(searchResults, sortBy)
     const visible = sorted.filter(item =>
-        matchesType(item, selectedType, loadedTypes),
+        matchesPokemonType(item, selectedType, loadedTypes),
     )
     const waitingForTypes =
         selectedType !== 'all' &&
@@ -51,14 +48,3 @@ export const useCatalogFilters = (
         resetFilters,
     }
 }
-
-const dexNumber = (pokemon: PokeList) =>
-    Number(pokemon.url.split('/').filter(Boolean).pop())
-const matchesType = (
-    pokemon: PokeList,
-    type: string,
-    loaded: Record<string, string[]>,
-) =>
-    type === 'all' ||
-    !loaded[pokemon.name ?? ''] ||
-    loaded[pokemon.name ?? ''].includes(type)

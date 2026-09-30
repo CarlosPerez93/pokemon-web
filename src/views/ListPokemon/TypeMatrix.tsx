@@ -2,6 +2,7 @@ import {
     POKEMON_TYPE_COLORS,
     POKEMON_TYPE_NAMES,
 } from '../../utils/constants/pokemon-type.constants'
+import { TypeOption } from './TypeOption'
 
 type TypeMatrixProps = {
     selected: string
@@ -36,31 +37,4 @@ export const TypeMatrix = ({ selected, onSelect }: TypeMatrixProps) => (
             ))}
         </div>
     </section>
-)
-
-const TypeOption = ({
-    name,
-    value,
-    color,
-    active,
-    onSelect,
-}: {
-    name: string
-    value: string
-    color?: string
-    active: boolean
-    onSelect: (value: string) => void
-}) => (
-    <button
-        className={`type-option${active ? ' is-active' : ''}`}
-        type='button'
-        aria-pressed={active}
-        onClick={() => onSelect(value)}
-    >
-        <span
-            className={`type-option__dot${value === 'all' ? ' type-option__dot--all' : ''}`}
-            style={color ? { backgroundColor: color } : undefined}
-        />
-        <span>{name}</span>
-    </button>
 )

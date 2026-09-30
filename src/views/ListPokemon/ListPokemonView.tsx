@@ -4,13 +4,12 @@ import api from '../../api'
 import { useGet } from '../../hooks/api/useGet'
 import { useFavorites } from '../../hooks/useFavorites'
 import { ResponseFetch } from '../../utils/api/pokemon-list.types'
-import { CatalogControls } from './CatalogControls'
+import { CatalogToolbar } from './CatalogToolbar'
 import { CatalogResults } from './CatalogResults'
-import { CatalogSearch } from './CatalogSearch'
 import { CatalogTitle } from './CatalogTitle'
-import { TypeMatrix } from './TypeMatrix'
 import { useCatalogFilters } from './useCatalogFilters'
 import { usePokemonTypeIndex } from './usePokemonTypeIndex'
+
 import './ListPokemon.css'
 
 export const ListPokemonView = () => {
@@ -23,23 +22,10 @@ export const ListPokemonView = () => {
     return (
         <main className='pokemon-page page-container'>
             <CatalogTitle data={request.data} />
-            <CatalogSearch
-                value={filters.searchTerm}
-                inputRef={searchRef}
-                onChange={filters.setSearchTerm}
-            />
-            <TypeMatrix
-                selected={filters.selectedType}
-                onSelect={filters.setSelectedType}
-            />
-            <CatalogControls
-                sortBy={filters.sortBy}
-                viewMode={filters.viewMode}
-                favoritesOnly={filters.favoritesOnly}
-                favoriteCount={favorites.length}
-                onSort={filters.setSortBy}
-                onView={filters.setViewMode}
-                onFavorites={() => filters.setFavoritesOnly(value => !value)}
+            <CatalogToolbar
+                filters={filters}
+                favorites={favorites}
+                searchRef={searchRef}
             />
             <div className='catalog-layout'>
                 <CatalogResults

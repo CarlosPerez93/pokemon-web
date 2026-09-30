@@ -1,7 +1,6 @@
-import { ArrowRightOutlined, HeartFilled, HeartOutlined } from '@ant-design/icons'
-import { Link } from 'react-router-dom'
-
 import { DossierRecordProps } from './dossier.types'
+import { DossierActions } from './DossierActions'
+import { DossierMorphometrics } from './DossierMorphometrics'
 
 export const DossierIdentity = ({
     pokemon,
@@ -36,56 +35,16 @@ export const DossierIdentity = ({
                     </span>
                 ))}
             </div>
-            <DossierMorphometrics {...{ pokemon }} />
+            <DossierMorphometrics pokemon={pokemon} />
             <p className='dossier-note'>
                 {note ?? 'Registered biological field specimen.'}
                 {habitat && ` Habitat: ${habitat}.`}
             </p>
-            <DossierActions {...{ pokemon, isFavorite, onToggleFavorite }} />
+            <DossierActions
+                name={pokemon.name}
+                isFavorite={isFavorite}
+                onToggleFavorite={onToggleFavorite}
+            />
         </div>
     )
 }
-
-const DossierMorphometrics = ({ pokemon }: Pick<DossierRecordProps, 'pokemon'>) => (
-    <div className='dossier-morphometrics'>
-        <div>
-            <span>HEIGHT</span>
-            <strong>
-                {(pokemon.height / 10).toFixed(1)} <small>m</small>
-            </strong>
-        </div>
-        <div>
-            <span>WEIGHT</span>
-            <strong>
-                {(pokemon.weight / 10).toFixed(1)} <small>kg</small>
-            </strong>
-        </div>
-        <div>
-            <span>BASE STAT</span>
-            <strong>
-                {pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0)}
-            </strong>
-        </div>
-    </div>
-)
-
-const DossierActions = ({
-    pokemon,
-    isFavorite,
-    onToggleFavorite,
-}: DossierRecordProps) => (
-    <div className='dossier-actions'>
-        <Link className='dossier-primary-action' to='/list-pokemon'>
-            Explore Pokédex <ArrowRightOutlined />
-        </Link>
-        <button
-            className={`dossier-favorite${isFavorite ? ' is-active' : ''}`}
-            type='button'
-            aria-pressed={isFavorite}
-            onClick={() => onToggleFavorite(pokemon.name)}
-        >
-            {isFavorite ? <HeartFilled /> : <HeartOutlined />}
-            {isFavorite ? 'Saved to archive' : 'Save specimen'}
-        </button>
-    </div>
-)

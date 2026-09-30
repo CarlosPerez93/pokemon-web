@@ -1,14 +1,9 @@
-import {
-    PolarAngleAxis,
-    PolarGrid,
-    PolarRadiusAxis,
-    Radar,
-    RadarChart,
-    Tooltip,
-} from 'recharts'
+import { RadarChart, Tooltip } from 'recharts'
 
 import { useElementWidth } from '../../hooks/useElementWidth'
 import { PokemonStatSlot } from '../../utils/api/pokemon-record.types'
+import { CombatRadarAxes } from './CombatRadarAxes'
+import { CombatRadarSeries } from './CombatRadarSeries'
 import './CombatRadar.css'
 
 type CombatRadarProps = {
@@ -35,24 +30,8 @@ export const CombatRadar = ({ stats }: CombatRadarProps) => {
                     data={data}
                     outerRadius='55%'
                 >
-                    <PolarGrid stroke='var(--color-border-strong)' />
-                    <PolarAngleAxis
-                        dataKey='axis'
-                        tick={{ fill: 'var(--color-muted)', fontSize: 11 }}
-                    />
-                    <PolarRadiusAxis
-                        angle={90}
-                        domain={[0, 150]}
-                        tickCount={4}
-                        tick={{ fill: 'var(--color-muted)', fontSize: 9 }}
-                    />
-                    <Radar
-                        dataKey='value'
-                        name='Base stat'
-                        stroke='#b80035'
-                        fill='#b80035'
-                        fillOpacity={0.18}
-                    />
+                    <CombatRadarAxes />
+                    <CombatRadarSeries />
                     <Tooltip
                         allowEscapeViewBox={{ x: false, y: false }}
                         formatter={value => [value, 'Base stat']}

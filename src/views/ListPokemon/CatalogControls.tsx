@@ -1,9 +1,5 @@
-import {
-    AppstoreOutlined,
-    BarsOutlined,
-    HeartFilled,
-    HeartOutlined,
-} from '@ant-design/icons'
+import { HeartFilled, HeartOutlined } from '@ant-design/icons'
+import { CatalogViewMode } from './CatalogViewMode'
 
 type CatalogControlsProps = {
     sortBy: 'number' | 'name'
@@ -41,32 +37,6 @@ export const CatalogControls = (props: CatalogControlsProps) => (
             <span>Favorites</span>
             <strong>{props.favoriteCount}</strong>
         </button>
-        <ViewMode viewMode={props.viewMode} onView={props.onView} />
+        <CatalogViewMode mode={props.viewMode} onSelect={props.onView} />
     </section>
-)
-
-const ViewMode = ({
-    viewMode,
-    onView,
-}: Pick<CatalogControlsProps, 'viewMode' | 'onView'>) => (
-    <div className='view-mode' role='group' aria-label='Catalog layout'>
-        <button
-            className={viewMode === 'grid' ? 'is-active' : ''}
-            type='button'
-            aria-label='Grid view'
-            aria-pressed={viewMode === 'grid'}
-            onClick={() => onView('grid')}
-        >
-            <AppstoreOutlined />
-        </button>
-        <button
-            className={viewMode === 'list' ? 'is-active' : ''}
-            type='button'
-            aria-label='List view'
-            aria-pressed={viewMode === 'list'}
-            onClick={() => onView('list')}
-        >
-            <BarsOutlined />
-        </button>
-    </div>
 )

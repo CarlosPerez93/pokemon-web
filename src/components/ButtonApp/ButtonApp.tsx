@@ -1,13 +1,13 @@
-import { ComponentProps } from 'react'
-
-import './ButtonApp.css'
 import { Button } from 'antd'
 
-type PropsBtn = ComponentProps<'button'>
+import { PropsBtn } from './Button.type'
 
-export const ButtonApp = ({ children, onClick, style }: PropsBtn) => {
+import './ButtonApp.css'
+
+export const ButtonApp = ({ className, children, onClick }: PropsBtn) => {
+    const styles = className ? className : 'button-app'
     return (
-        <Button onClick={onClick} style={style} className='button-app'>
+        <Button onClick={onClick} className={styles}>
             {children}
         </Button>
     )

@@ -1,3 +1,9 @@
+import { Link } from 'react-router-dom'
+
+import { ButtonApp } from '@components/ButtonApp/ButtonApp'
+
+import { ROUTES_PUBLIC as RP } from '@utils/constants/routes.constants'
+
 import './Error404.css'
 
 export const Error404 = () => {
@@ -17,6 +23,9 @@ export const Error404 = () => {
                 </h1>
 
                 <span className='error-404__label'>ERROR</span>
+                <ButtonApp className='error-404__button'>
+                    <Link to={RP.home}>Home</Link>
+                </ButtonApp>
             </div>
         </main>
     )

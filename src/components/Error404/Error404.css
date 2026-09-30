@@ -12,6 +12,7 @@
 
 .error-404__scene {
     position: relative;
+    margin-top: 20px;
     width: min(92vw, 42rem);
     aspect-ratio: 1.15;
     display: flex;
@@ -163,6 +164,21 @@
         30% 35%
     );
     transform: rotate(-18deg);
+}
+
+.error-404__button {
+    z-index: 1;
+    width: 100px;
+    position: absolute;
+    background-color: #f2c52d;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 600;
+    bottom: 300px;
+
+    &:hover {
+        background-color: #f28b24 !important;
+    }
 }
 
 @media (max-width: 38rem) {

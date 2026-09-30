@@ -1,1 +1,1 @@
-export { FooterApp, default } from './FooterApp'
+export { FooterAppView as FooterApp, default } from './FooterAppView'

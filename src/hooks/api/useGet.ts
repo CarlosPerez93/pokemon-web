@@ -1,6 +1,6 @@
 import { useCallback, useState, useEffect } from 'react'
 
-import { ResponseGeneric } from '@utils/api/api.util'
+import { ResponseGeneric } from '@utils/api/response-generic.type'
 import { ResponseState, QueryType, Func } from './api.types'
 import { errorNotification } from '@utils/notifications/notification.action'
 

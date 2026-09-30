@@ -1,5 +1,5 @@
-import { ResponseGeneric } from '@utils/api/api.util'
-import { ApiResponseError, ApiResponseSuccess } from '@utils/types/response.type'
+import { ResponseGeneric } from '@utils/api/response-generic.type'
+import { ApiResponseError, ApiResponseSuccess } from '@utils/types/api-response.types'
 
 export type ResponseState<T> = {
     loading: boolean

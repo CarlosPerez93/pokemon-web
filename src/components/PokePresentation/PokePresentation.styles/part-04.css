@@ -1,0 +1,44 @@
+.type-badge--bug {
+    --type-color: #65a30d;
+}
+
+.type-badge--rock {
+    --type-color: #78716c;
+}
+
+.type-badge--ghost {
+    --type-color: #7c3aed;
+}
+
+.type-badge--dragon {
+    --type-color: #4f46e5;
+}
+
+.type-badge--dark {
+    --type-color: #475569;
+}
+
+.type-badge--steel {
+    --type-color: #64748b;
+}
+
+.type-badge--fairy {
+    --type-color: #ec4899;
+}
+
+.feature-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.feature-facts div {
+    display: grid;
+    gap: 4px;
+}
+
+.feature-facts dt {
+    color: var(--color-muted);
+    font-size: 10px;
+}

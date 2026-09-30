@@ -1,1 +1,1 @@
-export { Home, default } from './Home'
+export { HomeView as Home, default } from './HomeView'

@@ -1,0 +1,19 @@
+.home-intro p,
+.expedition-banner p {
+    font-size: 15px;
+}
+
+.priority-heading h2,
+.expedition-banner h2 {
+    font-size: 20px;
+}
+
+.priority-heading__actions,
+.home-telemetry span,
+.home-telemetry i {
+    font-size: 10px;
+}
+
+.home-telemetry strong {
+    font-size: 18px;
+}

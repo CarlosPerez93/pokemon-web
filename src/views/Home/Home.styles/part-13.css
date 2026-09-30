@@ -1,0 +1,54 @@
+@media (max-width: 640px) {
+    .home-page {
+        padding-top: 10px;
+    }
+
+    .home-breadcrumb {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 5px 0;
+    }
+
+    .home-live-status {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .priority-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .priority-heading__actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .priority-grid {
+        gap: 8px;
+    }
+
+    .priority-grid .pokemon-card {
+        min-height: 300px;
+    }
+
+    .expedition-banner {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .expedition-banner__icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .expedition-button {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+    }
+
+    .home-telemetry {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

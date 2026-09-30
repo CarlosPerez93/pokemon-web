@@ -1,0 +1,24 @@
+@media (max-width: 1050px) {
+    .feature-slide {
+        grid-template-columns: minmax(230px, 1fr) minmax(230px, 1fr);
+        padding-bottom: 46px;
+    }
+
+    .feature-slide__stats {
+        grid-column: 1 / -1;
+        grid-template-columns: auto repeat(3, minmax(100px, 1fr));
+        align-items: center;
+        gap: 14px;
+        padding: 16px 0 0;
+        border-top: 1px solid var(--color-border);
+        border-left: 0;
+    }
+
+    .feature-slide__stats .section-kicker {
+        grid-row: 1;
+    }
+
+    .metric-row {
+        grid-template-columns: 1fr 36px 24px;
+    }
+}

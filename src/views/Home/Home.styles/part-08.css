@@ -1,0 +1,52 @@
+@media (max-width: 480px) {
+    .eyebrow-line {
+        flex-wrap: wrap;
+        row-gap: 6px;
+        font-size: 9px;
+    }
+
+    .home-intro h1 {
+        font-size: 32px;
+    }
+
+    .home-intro p {
+        font-size: 13px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-summary {
+        gap: 16px;
+    }
+
+    .spotlight-skeleton {
+        min-height: 340px;
+        padding: 20px;
+    }
+}
+
+.home-page {
+    padding-top: 18px;
+}
+
+.home-breadcrumb {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-muted);
+    font: 700 8px/1.5 var(--font-display);
+    letter-spacing: 0.06em;
+}
+
+.home-live-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: var(--color-text);
+}

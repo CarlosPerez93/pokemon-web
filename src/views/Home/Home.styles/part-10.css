@@ -1,0 +1,47 @@
+.priority-grid .pokemon-card {
+    min-height: 310px;
+}
+
+.priority-grid .pokemon-card__art {
+    height: 120px;
+}
+
+.priority-grid .pokemon-card__stats {
+    grid-template-columns: 1fr;
+}
+
+.expedition-banner {
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+    padding: 16px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: linear-gradient(
+        100deg,
+        var(--color-surface-inset),
+        var(--color-surface)
+    );
+}
+
+.expedition-banner__icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid
+        color-mix(in srgb, var(--color-secondary) 20%, var(--color-border));
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--color-secondary) 8%, var(--color-surface));
+    color: var(--color-secondary);
+    font-size: 18px;
+}
+
+.expedition-banner h2 {
+    margin-top: 3px;
+    color: var(--color-text);
+    font: 600 14px/1.35 var(--font-display);
+}

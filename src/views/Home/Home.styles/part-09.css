@@ -1,0 +1,47 @@
+.home-live-status i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #16a34a;
+}
+
+.priority-section {
+    margin-top: 26px;
+}
+
+.priority-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.priority-heading h2 {
+    margin-top: 4px;
+    color: var(--color-text);
+    font: 600 19px/1.3 var(--font-display);
+}
+
+.priority-heading__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--color-muted);
+    font-size: 9px;
+}
+
+.priority-heading__actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.priority-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}

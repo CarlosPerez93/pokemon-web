@@ -1,0 +1,45 @@
+.home-intro h1 span {
+    color: var(--color-primary);
+}
+
+.home-intro p {
+    max-width: 560px;
+    margin-top: 17px;
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    margin-top: 5px;
+    font: 600 22px/1.3 var(--font-display);
+}
+
+.text-link,
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.feature-link:hover {
+    color: var(--color-primary-hover);
+}
+
+.spotlight-carousel .slick-list,
+.spotlight-carousel .slick-track {
+    display: flex;
+}

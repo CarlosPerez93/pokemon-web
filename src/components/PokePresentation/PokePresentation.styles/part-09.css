@@ -1,0 +1,35 @@
+@media (max-width: 620px) {
+    .feature-slide {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px 20px 44px;
+    }
+
+    .feature-slide__copy h1 {
+        margin-top: 14px;
+        font-size: 34px;
+    }
+
+    .feature-slide__art {
+        min-height: 220px;
+        grid-row: 1;
+    }
+
+    .feature-slide__art img {
+        max-height: 220px;
+    }
+
+    .feature-slide__stats {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-slide__stats .section-kicker {
+        grid-column: 1 / -1;
+    }
+
+    .feature-skeleton {
+        min-height: 540px;
+    }
+}

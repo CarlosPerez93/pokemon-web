@@ -1,0 +1,47 @@
+.home-telemetry > div {
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    column-gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+}
+
+.home-telemetry strong {
+    grid-row: span 2;
+    align-self: center;
+    color: var(--color-primary);
+    font: 700 16px var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+
+.home-telemetry span,
+.home-telemetry i {
+    color: var(--color-muted);
+    font: 700 7px/1.4 var(--font-display);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.home-telemetry i {
+    color: #15803d;
+    font-style: normal;
+}
+
+@media (max-width: 1000px) {
+    .priority-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .expedition-banner {
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+    }
+
+    .expedition-banner .expedition-button--primary {
+        grid-column: 2 / -1;
+        justify-self: end;
+    }
+}

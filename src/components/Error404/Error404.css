@@ -1,0 +1,188 @@
+.error-404 {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #182c35;
+}
+
+.error-404__scene {
+    position: relative;
+    width: min(92vw, 42rem);
+    aspect-ratio: 1.15;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.error-404__number {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: clamp(9rem, 28vw, 19rem);
+    line-height: 0.76;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    color: #1c3038;
+    z-index: 1;
+}
+
+.error-404__pokemon {
+    position: relative;
+    z-index: 2;
+    width: min(63%, 22rem);
+    max-height: 82%;
+    object-fit: contain;
+    transform: translateY(-14%);
+    filter: drop-shadow(0 1rem 0.7rem rgb(24 44 53 / 18%));
+}
+
+.error-404__label {
+    position: absolute;
+    z-index: 3;
+    right: 10%;
+    bottom: 7%;
+    padding: 0.15em 0.38em;
+    border: 0.16em solid #1570c5;
+    background: #fff;
+    color: #1570c5;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    transform: rotate(-3deg);
+}
+
+.error-404__pokemon {
+    position: absolute;
+    z-index: 0;
+    width: 5rem;
+    height: 4.5rem;
+    border-radius: 48% 48% 45% 45%;
+    background:
+        radial-gradient(circle at 30% 54%, #e52f39 0 0.35rem, transparent 0.4rem),
+        radial-gradient(circle at 70% 54%, #e52f39 0 0.35rem, transparent 0.4rem),
+        radial-gradient(
+            circle at 37% 40%,
+            #182c35 0 0.28rem,
+            #fff 0.3rem 0.48rem,
+            transparent 0.5rem
+        ),
+        radial-gradient(
+            circle at 63% 40%,
+            #182c35 0 0.28rem,
+            #fff 0.3rem 0.48rem,
+            transparent 0.5rem
+        ),
+        #f2c52d;
+    box-shadow: 0 0.5rem 0.7rem rgb(24 44 53 / 12%);
+    transform: rotate(-12deg);
+}
+
+.error-404__pokemon::before,
+.error-404__pokemon::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    width: 1.5rem;
+    height: 3rem;
+    top: -1.7rem;
+    background: #f2c52d;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.error-404__pokemon::before {
+    left: 0.2rem;
+    transform: rotate(-18deg);
+}
+
+.error-404__pokemon::after {
+    right: 0.2rem;
+    transform: rotate(18deg);
+}
+
+.error-404__pokemon--left {
+    left: 2%;
+    top: 25%;
+}
+
+.error-404__pokemon--charmander {
+    right: 1%;
+    top: 13%;
+    transform: scale(1.2) rotate(12deg);
+    border-radius: 45% 45% 42% 42%;
+    background:
+        radial-gradient(ellipse at 50% 78%, #f5d6a1 0 1.25rem, transparent 1.3rem),
+        radial-gradient(
+            circle at 35% 40%,
+            #2488d8 0 0.28rem,
+            #182c35 0.3rem 0.48rem,
+            #fff 0.5rem 0.62rem,
+            transparent 0.64rem
+        ),
+        radial-gradient(
+            circle at 65% 40%,
+            #2488d8 0 0.28rem,
+            #182c35 0.3rem 0.48rem,
+            #fff 0.5rem 0.62rem,
+            transparent 0.64rem
+        ),
+        #e86527;
+}
+
+.error-404__pokemon--charmander::before {
+    width: 2.8rem;
+    height: 1.2rem;
+    left: -2.1rem;
+    top: 2.8rem;
+    border-radius: 80% 20% 20% 80%;
+    background: #e86527;
+    clip-path: none;
+    transform: rotate(-20deg);
+}
+
+.error-404__pokemon--charmander::after {
+    width: 1.35rem;
+    height: 1.8rem;
+    left: -3.15rem;
+    top: 1.8rem;
+    border-radius: 50% 50% 50% 0;
+    background: linear-gradient(135deg, #ffd447 15%, #f28b24 55%, #e33b2f 56%);
+    clip-path: polygon(
+        50% 0,
+        78% 38%,
+        100% 50%,
+        65% 62%,
+        50% 100%,
+        32% 65%,
+        0 55%,
+        30% 35%
+    );
+    transform: rotate(-18deg);
+}
+
+@media (max-width: 38rem) {
+    .error-404 {
+        min-height: 78vh;
+        padding: 1rem;
+    }
+
+    .error-404__scene {
+        width: 100%;
+        aspect-ratio: 0.9;
+    }
+
+    .error-404__pokemon {
+        width: 75%;
+        transform: translateY(-12%);
+    }
+
+    .error-404__label {
+        right: 4%;
+        bottom: 12%;
+    }
+}

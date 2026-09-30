@@ -5,7 +5,11 @@ export const usePokemonTypeIndex = () => {
     const onTypesLoaded = useCallback((name: string, types: string[]) => {
         setLoadedTypes(current => {
             const previous = current[name]
-            if (previous?.length === types.length && previous.every((type, index) => type === types[index])) return current
+            if (
+                previous?.length === types.length &&
+                previous.every((type, index) => type === types[index])
+            )
+                return current
             return { ...current, [name]: types }
         })
     }, [])

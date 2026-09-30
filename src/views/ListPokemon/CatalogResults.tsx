@@ -19,7 +19,21 @@ type CatalogResultsProps = {
 
 export const CatalogResults = (props: CatalogResultsProps) => (
     <section className='catalog-results' aria-label='Pokémon results'>
-        <div className='catalog-results__heading'><span className='section-kicker'>SPECIMEN RECORDS</span><span>{props.items.length} records</span></div>
-        {props.error ? <CatalogErrorState onRetry={props.onRetry} /> : props.loading ? <PokemonLoadingGrid /> : props.items.length ? <PokemonResultsGrid {...props} /> : <CatalogEmptyState waitingForTypes={props.waitingForTypes} onReset={props.onReset} />}
+        <div className='catalog-results__heading'>
+            <span className='section-kicker'>SPECIMEN RECORDS</span>
+            <span>{props.items.length} records</span>
+        </div>
+        {props.error ? (
+            <CatalogErrorState onRetry={props.onRetry} />
+        ) : props.loading ? (
+            <PokemonLoadingGrid />
+        ) : props.items.length ? (
+            <PokemonResultsGrid {...props} />
+        ) : (
+            <CatalogEmptyState
+                waitingForTypes={props.waitingForTypes}
+                onReset={props.onReset}
+            />
+        )}
     </section>
 )

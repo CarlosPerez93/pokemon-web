@@ -23,11 +23,37 @@ export const ListPokemonView = () => {
     return (
         <main className='pokemon-page page-container'>
             <CatalogTitle data={request.data} />
-            <CatalogSearch value={filters.searchTerm} inputRef={searchRef} onChange={filters.setSearchTerm} />
-            <TypeMatrix selected={filters.selectedType} onSelect={filters.setSelectedType} />
-            <CatalogControls sortBy={filters.sortBy} viewMode={filters.viewMode} favoritesOnly={filters.favoritesOnly} favoriteCount={favorites.length} onSort={filters.setSortBy} onView={filters.setViewMode} onFavorites={() => filters.setFavoritesOnly(value => !value)} />
+            <CatalogSearch
+                value={filters.searchTerm}
+                inputRef={searchRef}
+                onChange={filters.setSearchTerm}
+            />
+            <TypeMatrix
+                selected={filters.selectedType}
+                onSelect={filters.setSelectedType}
+            />
+            <CatalogControls
+                sortBy={filters.sortBy}
+                viewMode={filters.viewMode}
+                favoritesOnly={filters.favoritesOnly}
+                favoriteCount={favorites.length}
+                onSort={filters.setSortBy}
+                onView={filters.setViewMode}
+                onFavorites={() => filters.setFavoritesOnly(value => !value)}
+            />
             <div className='catalog-layout'>
-                <CatalogResults items={filters.visible} loading={request.loading} error={request.error} waitingForTypes={filters.waitingForTypes} favorites={favorites} viewMode={filters.viewMode} onRetry={() => request.refetch()} onReset={filters.resetFilters} onToggleFavorite={toggleFavorite} onTypesLoaded={catalog.onTypesLoaded} />
+                <CatalogResults
+                    items={filters.visible}
+                    loading={request.loading}
+                    error={request.error}
+                    waitingForTypes={filters.waitingForTypes}
+                    favorites={favorites}
+                    viewMode={filters.viewMode}
+                    onRetry={() => request.refetch()}
+                    onReset={filters.resetFilters}
+                    onToggleFavorite={toggleFavorite}
+                    onTypesLoaded={catalog.onTypesLoaded}
+                />
             </div>
         </main>
     )

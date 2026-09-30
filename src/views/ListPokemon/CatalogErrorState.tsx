@@ -8,6 +8,8 @@ export const CatalogErrorState = ({ onRetry }: CatalogErrorStateProps) => (
     <div className='catalog-state' role='alert'>
         <strong>Unable to retrieve the field index.</strong>
         <span>Check the connection and retry.</span>
-        <button type='button' onClick={onRetry}><ReloadOutlined /> Retry</button>
+        <button type='button' onClick={onRetry}>
+            <ReloadOutlined /> Retry
+        </button>
     </div>
 )

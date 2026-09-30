@@ -1,15 +1,41 @@
 export const POKEMON_COLORS = {
-    BLACK: 1, BLUE: 2, BROWN: 3, GRAY: 4, GREEN: 5,
-    PINK: 6, PURPLE: 7, RED: 8, WHITE: 9, YELLOW: 10,
+    BLACK: 1,
+    BLUE: 2,
+    BROWN: 3,
+    GRAY: 4,
+    GREEN: 5,
+    PINK: 6,
+    PURPLE: 7,
+    RED: 8,
+    WHITE: 9,
+    YELLOW: 10,
 } as const
 
 export const POKEMON_HABITATS = {
-    CAVE: 1, FOREST: 2, GRASSLAND: 3, MONTAIN: 4, RARE: 5,
-    ROUGH_TERRAIN: 6, SEA: 7, URBAN: 8, WATERS_EDGE: 9,
+    CAVE: 1,
+    FOREST: 2,
+    GRASSLAND: 3,
+    MONTAIN: 4,
+    RARE: 5,
+    ROUGH_TERRAIN: 6,
+    SEA: 7,
+    URBAN: 8,
+    WATERS_EDGE: 9,
 } as const
 
 export const POKEMON_SHAPES = {
-    BALL: 1, SQUIGGLE: 2, FISH: 3, ARMS: 4, BLOB: 5,
-    UPRIGHT: 6, LEGS: 7, QUADRUPED: 8, WINGS: 9,
-    TENTACLES: 10, HEADS: 11, HUMANOID: 12, BUG_WINGS: 13, ARMOR: 14,
+    BALL: 1,
+    SQUIGGLE: 2,
+    FISH: 3,
+    ARMS: 4,
+    BLOB: 5,
+    UPRIGHT: 6,
+    LEGS: 7,
+    QUADRUPED: 8,
+    WINGS: 9,
+    TENTACLES: 10,
+    HEADS: 11,
+    HUMANOID: 12,
+    BUG_WINGS: 13,
+    ARMOR: 14,
 } as const

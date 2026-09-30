@@ -36,7 +36,10 @@ export interface ResponsePoke<T = unknown> {
     past_abilities: T
     past_types: T
     species: T
-    sprites: { front_default?: string | null; other?: Record<string, { front_default?: string | null }> }
+    sprites: {
+        front_default?: string | null
+        other?: Record<string, { front_default?: string | null }>
+    }
     stats: PokemonStatSlot[]
     types: PokemonTypeSlot[]
     weight: number

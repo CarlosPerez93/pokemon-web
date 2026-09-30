@@ -36,8 +36,4 @@ const errorNotification = (
     })
 }
 
-export {
-    successNotification,
-    errorNotification,
-    infoNotification,
-}
+export { successNotification, errorNotification, infoNotification }

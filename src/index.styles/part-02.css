@@ -1,0 +1,45 @@
+button,
+input {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgb(184 0 53 / 38%);
+    outline-offset: 3px;
+}
+
+[data-theme='dark'] {
+    color-scheme: dark;
+    --color-canvas: #0f172a;
+    --color-surface: #1e293b;
+    --color-surface-inset: #0b1120;
+    --color-text: #f8fafc;
+    --color-muted: #94a3b8;
+    --color-border: #334155;
+    --color-border-strong: #475569;
+    --shadow-card: 0 1px 3px rgb(0 0 0 / 25%);
+    --shadow-raised: 0 12px 24px -4px rgb(0 0 0 / 40%);
+}
+
+::selection {
+    color: #fff;
+    background: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,33 @@
+body {
+    font-size: 16px;
+}
+
+.section-kicker,
+.eyebrow-line,
+.specimen-index,
+.catalog-count span,
+.catalog-results__heading,
+.home-breadcrumb,
+.dossier-number,
+.catalog-region {
+    font-size: 12px;
+}
+
+.brand__copy small,
+.system-status,
+.summary-item__label {
+    font-size: 10px;
+}
+
+.feature-slide__description,
+.feature-facts dt,
+.summary-item__note {
+    font-size: 14px;
+}
+
+.feature-facts dd,
+.feature-link,
+.text-link,
+.summary-cta {
+    font-size: 14px;
+}

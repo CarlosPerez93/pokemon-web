@@ -1,0 +1,32 @@
+.dossier-breadcrumb,
+.dossier-species,
+.dossier-morphometrics span,
+.dossier-primary-action,
+.dossier-favorite {
+    font-size: 12px;
+}
+
+.dossier-breadcrumb__sector,
+.dossier-artwork__index,
+.dossier-artwork__caption,
+.dossier-stat,
+.dossier-stat strong,
+.dossier-data-strip span,
+.dossier-record-nav {
+    font-size: 10px;
+}
+
+.dossier-note,
+.dossier-state p {
+    font-size: 14px;
+}
+
+.footer-app__about p,
+.footer-app__group a,
+.footer-app__group span {
+    font-size: 12px;
+}
+
+.footer-app__bottom {
+    font-size: 9px;
+}

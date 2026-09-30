@@ -1,0 +1,51 @@
+:root {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #131b2e;
+    background: #faf8ff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --color-primary: #b80035;
+    --color-primary-hover: #920028;
+    --color-secondary: #4b41e1;
+    --color-tertiary: #f59e0b;
+    --color-success: #15803d;
+    --color-warning: #b45309;
+    --color-danger: #b91c1c;
+    --color-info: #0369a1;
+    --color-canvas: #faf8ff;
+    --color-surface: #ffffff;
+    --color-surface-inset: #f2f3ff;
+    --color-text: #131b2e;
+    --color-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-border-strong: #cbd5e1;
+    --shadow-card: 0 1px 3px rgb(15 23 42 / 4%), 0 1px 2px rgb(15 23 42 / 2%);
+    --shadow-raised:
+        0 10px 20px -3px rgb(15 23 42 / 6%), 0 4px 6px -2px rgb(15 23 42 / 3%);
+    --radius-control: 8px;
+    --radius-card: 16px;
+    --radius-panel: 24px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--color-canvas);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}

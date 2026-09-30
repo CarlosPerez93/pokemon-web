@@ -1,0 +1,43 @@
+.error-404 {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #182c35;
+}
+
+.error-404__scene {
+    position: relative;
+    margin-top: 20px;
+    width: min(92vw, 42rem);
+    aspect-ratio: 1.15;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.error-404__number {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: clamp(9rem, 28vw, 19rem);
+    line-height: 0.76;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    color: #1c3038;
+    z-index: 1;
+}
+
+.error-404__pokemon {
+    position: relative;
+    z-index: 2;
+    width: min(63%, 22rem);
+    max-height: 82%;
+    object-fit: contain;
+    transform: translateY(-14%);
+    filter: drop-shadow(0 1rem 0.7rem rgb(24 44 53 / 18%));
+}

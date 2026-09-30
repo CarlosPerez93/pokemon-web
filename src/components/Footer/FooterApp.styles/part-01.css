@@ -1,0 +1,43 @@
+.footer-app {
+    width: min(100% - 64px, 1440px);
+    margin: 30px auto 0;
+    padding: 20px 0 12px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+.footer-app__columns {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(170px, 1fr));
+    gap: 48px;
+    padding-bottom: 22px;
+}
+
+.footer-app__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    font: 700 10px var(--font-display);
+    letter-spacing: 0.03em;
+}
+
+.footer-app__brand svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+}
+
+.footer-app__about p {
+    max-width: 410px;
+    margin-top: 9px;
+    color: var(--color-muted);
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+.footer-app__social {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}

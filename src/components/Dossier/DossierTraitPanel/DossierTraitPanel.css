@@ -1,0 +1,27 @@
+.dossier-trait-panel {
+    display: grid;
+    align-content: start;
+    gap: 9px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+.dossier-trait-panel__trait {
+    display: grid;
+    gap: 4px;
+    padding: 9px;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-inset);
+}
+.dossier-trait-panel__trait strong {
+    color: var(--color-text);
+    font: 700 13px var(--font-display);
+    text-transform: capitalize;
+}
+.dossier-trait-panel__trait span {
+    color: var(--color-muted);
+    font-size: 10px;
+    line-height: 1.45;
+}

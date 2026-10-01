@@ -1,1 +1,0 @@
-export { DossierClassification } from './DossierClassification'

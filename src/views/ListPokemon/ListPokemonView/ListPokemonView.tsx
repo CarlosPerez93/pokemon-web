@@ -1,19 +1,17 @@
 import { useRef } from 'react'
 
-import api from '../../../api'
-import { useGet } from '../../../hooks/api/useGet'
 import { useFavorites } from '../../../hooks/useFavorites'
-import { ResponseFetch } from '../../../utils/api/pokemon-list.types'
 import { CatalogToolbar } from '../CatalogToolbar'
 import { CatalogResults } from '../CatalogResults'
 import { CatalogTitle } from '../CatalogTitle'
 import { useCatalogFilters } from '../../../hooks/useCatalogFilters'
 import { usePokemonTypeIndex } from '../../../hooks/usePokemonTypeIndex'
+import { usePokemonCatalog } from '../../../hooks/usePokemonCatalog'
 
 import './ListPokemonView.css'
 
 export const ListPokemonView = () => {
-    const request = useGet<ResponseFetch>({ functionFetch: api.pokemon.pokemonList })
+    const request = usePokemonCatalog()
     const catalog = usePokemonTypeIndex()
     const { favorites, toggleFavorite } = useFavorites()
     const filters = useCatalogFilters(request.data, favorites, catalog.loadedTypes)
@@ -35,6 +33,9 @@ export const ListPokemonView = () => {
                     waitingForTypes={filters.waitingForTypes}
                     favorites={favorites}
                     viewMode={filters.viewMode}
+                    hasMore={request.hasMore}
+                    loadingMore={request.loadingMore}
+                    onLoadMore={request.loadMore}
                     onRetry={() => request.refetch()}
                     onReset={filters.resetFilters}
                     onToggleFavorite={toggleFavorite}

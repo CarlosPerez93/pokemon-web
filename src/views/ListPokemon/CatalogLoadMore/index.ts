@@ -1,0 +1,1 @@
+export { CatalogLoadMore } from './CatalogLoadMore'

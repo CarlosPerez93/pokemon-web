@@ -1,6 +1,7 @@
 import { PokeList } from '../../../utils/api/pokemon-list.types'
 import { CatalogEmptyState } from '../CatalogEmptyState'
 import { CatalogErrorState } from '../CatalogErrorState'
+import { CatalogLoadMore } from '../CatalogLoadMore'
 import { PokemonLoadingGrid } from '../PokemonLoadingGrid'
 import { PokemonResultsGrid } from '../PokemonResultsGrid'
 
@@ -14,6 +15,9 @@ type CatalogResultsProps = {
     waitingForTypes: boolean
     favorites: string[]
     viewMode: 'grid' | 'list'
+    hasMore: boolean
+    loadingMore: boolean
+    onLoadMore: () => void
     onRetry: () => void
     onReset: () => void
     onToggleFavorite: (name: string) => void
@@ -31,7 +35,14 @@ export const CatalogResults = (props: CatalogResultsProps) => (
         ) : props.loading ? (
             <PokemonLoadingGrid />
         ) : props.items.length ? (
-            <PokemonResultsGrid {...props} />
+            <>
+                <PokemonResultsGrid {...props} />
+                <CatalogLoadMore
+                    hasMore={props.hasMore}
+                    loadingMore={props.loadingMore}
+                    onLoadMore={props.onLoadMore}
+                />
+            </>
         ) : (
             <CatalogEmptyState
                 waitingForTypes={props.waitingForTypes}

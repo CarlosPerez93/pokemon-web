@@ -1,0 +1,9 @@
+.catalog-load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.catalog-load-more__action {
+    min-width: 220px;
+}

@@ -27,7 +27,7 @@ export const CatalogControls = (props: CatalogControlsProps) => (
                 <option value='name'>Name A-Z</option>
             </select>
         </label>
-        <span className='catalog-region'>REGION: KANTO</span>
+        <span className='catalog-region'>REGION: NATIONAL</span>
         <span className='catalog-control-row__spacer' />
         <button
             className={`favorites-filter${props.favoritesOnly ? ' is-active' : ''}`}

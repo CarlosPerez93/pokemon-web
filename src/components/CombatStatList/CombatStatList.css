@@ -32,7 +32,25 @@
     height: 100%;
     display: block;
     border-radius: inherit;
-    background: var(--type-color);
+    background: var(--type-color, var(--color-primary));
+}
+.dossier-stat:nth-child(1) .dossier-stat__track span {
+    background: #10b981;
+}
+.dossier-stat:nth-child(2) .dossier-stat__track span {
+    background: #f97316;
+}
+.dossier-stat:nth-child(3) .dossier-stat__track span {
+    background: #d97706;
+}
+.dossier-stat:nth-child(4) .dossier-stat__track span {
+    background: #be0037;
+}
+.dossier-stat:nth-child(5) .dossier-stat__track span {
+    background: #ec4899;
+}
+.dossier-stat:nth-child(6) .dossier-stat__track span {
+    background: #facc15;
 }
 @media (max-width: 960px) {
     .dossier-stat-list {

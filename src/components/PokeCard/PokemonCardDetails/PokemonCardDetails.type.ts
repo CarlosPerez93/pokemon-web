@@ -1,7 +1,4 @@
-import {
-    PokemonStatSlot,
-    PokemonTypeSlot,
-} from '../../../utils/api/pokemon-record.types'
+import { PokemonStatSlot, PokemonTypeSlot } from '@utils/api/pokemon-record.types'
 
 export type PokemonCardDetailsProps = {
     name: string

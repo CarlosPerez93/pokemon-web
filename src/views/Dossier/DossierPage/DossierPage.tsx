@@ -14,6 +14,7 @@ import { DossierClassification } from '@components/Dossier/DossierClassification
 import { DossierEvolutionChain } from '@components/Dossier/DossierEvolutionChain'
 import { DossierMoveArsenal } from '@components/Dossier/DossierMoveArsenal'
 import { DossierRecordNavigation } from '@components/Dossier/DossierRecordNavigation'
+import { FieldJournal } from '@components/Dossier/FieldJournal'
 
 export const DossierPage = (props: DossierRecordProps) => {
     const primaryType = props.pokemon.types[0]?.type.name ?? 'normal'
@@ -31,10 +32,11 @@ export const DossierPage = (props: DossierRecordProps) => {
             >
                 <DossierIdentity {...props} />
                 <DossierArtwork pokemon={props.pokemon} />
-                <CombatTelemetry pokemon={props.pokemon} />
             </section>
             <DossierDataStrip pokemon={props.pokemon} />
             <DossierClassification species={props.species} />
+            <FieldJournal pokemon={props.pokemon} species={props.species} />
+            <CombatTelemetry pokemon={props.pokemon} />
             <DossierEvolutionChain
                 stages={evolution.stages}
                 loading={evolution.loading}

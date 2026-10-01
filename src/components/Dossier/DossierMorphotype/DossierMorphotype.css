@@ -1,5 +1,6 @@
 .dossier-morphotype {
     min-width: 0;
+    height: 150px;
     display: grid;
     align-content: start;
     gap: 12px;
@@ -27,7 +28,4 @@
 .dossier-conservation {
     color: var(--color-success);
     font: 700 10px var(--font-display);
-}
-.dossier-morphotype > .type-badges {
-    margin-top: -3px;
 }

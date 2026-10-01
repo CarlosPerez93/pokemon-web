@@ -1,39 +1,41 @@
 import { formatGenderRate } from '@utils/functions/formatGenderRate'
-import { DossierMorphotypeProps } from '../Dossier/DossierMorphotype/DossierMorphotype.type'
+import { DossierMorphotypeFactCard } from '@components/DossierMorphotypeFactCard'
+import { DossierMorphotypeFactsProps } from './DossierMorphotypeFacts.type'
 
 import './DossierMorphotypeFacts.css'
 export const DossierMorphotypeFacts = ({
     pokemon,
     species,
-}: DossierMorphotypeProps) => {
+}: DossierMorphotypeFactsProps) => {
     const habitat = species?.habitat?.name.replace('-', ' ') ?? 'Volcanic Crags'
+    const facts = [
+        {
+            label: 'HEIGHT (ALTITUDE)',
+            value: `${(pokemon.height / 10).toFixed(1)} m`,
+            detail: `Imperial: ${((pokemon.height / 10) * 3.28084).toFixed(1)}'`,
+        },
+        {
+            label: 'BODY MASS',
+            value: `${(pokemon.weight / 10).toFixed(1)} kg`,
+            detail: `Imperial: ${((pokemon.weight / 10) * 2.20462).toFixed(1)} lbs`,
+        },
+        {
+            label: 'GENDER RATIO',
+            value: formatGenderRate(species?.gender_rate),
+            detail: 'Field population estimate',
+        },
+        {
+            label: 'NATURAL BIOME',
+            value: habitat,
+            detail: 'Montane thermal shifts',
+        },
+    ]
 
     return (
         <div className='dossier-morphotype__facts'>
-            <div>
-                <span>HEIGHT (ALTITUDE)</span>
-                <strong>{(pokemon.height / 10).toFixed(1)} m</strong>
-                <small>
-                    Imperial: {((pokemon.height / 10) * 3.28084).toFixed(1)}'
-                </small>
-            </div>
-            <div>
-                <span>BODY MASS</span>
-                <strong>{(pokemon.weight / 10).toFixed(1)} kg</strong>
-                <small>
-                    Imperial: {((pokemon.weight / 10) * 2.20462).toFixed(1)} lbs
-                </small>
-            </div>
-            <div>
-                <span>GENDER RATIO</span>
-                <strong>{formatGenderRate(species?.gender_rate)}</strong>
-                <small>Field population estimate</small>
-            </div>
-            <div>
-                <span>NATURAL BIOME</span>
-                <strong>{habitat}</strong>
-                <small>Montane thermal shifts</small>
-            </div>
+            {facts.map(fact => (
+                <DossierMorphotypeFactCard key={fact.label} {...fact} />
+            ))}
         </div>
     )
 }

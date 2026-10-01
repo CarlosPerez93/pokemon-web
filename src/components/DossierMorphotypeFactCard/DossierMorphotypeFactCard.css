@@ -1,0 +1,23 @@
+.dossier-morphotype-fact-card {
+    display: grid;
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    height: 100px;
+}
+.dossier-morphotype-fact-card span {
+    color: var(--color-muted);
+    font: 700 10px var(--font-display);
+    letter-spacing: 0.06em;
+}
+.dossier-morphotype-fact-card strong {
+    color: var(--color-text);
+    font: 700 14px var(--font-display);
+}
+.dossier-morphotype-fact-card small {
+    color: var(--color-muted);
+    font-size: 10px;
+}

@@ -1,4 +1,5 @@
 import { DossierMorphotypeProps } from './DossierMorphotype.type'
+import { Badges } from '../../Badges/Badges'
 
 import './DossierMorphotype.css'
 
@@ -19,12 +20,7 @@ export const DossierMorphotype = ({ pokemon, species }: DossierMorphotypeProps) 
             </div>
             <div className='type-badges' aria-label={`${pokemon.name} types`}>
                 {pokemon.types.map(({ type }) => (
-                    <span
-                        className={`type-badge type-badge--${type.name}`}
-                        key={type.name}
-                    >
-                        <span aria-hidden='true' /> {type.name}
-                    </span>
+                    <Badges type={type} />
                 ))}
             </div>
         </aside>

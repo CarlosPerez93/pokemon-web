@@ -5,6 +5,7 @@
     margin-top: -3px;
     width: 450px;
 }
+
 .type-badge {
     display: inline-flex;
     align-items: center;
@@ -28,7 +29,11 @@
     background: currentColor;
 }
 
-.badge {
+.badge-large {
     border: solid 1px;
     width: 45%;
+}
+.badge-small {
+    border: solid 1px;
+    width: 20%;
 }

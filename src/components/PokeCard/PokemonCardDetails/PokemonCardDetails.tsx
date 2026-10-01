@@ -4,6 +4,7 @@ import { PokemonCardDetailsProps } from './PokemonCardDetails.type'
 import { PokemonCardStats } from '../PokemonCardStats'
 
 import './PokemonCardDetails.css'
+import Badges from '@components/Badges'
 
 export const PokemonCardDetails = ({
     name,
@@ -16,13 +17,7 @@ export const PokemonCardDetails = ({
         </h2>
         <div className='type-badges' aria-label={`${name} types`}>
             {types.map(({ type }) => (
-                <span
-                    className={`type-badge type-badge--${type.name}`}
-                    key={type.name}
-                >
-                    <span aria-hidden='true' />
-                    {type.name}
-                </span>
+                <Badges type={type} className />
             ))}
         </div>
         <PokemonCardStats stats={stats} />

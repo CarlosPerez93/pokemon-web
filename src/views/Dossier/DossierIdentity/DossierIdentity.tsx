@@ -25,7 +25,7 @@ export const DossierIdentity = ({
                 #{String(pokemon.id).padStart(4, '0')}
             </div>
             <h1>{pokemon.name}</h1>
-            <p className='dossier-species'>{genus ?? 'Field specimen'} · Kanto</p>
+            <p className='dossier-species'>{genus ?? 'Field specimen'}</p>
             <div className='type-badges' aria-label={`${pokemon.name} types`}>
                 {pokemon.types.map(({ type }) => (
                     <span

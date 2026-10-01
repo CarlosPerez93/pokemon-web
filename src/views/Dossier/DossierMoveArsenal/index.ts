@@ -1,0 +1,1 @@
+export { DossierMoveArsenal } from './DossierMoveArsenal'

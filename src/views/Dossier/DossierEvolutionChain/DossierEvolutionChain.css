@@ -1,0 +1,77 @@
+.dossier-evolution-chain {
+    margin-top: 16px;
+}
+
+.dossier-evolution-chain__grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dossier-evolution-chain__node {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dossier-evolution-chain__arrow {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.dossier-evolution-chain__card {
+    display: flex;
+    width: 128px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.dossier-evolution-chain__card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.dossier-evolution-chain__card.is-current {
+    border-color: var(--color-primary);
+}
+
+.dossier-evolution-chain__card img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.dossier-evolution-chain__card span {
+    color: var(--color-muted);
+    font: 700 11px var(--font-display);
+    letter-spacing: 0.04em;
+}
+
+.dossier-evolution-chain__card strong {
+    font: 600 13px var(--font-display);
+    text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+    .dossier-evolution-chain__card {
+        width: 104px;
+        padding: 8px;
+    }
+
+    .dossier-evolution-chain__card img {
+        width: 56px;
+        height: 56px;
+    }
+}

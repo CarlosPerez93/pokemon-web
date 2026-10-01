@@ -1,15 +1,8 @@
-import { DossierActions } from '../DossierActions'
-import { DossierMorphometrics } from '../DossierMorphometrics'
 import { DossierIdentityProps } from './DossierIdentity.type'
 
 import './DossierIdentity.css'
 
-export const DossierIdentity = ({
-    pokemon,
-    species,
-    isFavorite,
-    onToggleFavorite,
-}: DossierIdentityProps) => {
+export const DossierIdentity = ({ pokemon, species }: DossierIdentityProps) => {
     const genus = species?.genera?.find(
         ({ language }) => language.name === 'en',
     )?.genus
@@ -37,16 +30,10 @@ export const DossierIdentity = ({
                     </span>
                 ))}
             </div>
-            <DossierMorphometrics pokemon={pokemon} />
             <p className='dossier-note'>
                 {note ?? 'Registered biological field specimen.'}
                 {habitat && ` Habitat: ${habitat}.`}
             </p>
-            <DossierActions
-                name={pokemon.name}
-                isFavorite={isFavorite}
-                onToggleFavorite={onToggleFavorite}
-            />
         </div>
     )
 }

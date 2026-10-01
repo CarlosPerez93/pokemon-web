@@ -8,6 +8,7 @@ import { CombatTelemetry } from '@components/CombatTelemetry'
 import './DossierPage.css'
 import { DossierBreadcrumb } from '@components/Dossier/DossierBreadcrumb'
 import { DossierIdentity } from '@components/Dossier/DossierIdentity'
+import { DossierActions } from '@components/Dossier/DossierActions'
 import { DossierArtwork } from '@components/Dossier/DossierArtwork'
 import { DossierDataStrip } from '@components/Dossier/DossierDataStrip'
 import { DossierClassification } from '@components/Dossier/DossierClassification'
@@ -15,6 +16,7 @@ import { DossierEvolutionChain } from '@components/Dossier/DossierEvolutionChain
 import { DossierMoveArsenal } from '@components/Dossier/DossierMoveArsenal'
 import { DossierRecordNavigation } from '@components/Dossier/DossierRecordNavigation'
 import { FieldJournal } from '@components/Dossier/FieldJournal'
+import { DossierMorphotype } from '@components/Dossier/DossierMorphotype'
 
 export const DossierPage = (props: DossierRecordProps) => {
     const primaryType = props.pokemon.types[0]?.type.name ?? 'normal'
@@ -30,8 +32,16 @@ export const DossierPage = (props: DossierRecordProps) => {
                 className='dossier-hero'
                 style={{ '--type-color': typeColor } as CSSProperties}
             >
-                <DossierIdentity {...props} />
-                <DossierArtwork pokemon={props.pokemon} />
+                <div className='dossier-hero-left'>
+                    <DossierIdentity {...props} />
+                    <DossierArtwork pokemon={props.pokemon} />
+                    <DossierActions
+                        name={props.pokemon.name}
+                        isFavorite={props.isFavorite}
+                        onToggleFavorite={props.onToggleFavorite}
+                    />
+                </div>
+                <DossierMorphotype {...props} />
             </section>
             <DossierDataStrip pokemon={props.pokemon} />
             <DossierClassification species={props.species} />

@@ -1,0 +1,7 @@
+.route-loading {
+    min-height: min(60vh, 640px);
+    display: grid;
+    place-items: center;
+    color: var(--color-muted);
+    font: 600 14px var(--font-display);
+}

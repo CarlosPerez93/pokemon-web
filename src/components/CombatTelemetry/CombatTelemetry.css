@@ -1,36 +1,51 @@
-.dossier-telemetry {
+.dossier-combat-analysis {
     min-width: 0;
-    align-self: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    gap: 16px;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-panel);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+.dossier-biometrics,
+.dossier-radar-panel {
+    min-width: 0;
     padding: 14px;
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-card);
+    border-radius: var(--radius-control);
     background: var(--color-surface-inset);
 }
-
+.dossier-analysis-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
 .telemetry-score {
     display: block;
-    margin-top: 7px;
     color: var(--color-primary);
-    font: 700 30px/1 var(--font-display);
+    font: 700 22px/1 var(--font-display);
     font-variant-numeric: tabular-nums;
 }
-
-.telemetry-caption {
-    display: block;
-    margin-top: 4px;
+.dossier-analysis-version {
     color: var(--color-muted);
-    font: 700 12px var(--font-display);
-    letter-spacing: 0.07em;
+    font: 700 10px var(--font-display);
+    text-transform: uppercase;
 }
-
-@media (max-width: 1100px) {
-    .dossier-telemetry {
-        grid-column: 1 / -1;
-    }
+.dossier-combat-analysis .dossier-abilities {
+    grid-column: 1 / -1;
+    margin-top: 0;
 }
-
 @media (max-width: 640px) {
-    .dossier-telemetry {
+    .dossier-combat-analysis {
+        grid-template-columns: 1fr;
+        margin-top: 28px;
+        padding: 12px;
+    }
+    .dossier-combat-analysis .dossier-abilities {
         grid-column: auto;
     }
 }

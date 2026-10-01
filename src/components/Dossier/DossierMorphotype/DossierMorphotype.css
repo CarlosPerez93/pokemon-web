@@ -1,0 +1,31 @@
+.dossier-morphotype {
+    min-width: 0;
+    height: 150px;
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+.dossier-morphotype__heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.dossier-morphotype h2 {
+    margin-top: 7px;
+    color: var(--color-text);
+    font: 700 28px/1.05 var(--font-display);
+    text-transform: capitalize;
+}
+.dossier-morphotype__genus {
+    color: var(--color-muted);
+    font: italic 12px var(--font-body);
+}
+.dossier-conservation {
+    color: var(--color-success);
+    font: 700 10px var(--font-display);
+}

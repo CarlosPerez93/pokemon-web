@@ -1,6 +1,7 @@
 import { AbilityList } from '@components/AbilityList'
 import { CombatRadar } from '@components/CombatRadar'
 import { CombatStatList } from '@components/CombatStatList'
+import { ElementalVulnerabilityMatrix } from '@components/ElementalVulnerabilityMatrix'
 
 import { CombatTelemetryProps } from './CombatTelemetry.type'
 
@@ -10,13 +11,29 @@ export const CombatTelemetry = ({ pokemon }: CombatTelemetryProps) => {
     const total = pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0)
 
     return (
-        <aside className='dossier-telemetry' aria-label='Combat telemetry'>
-            <div className='section-kicker'>COMBAT TELEMETRY</div>
-            <strong className='telemetry-score'>{total}</strong>
-            <span className='telemetry-caption'>TOTAL BASE STATS</span>
-            <CombatRadar stats={pokemon.stats} />
-            <CombatStatList stats={pokemon.stats} />
+        <section className='dossier-combat-analysis' aria-label='Combat analysis'>
+            <div className='dossier-biometrics'>
+                <div className='dossier-analysis-heading'>
+                    <div className='section-kicker'>
+                        COMBAT BIOMETRICS & PHYSIOLOGICAL BASE STATS
+                    </div>
+                    <strong className='telemetry-score'>BST: {total}</strong>
+                </div>
+                <CombatStatList stats={pokemon.stats} />
+            </div>
+            <div className='dossier-radar-panel'>
+                <div className='dossier-analysis-heading'>
+                    <div className='section-kicker'>TACTICAL PROFILE RADAR</div>
+                    <span className='dossier-analysis-version'>
+                        HEX-POLYGON / V3.2
+                    </span>
+                </div>
+                <CombatRadar stats={pokemon.stats} />
+                <ElementalVulnerabilityMatrix
+                    types={pokemon.types.map(({ type }) => type.name)}
+                />
+            </div>
             <AbilityList abilities={pokemon.abilities} />
-        </aside>
+        </section>
     )
 }

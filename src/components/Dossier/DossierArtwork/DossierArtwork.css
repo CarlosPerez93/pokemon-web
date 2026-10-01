@@ -1,0 +1,102 @@
+.dossier-artwork {
+    min-width: 0;
+    min-height: 350px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface-inset);
+    isolation: isolate;
+}
+
+.dossier-artwork__halo {
+    width: min(80%, 280px);
+    position: absolute;
+    z-index: -1;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--type-color) 12%, transparent),
+        transparent 72%
+    );
+}
+
+[data-theme='dark'] .dossier-artwork__halo {
+    background: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--type-color) 20%, transparent),
+        transparent 72%
+    );
+}
+
+.dossier-artwork::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 74%;
+    aspect-ratio: 1;
+    border: 1px dashed color-mix(in srgb, var(--type-color) 30%, transparent);
+    border-radius: 50%;
+}
+
+.dossier-artwork::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 74%;
+    aspect-ratio: 1;
+    border: 1px dashed color-mix(in srgb, var(--type-color) 30%, transparent);
+    border-radius: 50%;
+}
+
+.dossier-artwork::after {
+    width: 56%;
+    border-style: solid;
+    opacity: 0.55;
+}
+
+.dossier-artwork img {
+    width: min(90%, 330px);
+    max-height: 290px;
+    object-fit: contain;
+    filter: drop-shadow(
+        0 18px 20px color-mix(in srgb, var(--type-color) 25%, transparent)
+    );
+}
+
+.dossier-artwork__index {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+    letter-spacing: 0.08em;
+}
+
+.dossier-artwork__caption {
+    position: absolute;
+    right: 12px;
+    bottom: 11px;
+    left: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+    .dossier-artwork {
+        min-height: 280px;
+        grid-row: 1;
+    }
+}
+@media (max-width: 640px) {
+    .dossier-artwork img {
+        max-height: 230px;
+    }
+}

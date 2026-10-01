@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react'
 
-import { FeatureArtwork } from '../FeatureArtwork'
-import { FeatureDetails } from '../FeatureDetails'
-import { FeatureError } from '../FeatureError'
-import { FeatureMetrics } from '../FeatureMetrics'
-import { useFeaturedPokemon } from '../../../hooks/useFeaturedPokemon'
+import { FeatureArtwork } from '@components/PokePresentation/FeatureArtwork'
+import { FeatureDetails } from '@components/PokePresentation/FeatureDetails'
+import { FeatureError } from '@components/PokePresentation/FeatureError'
+import { FeatureMetrics } from '@components/PokePresentation/FeatureMetrics'
+import { useFeaturedPokemon } from '@hooks/useFeaturedPokemon'
 
 import './PokePresentationView.css'
 import '../FeatureError/FeatureError.css'

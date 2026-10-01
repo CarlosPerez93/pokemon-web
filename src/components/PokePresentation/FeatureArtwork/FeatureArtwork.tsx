@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom'
 import './FeatureArtwork.css'
 import './FeatureArtworkOrbits.css'
 import './FeatureArtworkResponsive.css'
-
-type FeatureArtworkProps = {
-    name: string
-    artwork?: string | null
-}
+import { FeatureArtworkProps } from './FeatureArtwork.type'
 
 export const FeatureArtwork = ({ name, artwork }: FeatureArtworkProps) => (
     <div className='feature-slide__art' aria-label={`${name} official artwork`}>

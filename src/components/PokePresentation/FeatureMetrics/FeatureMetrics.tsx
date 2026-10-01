@@ -1,11 +1,8 @@
 import { PokemonStatSlot } from '../../../utils/api/pokemon-record.types'
+import { FeatureMetricsProps } from './FeatureMetrics.type'
 import { CombatRadar } from '../../CombatRadar/CombatRadar'
 import './FeatureMetrics.css'
 import './FeatureMetricsResponsive.css'
-
-type FeatureMetricsProps = {
-    stats: PokemonStatSlot[]
-}
 
 export const FeatureMetrics = ({ stats }: FeatureMetricsProps) => (
     <aside className='feature-slide__stats' aria-label='Combat telemetry'>

@@ -1,14 +1,10 @@
 import { RadarChart, Tooltip } from 'recharts'
 
 import { useElementWidth } from '../../hooks/useElementWidth'
-import { PokemonStatSlot } from '../../utils/api/pokemon-record.types'
+import { CombatRadarProps } from './CombatRadar.type'
 import { CombatRadarAxes } from './CombatRadarAxes'
 import { CombatRadarSeries } from './CombatRadarSeries'
 import './CombatRadar.css'
-
-type CombatRadarProps = {
-    stats: PokemonStatSlot[]
-}
 
 export const CombatRadar = ({ stats }: CombatRadarProps) => {
     const { ref, width } = useElementWidth<HTMLDivElement>()

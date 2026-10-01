@@ -1,1 +1,1 @@
-export { default } from './Dossier'
+export { default, Dossier } from './Dossier'

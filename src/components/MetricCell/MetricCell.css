@@ -1,0 +1,52 @@
+.metric-cell {
+    min-width: 0;
+}
+
+.metric-cell--morphometric {
+    display: grid;
+    gap: 5px;
+}
+
+.metric-cell--morphometric span,
+.metric-cell--telemetry span,
+.metric-cell--telemetry i {
+    color: var(--color-muted);
+    font: 700 12px/1.4 var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.metric-cell--morphometric strong {
+    color: var(--color-text);
+    font: 700 16px var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+
+.metric-cell--morphometric small {
+    font-size: 12px;
+}
+
+.metric-cell--telemetry {
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    column-gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+}
+
+.metric-cell--telemetry strong {
+    grid-row: span 2;
+    align-self: center;
+    color: var(--color-primary);
+    font: 700 16px var(--font-display);
+    font-variant-numeric: tabular-nums;
+}
+
+.metric-cell--telemetry i {
+    color: var(--color-success);
+    font-style: normal;
+}

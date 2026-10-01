@@ -5,7 +5,7 @@ import { PokemonCardDetails } from '../PokemonCardDetails'
 import { PokemonCardHeader } from '../PokemonCardHeader'
 import { PokemonCardError, PokemonCardSkeleton } from '../PokemonCardState'
 import { PokeCardProps } from '../../../utils/types/poke-card.types'
-import { usePokemonRecord } from '../../../hooks/usePokemonRecord'
+import { usePokemonRecord } from '@hooks/usePokemonRecord'
 import './PokeCardView.css'
 
 export const PokeCardView = (props: PokeCardProps) => {

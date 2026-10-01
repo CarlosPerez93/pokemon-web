@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom'
+import { PokemonCardArtworkProps } from './PokemonCardArtwork.type'
 
 import './PokemonCardArtwork.css'
-
-type PokemonCardArtworkProps = {
-    name: string
-    artwork?: string | null
-}
 
 export const PokemonCardArtwork = ({ name, artwork }: PokemonCardArtworkProps) => (
     <div className='pokemon-card__art'>

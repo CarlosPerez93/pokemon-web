@@ -1,18 +1,9 @@
 import { Link } from 'react-router-dom'
 
-import {
-    PokemonTypeSlot,
-    PokemonStatSlot,
-} from '../../../utils/api/pokemon-record.types'
+import { PokemonCardDetailsProps } from './PokemonCardDetails.type'
 import { PokemonCardStats } from '../PokemonCardStats'
 
 import './PokemonCardDetails.css'
-
-type PokemonCardDetailsProps = {
-    name: string
-    types: PokemonTypeSlot[]
-    stats: PokemonStatSlot[]
-}
 
 export const PokemonCardDetails = ({
     name,

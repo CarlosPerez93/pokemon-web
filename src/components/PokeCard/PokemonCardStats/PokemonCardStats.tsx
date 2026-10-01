@@ -1,10 +1,6 @@
-import { PokemonStatSlot } from '../../../utils/api/pokemon-record.types'
+import { PokemonCardStatsProps } from './PokemonCardStats.type'
 
 import './PokemonCardStats.css'
-
-type PokemonCardStatsProps = {
-    stats: PokemonStatSlot[]
-}
 
 export const PokemonCardStats = ({ stats }: PokemonCardStatsProps) => (
     <div className='pokemon-card__stats' aria-label='Base stats'>

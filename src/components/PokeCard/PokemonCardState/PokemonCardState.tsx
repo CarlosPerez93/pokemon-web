@@ -1,11 +1,7 @@
 import { ReloadOutlined } from '@ant-design/icons'
+import { PokemonCardStateProps } from './PokemonCardState.type'
 
 import './PokemonCardState.css'
-
-type PokemonCardStateProps = {
-    name: string
-    onRetry: () => void
-}
 
 export const PokemonCardSkeleton = ({
     name,

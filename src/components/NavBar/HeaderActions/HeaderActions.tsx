@@ -1,7 +1,7 @@
 import { SearchTrigger } from '../SearchTrigger'
 import { SystemStatus } from '../SystemStatus'
 import { ThemeToggle } from '../ThemeToggle'
-import { useCatalogSearchShortcut } from '../../../hooks/useCatalogSearchShortcut'
+import { useCatalogSearchShortcut } from '@hooks/useCatalogSearchShortcut'
 
 import './HeaderActions.css'
 

@@ -1,13 +1,7 @@
 import { HeartFilled, HeartOutlined } from '@ant-design/icons'
+import { PokemonCardHeaderProps } from './PokemonCardHeader.type'
 
 import './PokemonCardHeader.css'
-
-type PokemonCardHeaderProps = {
-    id: number
-    name: string
-    isFavorite?: boolean
-    onToggleFavorite?: (name: string) => void
-}
 
 export const PokemonCardHeader = ({
     id,

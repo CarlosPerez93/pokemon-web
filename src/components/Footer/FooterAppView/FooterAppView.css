@@ -1,2 +1,30 @@
-@import './FooterAppView.styles/part-01.css';
-@import './FooterAppView.styles/part-03.css';
+.footer-app {
+    width: min(100% - 64px, 1440px);
+    margin: 30px auto 0;
+    padding: 20px 0 12px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+.footer-app__columns {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(170px, 1fr));
+    gap: 48px;
+    padding-bottom: 22px;
+}
+@media (max-width: 760px) {
+    .footer-app__columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-app {
+        width: calc(100% - 32px);
+    }
+
+    .footer-app__columns {
+        gap: 20px 14px;
+    }
+}

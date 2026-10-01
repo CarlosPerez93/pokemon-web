@@ -1,0 +1,1 @@
+export type ExpeditionBannerProps = Record<string, never>

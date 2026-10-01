@@ -35,6 +35,7 @@
 .dossier-artwork::before {
     content: '';
     position: absolute;
+    max-height: 290px;
     z-index: -1;
     width: 74%;
     aspect-ratio: 1;

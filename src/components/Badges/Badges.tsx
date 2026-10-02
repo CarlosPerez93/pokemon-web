@@ -2,13 +2,11 @@ import './Badges.css'
 
 type BadgesProps = {
     type: { name: string }
-    className?: boolean
+    className?: string
 }
 
-export const Badges = ({ type, className = false }: BadgesProps) => {
-    const widthProp = className
-        ? `type-badge type-badge--${type.name} badge-small `
-        : `type-badge type-badge--${type.name} badge-large `
+export const Badges = ({ type, className }: BadgesProps) => {
+    const widthProp = `type-badge type-badge--${type.name} badge ${className ?? ''}`
 
     return (
         <span className={widthProp} key={type.name}>

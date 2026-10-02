@@ -13,7 +13,7 @@
     padding-top: 18px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 500px) {
     .home-page {
         padding-top: 10px;
     }

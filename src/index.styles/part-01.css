@@ -43,7 +43,7 @@
 }
 
 body {
-    min-width: 320px;
+    min-width: min(320px, 100%);
     min-height: 100vh;
     background: var(--color-canvas);
     color: var(--color-text);

@@ -21,11 +21,24 @@
 }
 @media (max-width: 620px) {
     .feature-slide__stats {
+        min-width: 0;
         grid-column: auto;
+        grid-row: 3;
         grid-template-columns: 1fr;
         gap: 12px;
+        padding: 14px;
     }
     .feature-slide__stats .section-kicker {
         grid-column: 1 / -1;
+    }
+
+    .feature-slide__stats .combat-radar,
+    .feature-peak-stats {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .metric-row {
+        grid-template-columns: minmax(0, 1fr) 36px 24px;
     }
 }

@@ -2,7 +2,7 @@ import { GetItem } from '@utils/storage'
 import { query } from '@api/core/api.types'
 import { getHeader, getUrl } from '@utils/api/api.util'
 
-const Query = async ({ url, params }: query) => {
+export const Query = async ({ url, params }: query) => {
     const newUrl = getUrl({ url, params })
 
     const response = await fetch(newUrl, {
@@ -14,4 +14,4 @@ const Query = async ({ url, params }: query) => {
     return response.json()
 }
 
-export { Query }
+export default Query

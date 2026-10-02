@@ -1,4 +1,4 @@
-export type MetricCellProps = {
+export type MetricsCellProps = {
     value: string | number
     label: string
     detail?: string

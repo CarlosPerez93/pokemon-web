@@ -1,37 +1,26 @@
 import { MetricCell } from '@components/MetricCell'
-import './ArchiveTelemetry.css'
 
+import { metrics } from '@utils/functions/metrics/metrics'
 import { ArchiveTelemetryProps } from './ArchiveTelemetry.type'
+
+import './ArchiveTelemetry.css'
 
 export const ArchiveTelemetry = ({
     speciesCount,
     favoriteCount,
     typeCount,
-}: ArchiveTelemetryProps) => (
-    <section className='home-telemetry' aria-label='Archive status'>
-        <MetricCell
-            value={speciesCount?.toLocaleString() ?? '—'}
-            label='REGISTERED SPECIES'
-            detail='SYNC 99.8%'
-            variant='telemetry'
-        />
-        <MetricCell
-            value={typeCount}
-            label='ELEMENTAL TYPES'
-            detail='ALL MAPPED'
-            variant='telemetry'
-        />
-        <MetricCell
-            value='ONLINE'
-            label='LOCAL SENSOR CACHE'
-            detail='SYNCHRONIZED'
-            variant='telemetry'
-        />
-        <MetricCell
-            value={favoriteCount}
-            label='ARCHIVED FAVORITES'
-            detail='FIELD NOTES'
-            variant='telemetry'
-        />
-    </section>
-)
+    apiStatus,
+}: ArchiveTelemetryProps) => {
+    const telemetryMetrics = metrics({
+        speciesCount,
+        favoriteCount,
+        typeCount,
+        apiStatus,
+    }).map(metric => <MetricCell key={metric.label} {...metric} />)
+
+    return (
+        <section className='home-telemetry' aria-label='Archive status'>
+            {telemetryMetrics}
+        </section>
+    )
+}

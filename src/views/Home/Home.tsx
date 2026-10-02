@@ -8,7 +8,6 @@ import api from '../../api'
 import { useGet } from '@hooks/api'
 import { useFavorites } from '@hooks/useFavorites'
 import { ResponseFetch } from '@utils/api/pokemon-list.types'
-import { POKEMON_TYPE_NAMES } from '@utils/constants/pokemon-type.constants'
 import { ArchiveTelemetry } from '@components/ArchiveTelemetry'
 import { ExpeditionBanner } from '@components/ExpeditionBanner'
 import { HomeBreadcrumb } from '@components/HomeBreadcrumb'
@@ -23,15 +22,29 @@ export const Home = () => {
         (state: { speciesIndex: { totalSpecies: number | null } }) =>
             state.speciesIndex.totalSpecies,
     )
-    console.log(speciesCount)
-    const { data } = useGet<ResponseFetch>({
+    const speciesRequest = useGet<ResponseFetch>({
         functionFetch: api.pokemon.pokemonList,
     })
+    const { data } = speciesRequest
+    const typeRequest = useGet<ResponseFetch>(
+        { functionFetch: api.pokemon.typeList },
+        { cancelError: true },
+    )
     const { favorites, toggleFavorite } = useFavorites()
 
     useEffect(() => {
         if (data?.count !== undefined) dispatch(setTotalSpecies(data.count))
     }, [data?.count, dispatch])
+
+    const apiStatus = (() => {
+        const hasSpeciesCount = data?.count !== undefined
+        const hasTypeCount = typeRequest.data?.count !== undefined
+
+        if (hasSpeciesCount && hasTypeCount) return 'ONLINE' as const
+        if (speciesRequest.error && typeRequest.error) return 'OFFLINE' as const
+        if (speciesRequest.error || typeRequest.error) return 'PARTIAL' as const
+        return 'SYNCING' as const
+    })()
 
     return (
         <main className='home-page page-container'>
@@ -51,7 +64,8 @@ export const Home = () => {
             <ArchiveTelemetry
                 speciesCount={speciesCount ?? undefined}
                 favoriteCount={favorites.length}
-                typeCount={POKEMON_TYPE_NAMES.length}
+                typeCount={typeRequest.data?.count}
+                apiStatus={apiStatus}
             />
         </main>
     )

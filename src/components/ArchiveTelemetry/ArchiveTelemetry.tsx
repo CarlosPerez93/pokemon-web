@@ -1,4 +1,5 @@
-import { MetricCell } from '@components/MetricCell'
+import { MetricCell, MetricCellProps } from '@components/MetricCell'
+
 import './ArchiveTelemetry.css'
 
 import { ArchiveTelemetryProps } from './ArchiveTelemetry.type'
@@ -7,31 +8,40 @@ export const ArchiveTelemetry = ({
     speciesCount,
     favoriteCount,
     typeCount,
-}: ArchiveTelemetryProps) => (
-    <section className='home-telemetry' aria-label='Archive status'>
-        <MetricCell
-            value={speciesCount?.toLocaleString() ?? '—'}
-            label='REGISTERED SPECIES'
-            detail='SYNC 99.8%'
-            variant='telemetry'
-        />
-        <MetricCell
-            value={typeCount}
-            label='ELEMENTAL TYPES'
-            detail='ALL MAPPED'
-            variant='telemetry'
-        />
-        <MetricCell
-            value='ONLINE'
-            label='LOCAL SENSOR CACHE'
-            detail='SYNCHRONIZED'
-            variant='telemetry'
-        />
-        <MetricCell
-            value={favoriteCount}
-            label='ARCHIVED FAVORITES'
-            detail='FIELD NOTES'
-            variant='telemetry'
-        />
-    </section>
-)
+    apiStatus,
+}: ArchiveTelemetryProps) => {
+    const metrics: MetricCellProps[] = [
+        {
+            value: speciesCount?.toLocaleString() ?? '—',
+            label: 'REGISTERED SPECIES',
+            detail: 'LIVE POKÉAPI INDEX',
+            variant: 'telemetry',
+        },
+        {
+            value: typeCount?.toLocaleString() ?? '—',
+            label: 'API TYPE RECORDS',
+            detail: 'INCLUDES SPECIAL TYPES',
+            variant: 'telemetry',
+        },
+        {
+            value: apiStatus,
+            label: 'POKÉAPI STATUS',
+            detail: 'SPECIES + TYPE ENDPOINTS',
+            variant: 'telemetry',
+        },
+        {
+            value: favoriteCount,
+            label: 'ARCHIVED FAVORITES',
+            detail: 'SAVED ON THIS DEVICE',
+            variant: 'telemetry',
+        },
+    ]
+
+    return (
+        <section className='home-telemetry' aria-label='Archive status'>
+            {metrics.map(metric => (
+                <MetricCell key={metric.label} {...metric} />
+            ))}
+        </section>
+    )
+}

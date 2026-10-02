@@ -1,5 +1,6 @@
-import './MetricCell.css'
 import { MetricCellProps } from './MetricCell.type'
+
+import './MetricCell.css'
 
 export const MetricCell = ({
     value,

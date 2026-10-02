@@ -14,7 +14,8 @@
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "deploy": "pnpm --package=netlify-cli dlx netlify deploy --build --prod"
     },
     "peerDependencies": {
         "react": "^17.0.0 || ^18.0.0",

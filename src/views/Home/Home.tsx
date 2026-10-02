@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import { HeartOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,8 +22,9 @@ export const Home = () => {
         (state: { speciesIndex: { totalSpecies: number | null } }) =>
             state.speciesIndex.totalSpecies,
     )
+    const fetchSpecies = useCallback(() => api.pokemon.pokemonList(), [])
     const speciesRequest = useGet<ResponseFetch>({
-        functionFetch: api.pokemon.pokemonList,
+        functionFetch: fetchSpecies,
     })
     const { data } = speciesRequest
     const typeRequest = useGet<ResponseFetch>(

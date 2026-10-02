@@ -23,11 +23,9 @@ export const CatalogToolbar = ({
         <CatalogControls
             sortBy={filters.sortBy}
             viewMode={filters.viewMode}
-            favoritesOnly={filters.favoritesOnly}
             favoriteCount={favorites.length}
             onSort={filters.setSortBy}
             onView={filters.setViewMode}
-            onFavorites={() => filters.setFavoritesOnly(value => !value)}
         />
     </div>
 )

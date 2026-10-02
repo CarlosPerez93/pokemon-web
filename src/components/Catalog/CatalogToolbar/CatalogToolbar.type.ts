@@ -9,8 +9,6 @@ export type CatalogToolbarFilters = {
     setSortBy: (value: 'number' | 'name') => void
     viewMode: 'grid' | 'list'
     setViewMode: (value: 'grid' | 'list') => void
-    favoritesOnly: boolean
-    setFavoritesOnly: (value: (current: boolean) => boolean) => void
 }
 
 export type CatalogToolbarProps = {

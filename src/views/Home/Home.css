@@ -13,6 +13,37 @@
     padding-top: 18px;
 }
 
+.home-favorites-access {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0 12px;
+}
+
+.home-favorites-access a {
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.home-favorites-access a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.home-favorites-access strong {
+    color: var(--color-muted);
+    font: 700 12px var(--font-display);
+}
+
 @media (max-width: 500px) {
     .home-page {
         padding-top: 10px;

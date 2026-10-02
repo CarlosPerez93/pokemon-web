@@ -1,3 +1,6 @@
+import { HeartOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
+
 import PokePresentation from '@components/PokePresentation'
 import api from '../../api'
 import { useGet } from '@hooks/api'
@@ -20,6 +23,12 @@ export const Home = () => {
     return (
         <main className='home-page page-container'>
             <HomeBreadcrumb queueSize={data?.count} />
+            <div className='home-favorites-access'>
+                <Link to='/favorites'>
+                    <HeartOutlined /> Saved favorites
+                    <strong>{favorites.length}</strong>
+                </Link>
+            </div>
             <PokePresentation name='charizard' />
             <PrioritySpecimens
                 favorites={favorites}

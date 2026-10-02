@@ -10,6 +10,7 @@ import './PublicRoutes.css'
 
 const Home = lazy(() => import('@views/Home'))
 const ListPokemon = lazy(() => import('@views/ListPokemon'))
+const Favorites = lazy(() => import('@views/Favorites'))
 const Dossier = lazy(() => import('@views/Dossier'))
 
 export const PublicRoutes = () => {
@@ -26,6 +27,7 @@ export const PublicRoutes = () => {
                     <Routes>
                         <Route path={RP.home} element={<Home />} />
                         <Route path={RP.listPokemon} element={<ListPokemon />} />
+                        <Route path={RP.favorites} element={<Favorites />} />
                         <Route path={RP.dossier} element={<Dossier />} />
                         <Route path={RP.error404} element={<Error404 />} />
 

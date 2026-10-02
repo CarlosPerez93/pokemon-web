@@ -30,6 +30,7 @@
     --radius-control: 8px;
     --radius-card: 16px;
     --radius-panel: 24px;
+    --layout-inline-inset: 64px;
 }
 
 *,
@@ -48,4 +49,22 @@ body {
     background: var(--color-canvas);
     color: var(--color-text);
     font-family: var(--font-body);
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    :root {
+        --layout-inline-inset: 48px;
+    }
+}
+
+@media (max-width: 639px) {
+    :root {
+        --layout-inline-inset: 32px;
+    }
+}
+
+@media (max-width: 350px) {
+    :root {
+        --layout-inline-inset: 24px;
+    }
 }

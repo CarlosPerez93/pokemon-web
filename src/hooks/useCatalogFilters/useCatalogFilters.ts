@@ -6,7 +6,6 @@ import { CatalogFiltersInput } from './useCatalogFilters.type'
 
 export const useCatalogFilters = ({
     data,
-    favorites,
     loadedTypes,
 }: CatalogFiltersInput) => {
     const [searchTerm, setSearchTerm] = useState('')

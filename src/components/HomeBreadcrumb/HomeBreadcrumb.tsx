@@ -1,13 +1,14 @@
-import './HomeBreadcrumb.css'
 import { HomeBreadcrumbProps } from './HomeBreadcrumb.type'
 
-export const HomeBreadcrumb = ({ queueSize }: HomeBreadcrumbProps) => (
+import './HomeBreadcrumb.css'
+
+export const HomeBreadcrumb = ({ speciesCount }: HomeBreadcrumbProps) => (
     <div className='home-breadcrumb'>
         FIELD OBSERVATION <span>/</span> RESEARCH ARCHIVE <span>/</span> KANTO SURVEY
         SECTOR
         <span className='home-live-status'>
-            <i /> TELEMETRY LOCK: ACTIVE · SPECIMEN QUEUE:{' '}
-            {queueSize?.toLocaleString() ?? '—'}
+            <i /> TELEMETRY LOCK: ACTIVE · SPECIES INDEXED:{' '}
+            {speciesCount?.toLocaleString() ?? '—'}
         </span>
     </div>
 )

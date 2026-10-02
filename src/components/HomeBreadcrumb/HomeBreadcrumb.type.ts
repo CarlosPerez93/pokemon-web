@@ -1,3 +1,3 @@
 export type HomeBreadcrumbProps = {
-    queueSize?: number
+    speciesCount?: number
 }

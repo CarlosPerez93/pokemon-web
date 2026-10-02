@@ -16,6 +16,13 @@
         box-shadow 180ms ease;
 }
 
+.pokemon-card__media {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .pokemon-card:hover {
     transform: translateY(-2px);
     border-color: color-mix(in srgb, var(--type-color) 28%, var(--color-border));

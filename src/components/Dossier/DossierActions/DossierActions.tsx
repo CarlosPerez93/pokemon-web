@@ -25,6 +25,9 @@ export const DossierActions = ({
             {isFavorite ? <HeartFilled /> : <HeartOutlined />}
             {isFavorite ? 'Saved to archive' : 'Save specimen'}
         </button>
+        <Link className='dossier-action-button' to='/favorites'>
+            <HeartOutlined /> Saved favorites
+        </Link>
         <Link className='dossier-action-button' to='/list-pokemon'>
             <FireOutlined /> Standard Biology
         </Link>

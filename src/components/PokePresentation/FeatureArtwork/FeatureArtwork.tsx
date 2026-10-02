@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 
 import './FeatureArtwork.css'
-import './FeatureArtworkOrbits.css'
-import './FeatureArtworkResponsive.css'
 import { FeatureArtworkProps } from './FeatureArtwork.type'
 
 export const FeatureArtwork = ({ name, artwork }: FeatureArtworkProps) => (

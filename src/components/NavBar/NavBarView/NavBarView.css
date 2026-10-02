@@ -19,7 +19,7 @@
 }
 
 .app-header__inner {
-    width: min(100% - 64px, 1440px);
+    width: min(100% - var(--layout-inline-inset), 1440px);
     min-height: 76px;
     margin: 0 auto;
     display: grid;
@@ -35,7 +35,6 @@
 
 @media (max-width: 800px) {
     .app-header__inner {
-        width: min(100% - 32px, 1440px);
         min-height: 68px;
         grid-template-columns: 1fr auto;
         gap: 10px;

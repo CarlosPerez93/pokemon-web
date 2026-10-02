@@ -16,7 +16,6 @@ export const ListPokemon = () => {
     const { favorites, toggleFavorite } = useFavorites()
     const filters = useCatalogFilters({
         data: request.data,
-        favorites,
         loadedTypes: catalog.loadedTypes,
     })
     const searchRef = useRef<HTMLInputElement>(null)

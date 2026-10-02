@@ -1,4 +1,5 @@
 import { HeartFilled, HeartOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 import { CatalogViewMode } from '../CatalogViewMode'
 import { CatalogControlsProps } from './CatalogControls.type'
 
@@ -20,16 +21,11 @@ export const CatalogControls = (props: CatalogControlsProps) => (
         </label>
         <span className='catalog-region'>REGION: NATIONAL</span>
         <span className='catalog-control-row__spacer' />
-        <button
-            className={`favorites-filter${props.favoritesOnly ? ' is-active' : ''}`}
-            type='button'
-            aria-pressed={props.favoritesOnly}
-            onClick={props.onFavorites}
-        >
-            {props.favoritesOnly ? <HeartFilled /> : <HeartOutlined />}
+        <Link className='favorites-filter' to='/favorites'>
+            {props.favoriteCount ? <HeartFilled /> : <HeartOutlined />}
             <span>Favorites</span>
             <strong>{props.favoriteCount}</strong>
-        </button>
+        </Link>
         <CatalogViewMode mode={props.viewMode} onSelect={props.onView} />
     </section>
 )

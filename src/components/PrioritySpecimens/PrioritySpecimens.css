@@ -81,3 +81,9 @@
         min-height: 300px;
     }
 }
+
+@media (max-width: 480px) {
+    .priority-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

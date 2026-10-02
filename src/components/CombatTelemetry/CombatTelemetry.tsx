@@ -28,7 +28,7 @@ export const CombatTelemetry = ({ pokemon }: CombatTelemetryProps) => {
                         HEX-POLYGON / V3.2
                     </span>
                 </div>
-                <CombatRadar stats={pokemon.stats} />
+                <CombatRadar stats={pokemon.stats} size='expanded' />
                 <ElementalVulnerabilityMatrix
                     types={pokemon.types.map(({ type }) => type.name)}
                 />

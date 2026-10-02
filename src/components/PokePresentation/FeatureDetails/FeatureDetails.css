@@ -33,8 +33,19 @@
     margin-top: 12px;
 }
 @media (max-width: 620px) {
+    .feature-slide__copy {
+        min-width: 0;
+        grid-row: 2;
+    }
+
     .feature-slide__copy h1 {
         margin-top: 14px;
         font-size: 34px;
+        overflow-wrap: anywhere;
+    }
+
+    .feature-slide__description,
+    .feature-slide__note {
+        max-width: 100%;
     }
 }

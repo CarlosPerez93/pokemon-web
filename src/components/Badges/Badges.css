@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     gap: 7px;
     margin-top: -3px;
-    width: 450px;
+    width: min(450px, 100%);
 }
 
 .type-badge {
@@ -29,11 +29,7 @@
     background: currentColor;
 }
 
-.badge-large {
+.badge {
     border: solid 1px;
     width: 45%;
-}
-.badge-small {
-    border: solid 1px;
-    width: 20%;
 }

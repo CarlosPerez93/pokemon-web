@@ -11,13 +11,9 @@ export const useCatalogFilters = ({
 }: CatalogFiltersInput) => {
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedType, setSelectedType] = useState('all')
-    const [favoritesOnly, setFavoritesOnly] = useState(false)
     const [sortBy, setSortBy] = useState<'number' | 'name'>('number')
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-    const searchResults =
-        useSearch({ data, stateFilter: searchTerm })?.filter(
-            ({ name }) => !favoritesOnly || favorites.includes(name ?? ''),
-        ) ?? []
+    const searchResults = useSearch({ data, stateFilter: searchTerm }) ?? []
     const sorted = sortPokemon(searchResults, sortBy)
     const visible = sorted.filter(item =>
         matchesPokemonType(item, selectedType, loadedTypes),
@@ -28,7 +24,6 @@ export const useCatalogFilters = ({
     const resetFilters = () => {
         setSearchTerm('')
         setSelectedType('all')
-        setFavoritesOnly(false)
         setSortBy('number')
     }
 
@@ -37,8 +32,6 @@ export const useCatalogFilters = ({
         setSearchTerm,
         selectedType,
         setSelectedType,
-        favoritesOnly,
-        setFavoritesOnly,
         sortBy,
         setSortBy,
         viewMode,

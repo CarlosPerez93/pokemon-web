@@ -28,13 +28,18 @@ export const PokeCardView = (props: PokeCardProps) => {
             data-type={record.primaryType}
             style={{ '--type-color': record.typeColor } as CSSProperties}
         >
-            <PokemonCardHeader
-                id={record.data.id}
-                name={record.pokemonName}
-                isFavorite={props.isFavorite}
-                onToggleFavorite={props.onToggleFavorite}
-            />
-            <PokemonCardArtwork name={record.pokemonName} artwork={record.artwork} />
+            <div className='pokemon-card__media'>
+                <PokemonCardHeader
+                    id={record.data.id}
+                    name={record.pokemonName}
+                    isFavorite={props.isFavorite}
+                    onToggleFavorite={props.onToggleFavorite}
+                />
+                <PokemonCardArtwork
+                    name={record.pokemonName}
+                    artwork={record.artwork}
+                />
+            </div>
             <PokemonCardDetails
                 name={record.pokemonName}
                 types={record.types}

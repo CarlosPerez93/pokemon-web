@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 
-import { PokemonCardDetailsProps } from './PokemonCardDetails.type'
+import Badges from '@components/Badges'
 import { PokemonCardStats } from '../PokemonCardStats'
 
+import { PokemonCardDetailsProps } from './PokemonCardDetails.type'
+
 import './PokemonCardDetails.css'
-import Badges from '@components/Badges'
 
 export const PokemonCardDetails = ({
     name,
@@ -17,7 +18,7 @@ export const PokemonCardDetails = ({
         </h2>
         <div className='type-badges' aria-label={`${name} types`}>
             {types.map(({ type }) => (
-                <Badges type={type} className />
+                <Badges type={type} className='type-badge' />
             ))}
         </div>
         <PokemonCardStats stats={stats} />

@@ -1,6 +1,7 @@
 .dossier-morphotype {
     min-width: 0;
-    height: 150px;
+    min-height: 150px;
+    height: auto;
     display: grid;
     align-content: start;
     gap: 12px;

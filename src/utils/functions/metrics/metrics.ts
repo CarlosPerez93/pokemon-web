@@ -19,13 +19,13 @@ export const metrics = ({
         variant: 'telemetry',
     },
     {
-        value: apiStatus,
+        value: apiStatus ?? '—',
         label: 'POKÉAPI STATUS',
         detail: 'SPECIES + TYPE ENDPOINTS',
         variant: 'telemetry',
     },
     {
-        value: favoriteCount,
+        value: favoriteCount ?? '—',
         label: 'ARCHIVED FAVORITES',
         detail: 'SAVED ON THIS DEVICE',
         variant: 'telemetry',

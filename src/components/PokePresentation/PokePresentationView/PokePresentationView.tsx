@@ -1,17 +1,15 @@
 import { CSSProperties } from 'react'
 
-import { FeatureArtwork } from '@components/PokePresentation/FeatureArtwork'
-import { FeatureDetails } from '@components/PokePresentation/FeatureDetails'
 import { FeatureError } from '@components/PokePresentation/FeatureError'
 import { FeatureMetrics } from '@components/PokePresentation/FeatureMetrics'
+import { FeatureDetails } from '@components/PokePresentation/FeatureDetails'
+import { FeatureArtwork } from '@components/PokePresentation/FeatureArtwork'
+
 import { useFeaturedPokemon } from '@hooks/useFeaturedPokemon'
+import { PokePresentationProps } from './PokePresentationView.type'
 
 import './PokePresentationView.css'
 import '../FeatureError/FeatureError.css'
-
-type PokePresentationProps = {
-    name: string
-}
 
 export const PokePresentationView = ({ name }: PokePresentationProps) => {
     const record = useFeaturedPokemon(name)

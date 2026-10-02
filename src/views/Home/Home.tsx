@@ -11,7 +11,7 @@ import { ResponseFetch } from '@utils/api/pokemon-list.types'
 import { ArchiveTelemetry } from '@components/ArchiveTelemetry'
 import { ExpeditionBanner } from '@components/ExpeditionBanner'
 import { HomeBreadcrumb } from '@components/HomeBreadcrumb'
-import { PrioritySpecimens } from '@components/PrioritySpecimens'
+import { PRIORITY_SPECIMENS, PrioritySpecimens } from '@components/PrioritySpecimens'
 import { setTotalSpecies } from '@services/SpeciesIndex/speciesIndex.slice'
 
 import './Home.css'
@@ -55,7 +55,7 @@ export const Home = () => {
                     <strong>{favorites.length}</strong>
                 </Link>
             </div>
-            <PokePresentation name='charizard' />
+            <PokePresentation names={['charizard', ...PRIORITY_SPECIMENS]} />
             <PrioritySpecimens
                 favorites={favorites}
                 onToggleFavorite={toggleFavorite}

@@ -2,11 +2,10 @@ import { ArrowRightOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 
 import PokeCard from '@components/PokeCard'
+import { PRIORITY_SPECIMENS } from './PrioritySpecimens.constants'
 import { PrioritySpecimensProps } from './PrioritySpecimens.type'
 
 import './PrioritySpecimens.css'
-
-const PRIORITY_SPECIMENS = ['pikachu', 'bulbasaur', 'blastoise', 'gengar']
 
 export const PrioritySpecimens = ({
     favorites,

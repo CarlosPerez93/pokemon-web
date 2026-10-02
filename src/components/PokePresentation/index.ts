@@ -1,4 +1,5 @@
 export {
     default,
-    PokePresentationView as PokePresentation,
-} from './PokePresentationView'
+    PokePresentationCarousel as PokePresentation,
+} from './PokePresentationCarousel'
+export { PokePresentationView } from './PokePresentationView'

@@ -1,1 +1,1 @@
-export { AbilityList } from './AbilityList'
+export { AbilityList, default } from './AbilityList'

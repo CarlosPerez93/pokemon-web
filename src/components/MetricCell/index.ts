@@ -1,2 +1,3 @@
 export { MetricCell } from './MetricCell'
-export type { MetricCellProps } from './MetricCell.type'
+
+export type { MetricsCellProps } from './MetricsCellProps.type'

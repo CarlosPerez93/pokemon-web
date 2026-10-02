@@ -1,4 +1,6 @@
-import { MetricCellProps } from './MetricCell.type'
+import type { MetricsCellProps } from './MetricsCellProps.type'
+
+import './MetricCell.css'
 
 import './MetricCell.css'
 
@@ -8,7 +10,7 @@ export const MetricCell = ({
     detail,
     unit,
     variant = 'morphometric',
-}: MetricCellProps) => (
+}: MetricsCellProps) => (
     <div className={`metric-cell metric-cell--${variant}`}>
         {variant === 'telemetry' ? (
             <>

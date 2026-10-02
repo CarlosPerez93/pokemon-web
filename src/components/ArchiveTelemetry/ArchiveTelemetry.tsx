@@ -1,8 +1,9 @@
-import { MetricCell, MetricCellProps } from '@components/MetricCell'
+import { MetricCell } from '@components/MetricCell'
+
+import { metrics } from '@utils/functions/metrics/metrics'
+import { ArchiveTelemetryProps } from './ArchiveTelemetry.type'
 
 import './ArchiveTelemetry.css'
-
-import { ArchiveTelemetryProps } from './ArchiveTelemetry.type'
 
 export const ArchiveTelemetry = ({
     speciesCount,
@@ -10,38 +11,16 @@ export const ArchiveTelemetry = ({
     typeCount,
     apiStatus,
 }: ArchiveTelemetryProps) => {
-    const metrics: MetricCellProps[] = [
-        {
-            value: speciesCount?.toLocaleString() ?? '—',
-            label: 'REGISTERED SPECIES',
-            detail: 'LIVE POKÉAPI INDEX',
-            variant: 'telemetry',
-        },
-        {
-            value: typeCount?.toLocaleString() ?? '—',
-            label: 'API TYPE RECORDS',
-            detail: 'INCLUDES SPECIAL TYPES',
-            variant: 'telemetry',
-        },
-        {
-            value: apiStatus,
-            label: 'POKÉAPI STATUS',
-            detail: 'SPECIES + TYPE ENDPOINTS',
-            variant: 'telemetry',
-        },
-        {
-            value: favoriteCount,
-            label: 'ARCHIVED FAVORITES',
-            detail: 'SAVED ON THIS DEVICE',
-            variant: 'telemetry',
-        },
-    ]
+    const telemetryMetrics = metrics({
+        speciesCount,
+        favoriteCount,
+        typeCount,
+        apiStatus,
+    }).map(metric => <MetricCell key={metric.label} {...metric} />)
 
     return (
         <section className='home-telemetry' aria-label='Archive status'>
-            {metrics.map(metric => (
-                <MetricCell key={metric.label} {...metric} />
-            ))}
+            {telemetryMetrics}
         </section>
     )
 }

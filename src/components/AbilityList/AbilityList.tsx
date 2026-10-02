@@ -13,3 +13,5 @@ export const AbilityList = ({ abilities }: AbilityListProps) => (
         ))}
     </div>
 )
+
+export default AbilityList

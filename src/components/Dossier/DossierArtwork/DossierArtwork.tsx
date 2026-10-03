@@ -24,3 +24,5 @@ export const DossierArtwork = ({ pokemon }: DossierArtworkProps) => {
         </div>
     )
 }
+
+export default DossierArtwork

@@ -1,1 +1,1 @@
-export { DossierLoadingState } from './DossierLoadingState'
+export { DossierLoadingState, default } from './DossierLoadingState'

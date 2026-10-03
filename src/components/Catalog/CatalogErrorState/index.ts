@@ -1,1 +1,1 @@
-export { CatalogErrorState } from './CatalogErrorState'
+export { CatalogErrorState, default } from './CatalogErrorState'

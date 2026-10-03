@@ -1,2 +1,3 @@
-export type PokeCardViewProps =
-    import('../../../utils/types/poke-card.types').PokeCardProps
+import { PokeCardProps } from '../../../utils/types/poke-card.types'
+
+export type PokeCardViewProps = PokeCardProps

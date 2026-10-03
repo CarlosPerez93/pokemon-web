@@ -17,3 +17,5 @@ export const CombatRadarAxes = () => (
         />
     </>
 )
+
+export default CombatRadarAxes

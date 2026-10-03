@@ -1,1 +1,1 @@
-export { CombatTelemetry } from './CombatTelemetry'
+export { CombatTelemetry, default } from './CombatTelemetry'

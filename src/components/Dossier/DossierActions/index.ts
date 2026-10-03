@@ -1,1 +1,1 @@
-export { DossierActions } from './DossierActions'
+export { DossierActions, default } from './DossierActions'

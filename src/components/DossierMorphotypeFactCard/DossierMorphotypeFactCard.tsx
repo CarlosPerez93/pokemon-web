@@ -13,3 +13,5 @@ export const DossierMorphotypeFactCard = ({
         <small>{detail}</small>
     </div>
 )
+
+export default DossierMorphotypeFactCard

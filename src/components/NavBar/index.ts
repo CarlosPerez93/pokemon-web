@@ -1,1 +1,1 @@
-export { default, NavBarView as NavBar } from './NavBarView'
+export { NavBar, default } from './NavBar'

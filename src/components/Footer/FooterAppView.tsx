@@ -1,7 +1,8 @@
-import { FooterAbout } from '../FooterAbout'
-import { FooterLegal } from '../FooterLegal'
-import { FooterMetadata } from '../FooterMetadata'
-import { FooterReferences } from '../FooterReferences'
+import FooterAbout from './FooterAbout'
+import { FooterLegal } from './FooterLegal'
+import { FooterMetadata } from './FooterMetadata'
+import { FooterReferences } from './FooterReferences'
+
 import './FooterAppView.css'
 
 export const FooterAppView = () => (

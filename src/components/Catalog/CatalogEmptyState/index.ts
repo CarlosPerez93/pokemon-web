@@ -1,1 +1,1 @@
-export { CatalogEmptyState } from './CatalogEmptyState'
+export { CatalogEmptyState, default } from './CatalogEmptyState'

@@ -1,1 +1,1 @@
-export { CatalogViewMode } from './CatalogViewMode'
+export { CatalogViewMode, default } from './CatalogViewMode'

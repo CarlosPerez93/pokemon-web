@@ -1,1 +1,1 @@
-export { DossierMoveArsenal } from './DossierMoveArsenal'
+export { DossierMoveArsenal, default } from './DossierMoveArsenal'

@@ -1,1 +1,1 @@
-export { CombatRadar } from './CombatRadar'
+export { CombatRadar, default } from './CombatRadar'

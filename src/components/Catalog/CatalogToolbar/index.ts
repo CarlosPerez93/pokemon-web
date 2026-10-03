@@ -1,1 +1,1 @@
-export { CatalogToolbar } from './CatalogToolbar'
+export { CatalogToolbar, default } from './CatalogToolbar'

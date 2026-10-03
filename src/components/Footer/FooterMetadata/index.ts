@@ -1,1 +1,1 @@
-export { FooterMetadata } from './FooterMetadata'
+export { FooterMetadata, default } from './FooterMetadata'

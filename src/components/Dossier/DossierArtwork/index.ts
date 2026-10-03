@@ -1,1 +1,1 @@
-export { DossierArtwork } from './DossierArtwork'
+export { DossierArtwork, default } from './DossierArtwork'

@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect } from 'react'
 
-import { ResponseGeneric } from '@utils/api/response-generic.type'
 import { ResponseState, QueryType, Func } from './api.type'
+import { ResponseGeneric } from '@utils/api/response-generic.type'
 import { errorNotification } from '@utils/notifications/notification'
 
 export const useGet = <T>(

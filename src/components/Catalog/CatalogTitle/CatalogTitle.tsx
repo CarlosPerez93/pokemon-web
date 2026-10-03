@@ -1,10 +1,6 @@
-import { ResponseFetch } from '../../../utils/api/pokemon-list.types'
+import { CatalogTitleProps } from './CatalogTitle.type'
 
 import './CatalogTitle.css'
-
-type CatalogTitleProps = {
-    data?: ResponseFetch
-}
 
 export const CatalogTitle = ({ data }: CatalogTitleProps) => (
     <section className='catalog-intro' aria-labelledby='catalog-title'>
@@ -24,3 +20,5 @@ export const CatalogTitle = ({ data }: CatalogTitleProps) => (
         </div>
     </section>
 )
+
+export default CatalogTitle

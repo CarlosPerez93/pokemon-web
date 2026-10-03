@@ -1,3 +1,1 @@
-export type CatalogErrorStateProps = {
-    onRetry: () => void
-}
+export type CatalogErrorStateProps = { onRetry: () => void }

@@ -1,3 +1,1 @@
-export type DossierErrorStateProps = {
-    onRetry: () => void
-}
+export type DossierErrorStateProps = { onRetry: () => void }

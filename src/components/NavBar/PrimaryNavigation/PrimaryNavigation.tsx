@@ -18,3 +18,5 @@ export const PrimaryNavigation = () => (
         </NavLink>
     </nav>
 )
+
+export default PrimaryNavigation

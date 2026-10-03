@@ -1,1 +1,1 @@
-export { SearchTrigger } from './SearchTrigger'
+export { SearchTrigger, default } from './SearchTrigger'

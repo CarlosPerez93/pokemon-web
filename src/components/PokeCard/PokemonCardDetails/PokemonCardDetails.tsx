@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import Badges from '@components/Badges'
+import { Badges } from '@components/Badges'
 import { PokemonCardStats } from '../PokemonCardStats'
 
 import { PokemonCardDetailsProps } from './PokemonCardDetails.type'
@@ -24,3 +24,5 @@ export const PokemonCardDetails = ({
         <PokemonCardStats stats={stats} />
     </div>
 )
+
+export default PokemonCardDetails

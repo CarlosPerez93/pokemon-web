@@ -28,6 +28,7 @@ export const DossierPage = (props: DossierRecordProps) => {
     return (
         <main className='dossier-page page-container'>
             <DossierBreadcrumb />
+            <DossierRecordNavigation id={props.pokemon.id} />
             <section
                 className='dossier-hero'
                 style={{ '--type-color': typeColor } as CSSProperties}
@@ -56,7 +57,6 @@ export const DossierPage = (props: DossierRecordProps) => {
                 currentId={props.pokemon.id}
             />
             <DossierMoveArsenal pokemon={props.pokemon} />
-            <DossierRecordNavigation id={props.pokemon.id} />
         </main>
     )
 }

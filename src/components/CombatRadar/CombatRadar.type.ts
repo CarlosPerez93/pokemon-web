@@ -1,4 +1,4 @@
-import { PokemonStatSlot } from '../../utils/api/pokemon-record.types'
+import { PokemonStatSlot } from '@utils/api/pokemon-record.types'
 
 export type CombatRadarProps = {
     stats: PokemonStatSlot[]

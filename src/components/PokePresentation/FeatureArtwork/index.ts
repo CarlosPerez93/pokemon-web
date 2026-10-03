@@ -1,1 +1,1 @@
-export { FeatureArtwork } from './FeatureArtwork'
+export { FeatureArtwork, default } from './FeatureArtwork'

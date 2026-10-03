@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { MoonOutlined, SunOutlined } from '@ant-design/icons'
 
+import { RootTheme } from './ThemeToggle.type'
 import { toggleTheme } from '../../../services/Theme/theme.slice'
 
 import './ThemeToggle.css'
-
-type RootTheme = { theme: { currentTheme: string } }
 
 export const ThemeToggle = () => {
     const dispatch = useDispatch()

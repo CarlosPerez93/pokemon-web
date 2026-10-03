@@ -1,1 +1,1 @@
-export { Brand } from './Brand'
+export { Brand, default } from './Brand'

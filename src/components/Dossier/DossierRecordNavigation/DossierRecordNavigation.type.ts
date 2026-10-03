@@ -1,3 +1,1 @@
-export type DossierRecordNavigationProps = {
-    id: number
-}
+export type DossierRecordNavigationProps = { id: number }

@@ -1,1 +1,1 @@
-export { ArchiveTelemetry } from './ArchiveTelemetry'
+export { ArchiveTelemetry, default } from './ArchiveTelemetry'

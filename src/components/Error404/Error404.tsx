@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { ButtonApp } from '@components/ButtonApp/ButtonApp'
+import { ButtonApp } from '@components/ButtonApp'
 
 import { ROUTES_PUBLIC as RP } from '@utils/constants/routes.constants'
 

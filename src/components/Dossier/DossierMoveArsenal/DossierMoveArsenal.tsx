@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { DossierMoveArsenalProps } from './DossierMoveArsenal.type'
 
 import './DossierMoveArsenal.css'
+import { ButtonApp } from '@components/ButtonApp/ButtonApp'
 
 const PREVIEW_COUNT = 24
 
@@ -25,14 +26,15 @@ export const DossierMoveArsenal = ({ pokemon }: DossierMoveArsenalProps) => {
                 ))}
             </div>
             {remaining > 0 && (
-                <button
+                <ButtonApp
                     className='dossier-move-arsenal__toggle'
-                    type='button'
                     onClick={() => setExpanded(true)}
                 >
                     Show {remaining} more moves
-                </button>
+                </ButtonApp>
             )}
         </section>
     )
 }
+
+export default DossierMoveArsenal

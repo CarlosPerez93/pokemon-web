@@ -1,1 +1,1 @@
-export { ButtonApp } from './ButtonApp'
+export { ButtonApp, default } from './ButtonApp'

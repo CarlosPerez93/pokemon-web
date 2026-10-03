@@ -1,14 +1,9 @@
-import { ArrowRightOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
-import { ResponsePoke } from '../../../utils/api/pokemon-record.types'
+import { ArrowRightOutlined } from '@ant-design/icons'
+
+import { FeatureDetailsProps } from './FeatureDetails.type'
 
 import './FeatureDetails.css'
-import './FeatureDetailsFacts.css'
-type FeatureDetailsProps = {
-    pokemon: ResponsePoke
-    genus?: string
-    fieldNote?: string
-}
 
 export const FeatureDetails = ({
     pokemon,
@@ -57,3 +52,5 @@ export const FeatureDetails = ({
         </Link>
     </div>
 )
+
+export default FeatureDetails

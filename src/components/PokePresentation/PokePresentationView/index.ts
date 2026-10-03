@@ -1,1 +1,1 @@
-export { default, PokePresentationView } from './PokePresentationView'
+export { PokePresentationView, default } from './PokePresentationView'

@@ -1,7 +1,8 @@
 import { ReloadOutlined } from '@ant-design/icons'
 
-import './FeatureError.css'
 import { FeatureErrorProps } from './FeatureError.type'
+
+import './FeatureError.css'
 
 export const FeatureError = ({ onRetry }: FeatureErrorProps) => (
     <div className='feature-error' role='alert'>
@@ -11,3 +12,5 @@ export const FeatureError = ({ onRetry }: FeatureErrorProps) => (
         </button>
     </div>
 )
+
+export default FeatureError

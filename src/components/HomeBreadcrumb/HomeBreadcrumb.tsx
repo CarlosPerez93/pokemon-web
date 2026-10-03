@@ -12,3 +12,5 @@ export const HomeBreadcrumb = ({ speciesCount }: HomeBreadcrumbProps) => (
         </span>
     </div>
 )
+
+export default HomeBreadcrumb

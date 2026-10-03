@@ -1,11 +1,8 @@
 import { AppstoreOutlined, BarsOutlined } from '@ant-design/icons'
 
-import './CatalogViewMode.css'
+import { CatalogViewModeProps } from './CatalogViewMode.type'
 
-type CatalogViewModeProps = {
-    mode: 'grid' | 'list'
-    onSelect: (mode: 'grid' | 'list') => void
-}
+import './CatalogViewMode.css'
 
 export const CatalogViewMode = ({ mode, onSelect }: CatalogViewModeProps) => (
     <div className='view-mode' role='group' aria-label='Catalog layout'>
@@ -29,3 +26,5 @@ export const CatalogViewMode = ({ mode, onSelect }: CatalogViewModeProps) => (
         </button>
     </div>
 )
+
+export default CatalogViewMode

@@ -1,11 +1,16 @@
 import { CSSProperties } from 'react'
 
+import { PokemonCardHeader } from '../PokemonCardHeader'
 import { PokemonCardArtwork } from '../PokemonCardArtwork'
 import { PokemonCardDetails } from '../PokemonCardDetails'
-import { PokemonCardHeader } from '../PokemonCardHeader'
-import { PokemonCardError, PokemonCardSkeleton } from '../PokemonCardState'
-import { PokeCardProps } from '@utils/types/poke-card.types'
+import {
+    PokemonCardSkeleton,
+    PokemonCardState,
+} from '../PokemonCardState/PokemonCardState'
+
 import { usePokemonRecord } from '@hooks/usePokemonRecord'
+import { PokeCardProps } from '@utils/types/poke-card.types'
+
 import './PokeCardView.css'
 
 export const PokeCardView = (props: PokeCardProps) => {
@@ -15,7 +20,7 @@ export const PokeCardView = (props: PokeCardProps) => {
     }
     if (record.error || !record.data?.id) {
         return (
-            <PokemonCardError
+            <PokemonCardState
                 name={record.pokemonName}
                 onRetry={() => record.refetch()}
             />

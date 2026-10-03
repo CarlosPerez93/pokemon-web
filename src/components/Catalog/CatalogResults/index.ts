@@ -1,1 +1,1 @@
-export { CatalogResults } from './CatalogResults'
+export { CatalogResults, default } from './CatalogResults'

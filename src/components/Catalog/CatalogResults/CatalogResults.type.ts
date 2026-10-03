@@ -1,17 +1,17 @@
-import { PokeList } from '../../../utils/api/pokemon-list.types'
+import { PokeList } from '@utils/api/pokemon-list.types'
 
 export type CatalogResultsProps = {
-    items: PokeList[]
-    loading: boolean
     error?: boolean
-    waitingForTypes: boolean
-    favorites: string[]
-    viewMode: 'grid' | 'list'
+    loading: boolean
     hasMore: boolean
+    items: PokeList[]
+    favorites: string[]
     loadingMore: boolean
-    onLoadMore: () => void
-    onRetry: () => void
+    waitingForTypes: boolean
+    viewMode: 'grid' | 'list'
     onReset: () => void
+    onRetry: () => void
+    onLoadMore: () => void
     onToggleFavorite: (name: string) => void
     onTypesLoaded: (name: string, types: string[]) => void
 }

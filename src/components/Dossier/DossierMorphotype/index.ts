@@ -1,2 +1,1 @@
-export { DossierMorphotype } from './DossierMorphotype'
-export type { DossierMorphotypeProps } from './DossierMorphotype.type'
+export { DossierMorphotype, default } from './DossierMorphotype'

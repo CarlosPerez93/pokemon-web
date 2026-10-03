@@ -1,4 +1,5 @@
 import { HeartFilled, HeartOutlined } from '@ant-design/icons'
+
 import { PokemonCardHeaderProps } from './PokemonCardHeader.type'
 
 import './PokemonCardHeader.css'
@@ -22,3 +23,4 @@ export const PokemonCardHeader = ({
         </button>
     </div>
 )
+export default PokemonCardHeader

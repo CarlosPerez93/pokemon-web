@@ -1,1 +1,1 @@
-export { CombatRadarSeries } from './CombatRadarSeries'
+export { CombatRadarSeries, default } from './CombatRadarSeries'

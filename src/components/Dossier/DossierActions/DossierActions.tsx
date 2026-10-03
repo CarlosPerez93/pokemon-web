@@ -1,44 +1,39 @@
-import {
-    AudioOutlined,
-    FireOutlined,
-    HeartFilled,
-    HeartOutlined,
-    RadarChartOutlined,
-} from '@ant-design/icons'
+import { Button } from 'antd'
 import { Link } from 'react-router-dom'
+import { HeartOutlined } from '@ant-design/icons'
+import ButtonGroup from 'antd/es/button/button-group'
+
+import { ButtonsGroup } from '@components/ButtonsGroup'
+
+import { DossierActionsProps } from './DossierActions.type'
 
 import './DossierActions.css'
-import { DossierActionsProps } from './DossierActions.type'
 
 export const DossierActions = ({
     name,
     isFavorite,
     onToggleFavorite,
-}: DossierActionsProps) => (
-    <div className='dossier-actions'>
-        <button
-            className={`dossier-favorite${isFavorite ? ' is-active' : ''}`}
-            type='button'
-            aria-pressed={isFavorite}
-            onClick={() => onToggleFavorite(name)}
-        >
-            {isFavorite ? <HeartFilled /> : <HeartOutlined />}
-            {isFavorite ? 'Saved to archive' : 'Save specimen'}
-        </button>
-        <Link className='dossier-action-button' to='/favorites'>
-            <HeartOutlined /> Saved favorites
-        </Link>
-        <Link className='dossier-action-button' to='/list-pokemon'>
-            <FireOutlined /> Standard Biology
-        </Link>
-        <button className='dossier-action-button' type='button'>
-            <HeartOutlined /> Shiny Variant
-        </button>
-        <button className='dossier-action-button' type='button'>
-            <AudioOutlined /> Cry Audio
-        </button>
-        <button className='dossier-action-button' type='button'>
-            <RadarChartOutlined /> Thermal Scan
-        </button>
-    </div>
-)
+}: DossierActionsProps) => {
+    return (
+        <div className='dossier-actions'>
+            <Link to='/favorites'>
+                <Button className='dossier-action-button'>
+                    <HeartOutlined /> Saved favorites
+                </Button>
+            </Link>
+            <ButtonGroup>
+                {ButtonsGroup({ isFavorite, name, onToggleFavorite }).map(btn => (
+                    <Button
+                        key={btn.label}
+                        className='dossier-action-button'
+                        onClick={btn.action}
+                    >
+                        {btn.icon} {btn.label}
+                    </Button>
+                ))}
+            </ButtonGroup>
+        </div>
+    )
+}
+
+export default DossierActions

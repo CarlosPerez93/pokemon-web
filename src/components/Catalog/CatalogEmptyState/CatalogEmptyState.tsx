@@ -3,8 +3,8 @@ import { CatalogEmptyStateProps } from './CatalogEmptyState.type'
 import './CatalogEmptyState.css'
 
 export const CatalogEmptyState = ({
-    waitingForTypes,
     onReset,
+    waitingForTypes,
 }: CatalogEmptyStateProps) => (
     <div className='catalog-state catalog-state--empty'>
         <span className='empty-radar' aria-hidden='true'>
@@ -23,3 +23,4 @@ export const CatalogEmptyState = ({
         </button>
     </div>
 )
+export default CatalogEmptyState

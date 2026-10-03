@@ -1,2 +1,1 @@
-export { FieldJournal } from './FieldJournal'
-export type { FieldJournalProps } from './FieldJournal.type'
+export { FieldJournal, default } from './FieldJournal'

@@ -1,1 +1,1 @@
-export { DossierIdentity } from './DossierIdentity'
+export { DossierIdentity, default } from './DossierIdentity'

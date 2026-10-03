@@ -1,1 +1,1 @@
-export { DossierEvolutionChain } from './DossierEvolutionChain'
+export { DossierEvolutionChain, default } from './DossierEvolutionChain'

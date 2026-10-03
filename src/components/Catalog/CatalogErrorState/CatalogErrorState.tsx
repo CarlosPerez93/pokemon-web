@@ -15,3 +15,5 @@ export const CatalogErrorState = ({ onRetry }: CatalogErrorStateProps) => (
         </button>
     </div>
 )
+
+export default CatalogErrorState

@@ -1,4 +1,5 @@
-import { ButtonApp } from '../../../components/ButtonApp'
+import { ButtonApp } from '@components/ButtonApp'
+
 import { CatalogLoadMoreProps } from './CatalogLoadMore.type'
 
 import './CatalogLoadMore.css'
@@ -18,3 +19,4 @@ export const CatalogLoadMore = ({
         </div>
     )
 }
+export default CatalogLoadMore

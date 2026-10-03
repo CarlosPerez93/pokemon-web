@@ -1,5 +1,5 @@
-import { ArrowRightOutlined, RadarChartOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { ArrowRightOutlined, RadarChartOutlined } from '@ant-design/icons'
 
 import './ExpeditionBanner.css'
 
@@ -27,3 +27,5 @@ export const ExpeditionBanner = () => (
         </Link>
     </section>
 )
+
+export default ExpeditionBanner

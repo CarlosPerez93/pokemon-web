@@ -1,4 +1,5 @@
 import { ReloadOutlined } from '@ant-design/icons'
+
 import { PokemonCardStateProps } from './PokemonCardState.type'
 
 import './PokemonCardState.css'
@@ -13,7 +14,7 @@ export const PokemonCardSkeleton = ({
     />
 )
 
-export const PokemonCardError = ({ name, onRetry }: PokemonCardStateProps) => (
+export const PokemonCardState = ({ name, onRetry }: PokemonCardStateProps) => (
     <article className='pokemon-card pokemon-card--error' role='alert'>
         <span className='pokemon-card__index'>RECORD UNAVAILABLE</span>
         <strong>{name}</strong>
@@ -22,3 +23,8 @@ export const PokemonCardError = ({ name, onRetry }: PokemonCardStateProps) => (
         </button>
     </article>
 )
+
+export default {
+    PokemonCardSkeleton,
+    PokemonCardState,
+}

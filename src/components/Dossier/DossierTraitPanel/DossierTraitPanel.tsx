@@ -16,3 +16,5 @@ export const DossierTraitPanel = ({ abilities }: DossierTraitPanelProps) => (
         ))}
     </aside>
 )
+
+export default DossierTraitPanel

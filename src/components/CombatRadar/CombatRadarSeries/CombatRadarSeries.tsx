@@ -11,3 +11,4 @@ export const CombatRadarSeries = () => (
         fillOpacity={0.18}
     />
 )
+export default CombatRadarSeries

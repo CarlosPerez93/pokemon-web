@@ -43,3 +43,5 @@ export const DossierEvolutionChain = ({
         </section>
     )
 }
+
+export default DossierEvolutionChain

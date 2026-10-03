@@ -19,3 +19,5 @@ export const PokemonCardStats = ({ stats }: PokemonCardStatsProps) => (
         ))}
     </div>
 )
+
+export default PokemonCardStats

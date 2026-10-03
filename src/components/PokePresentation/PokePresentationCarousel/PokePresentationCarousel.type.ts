@@ -1,3 +1,1 @@
-export type PokePresentationCarouselProps = {
-    names: readonly string[]
-}
+export type PokePresentationCarouselProps = { names: readonly string[] }

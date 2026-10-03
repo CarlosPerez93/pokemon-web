@@ -1,13 +1,10 @@
 import { useState } from 'react'
 
 import { useSearch } from '../useSearch'
-import { matchesPokemonType, sortPokemon } from '../../utils/types/catalog-sort.util'
 import { CatalogFiltersInput } from './useCatalogFilters.type'
+import { matchesPokemonType, sortPokemon } from '@utils/types/catalog-sort.util'
 
-export const useCatalogFilters = ({
-    data,
-    loadedTypes,
-}: CatalogFiltersInput) => {
+export const useCatalogFilters = ({ data, loadedTypes }: CatalogFiltersInput) => {
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedType, setSelectedType] = useState('all')
     const [sortBy, setSortBy] = useState<'number' | 'name'>('number')

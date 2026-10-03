@@ -35,3 +35,5 @@ export const FooterAbout = () => (
         </div>
     </section>
 )
+
+export default FooterAbout

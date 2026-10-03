@@ -1,4 +1,4 @@
-import { EvolutionStage } from '../../../hooks/useEvolutionChain'
+import { EvolutionStage } from '@hooks/useEvolutionChain'
 
 export type DossierEvolutionChainProps = {
     stages: EvolutionStage[]

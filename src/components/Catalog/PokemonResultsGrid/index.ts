@@ -1,1 +1,1 @@
-export { PokemonResultsGrid } from './PokemonResultsGrid'
+export { PokemonResultsGrid, default } from './PokemonResultsGrid'

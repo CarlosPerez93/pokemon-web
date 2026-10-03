@@ -1,6 +1,7 @@
-import { CatalogControls } from '../CatalogControls'
-import { CatalogSearch } from '../CatalogSearch'
 import { TypeMatrix } from '../TypeMatrix'
+import { CatalogSearch } from '../CatalogSearch'
+import { CatalogControls } from '../CatalogControls'
+
 import { CatalogToolbarProps } from './CatalogToolbar.type'
 
 import './CatalogToolbar.css'
@@ -29,3 +30,4 @@ export const CatalogToolbar = ({
         />
     </div>
 )
+export default CatalogToolbar

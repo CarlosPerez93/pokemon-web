@@ -1,1 +1,1 @@
-export { CombatStatList } from './CombatStatList'
+export { CombatStatList, default } from './CombatStatList'

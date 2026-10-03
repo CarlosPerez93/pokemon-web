@@ -1,1 +1,1 @@
-export { PrimaryNavigation } from './PrimaryNavigation'
+export { PrimaryNavigation, default } from './PrimaryNavigation'

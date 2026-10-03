@@ -1,8 +1,9 @@
+import { TypeOption } from '../TypeOption'
+
 import {
     POKEMON_TYPE_COLORS,
     POKEMON_TYPE_NAMES,
-} from '../../../utils/constants/pokemon-type.constants'
-import { TypeOption } from '../TypeOption'
+} from '@utils/constants/pokemon-type.constants'
 import { TypeMatrixProps } from './TypeMatrix.type'
 
 import './TypeMatrix.css'
@@ -36,3 +37,5 @@ export const TypeMatrix = ({ selected, onSelect }: TypeMatrixProps) => (
         </div>
     </section>
 )
+
+export default TypeMatrix

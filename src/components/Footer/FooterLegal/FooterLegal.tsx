@@ -9,3 +9,5 @@ export const FooterLegal = () => (
         <span>FIELD RESEARCH TERMINAL · NON-COMMERCIAL SCHOLARLY ARCHIVE</span>
     </div>
 )
+
+export default FooterLegal

@@ -1,6 +1,8 @@
-import { HeartFilled, HeartOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { HeartFilled, HeartOutlined } from '@ant-design/icons'
+
 import { CatalogViewMode } from '../CatalogViewMode'
+
 import { CatalogControlsProps } from './CatalogControls.type'
 
 import './CatalogControls.css'
@@ -29,3 +31,5 @@ export const CatalogControls = (props: CatalogControlsProps) => (
         <CatalogViewMode mode={props.viewMode} onSelect={props.onView} />
     </section>
 )
+
+export default CatalogControls

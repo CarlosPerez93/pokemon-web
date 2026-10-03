@@ -1,1 +1,1 @@
-export { ExpeditionBanner } from './ExpeditionBanner'
+export { ExpeditionBanner, default } from './ExpeditionBanner'

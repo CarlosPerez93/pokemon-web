@@ -1,15 +1,16 @@
 import { ComponentProps } from 'react'
 import { useSelector } from 'react-redux'
 
-import { FooterApp } from '../../Footer'
-import { Brand } from '../Brand'
-import { HeaderActions } from '../HeaderActions'
-import { PrimaryNavigation } from '../PrimaryNavigation'
-import './NavBarView.css'
+import { Brand } from './Brand'
+import FooterAppView from '@components/Footer'
+import { HeaderActions } from './HeaderActions'
+import { PrimaryNavigation } from './PrimaryNavigation'
+
+import './NavBar.css'
 
 type ThemeState = { theme: { currentTheme: string } }
 
-export const NavBarView = ({ children }: ComponentProps<'div'>) => {
+export const NavBar = ({ children }: ComponentProps<'div'>) => {
     const theme = useSelector((state: ThemeState) => state.theme.currentTheme)
     return (
         <div className='app-shell' data-theme={theme}>
@@ -21,9 +22,9 @@ export const NavBarView = ({ children }: ComponentProps<'div'>) => {
                 </div>
             </header>
             <div className='app-main'>{children}</div>
-            <FooterApp />
+            <FooterAppView />
         </div>
     )
 }
 
-export default NavBarView
+export default NavBar

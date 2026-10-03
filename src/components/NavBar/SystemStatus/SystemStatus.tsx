@@ -7,3 +7,5 @@ export const SystemStatus = () => (
         <WifiOutlined aria-hidden='true' /> SYSTEM ONLINE
     </span>
 )
+
+export default SystemStatus

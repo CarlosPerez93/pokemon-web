@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { IconPokeBall } from '../../Icons'
+import { IconPokeBall } from '@components/Icons'
 
 import './Brand.css'
 
@@ -17,3 +17,5 @@ export const Brand = () => (
         </span>
     </Link>
 )
+
+export default Brand

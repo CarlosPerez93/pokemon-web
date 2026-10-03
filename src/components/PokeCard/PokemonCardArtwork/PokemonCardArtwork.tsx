@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+
 import { PokemonCardArtworkProps } from './PokemonCardArtwork.type'
 
 import './PokemonCardArtwork.css'
@@ -14,3 +15,5 @@ export const PokemonCardArtwork = ({ name, artwork }: PokemonCardArtworkProps) =
         )}
     </div>
 )
+
+export default PokemonCardArtwork

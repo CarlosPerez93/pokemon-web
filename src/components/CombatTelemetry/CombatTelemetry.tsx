@@ -37,3 +37,5 @@ export const CombatTelemetry = ({ pokemon }: CombatTelemetryProps) => {
         </section>
     )
 }
+
+export default CombatTelemetry

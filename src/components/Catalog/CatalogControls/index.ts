@@ -1,1 +1,1 @@
-export { CatalogControls } from './CatalogControls'
+export { CatalogControls, default } from './CatalogControls'

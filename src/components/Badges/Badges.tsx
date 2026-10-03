@@ -1,9 +1,6 @@
-import './Badges.css'
+import type { BadgesProps } from './Badges.type'
 
-type BadgesProps = {
-    type: { name: string }
-    className?: string
-}
+import './Badges.css'
 
 export const Badges = ({ type, className }: BadgesProps) => {
     const widthProp = `type-badge type-badge--${type.name} badge ${className ?? ''}`

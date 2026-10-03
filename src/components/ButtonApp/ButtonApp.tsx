@@ -1,10 +1,10 @@
 import { Button } from 'antd'
 
-import { PropsBtn } from './Button.type'
+import { ButtonAppProps } from './ButtonApp.type'
 
 import './ButtonApp.css'
 
-export const ButtonApp = ({ className, children, onClick }: PropsBtn) => {
+export const ButtonApp = ({ className, children, onClick }: ButtonAppProps) => {
     const styles = className ? className : 'button-app'
     return (
         <Button onClick={onClick} className={styles}>
@@ -12,3 +12,5 @@ export const ButtonApp = ({ className, children, onClick }: PropsBtn) => {
         </Button>
     )
 }
+
+export default ButtonApp

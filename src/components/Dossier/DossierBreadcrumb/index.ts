@@ -1,1 +1,1 @@
-export { DossierBreadcrumb } from './DossierBreadcrumb'
+export { DossierBreadcrumb, default } from './DossierBreadcrumb'

@@ -1,1 +1,1 @@
-export { PokemonCardHeader } from './PokemonCardHeader'
+export { PokemonCardHeader, default } from './PokemonCardHeader'

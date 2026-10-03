@@ -2,12 +2,12 @@ import { RefObject } from 'react'
 
 export type CatalogToolbarFilters = {
     searchTerm: string
-    setSearchTerm: (value: string) => void
     selectedType: string
-    setSelectedType: (value: string) => void
     sortBy: 'number' | 'name'
-    setSortBy: (value: 'number' | 'name') => void
     viewMode: 'grid' | 'list'
+    setSearchTerm: (value: string) => void
+    setSelectedType: (value: string) => void
+    setSortBy: (value: 'number' | 'name') => void
     setViewMode: (value: 'grid' | 'list') => void
 }
 

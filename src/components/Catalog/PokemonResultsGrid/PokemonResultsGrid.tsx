@@ -1,15 +1,8 @@
-import PokeCard from '@components/PokeCard'
-import { PokeList } from '../../../utils/api/pokemon-list.types'
+import { PokeCard } from '@components/PokeCard'
+
+import { PokemonResultsGridProps } from './PokemonResultsGrid.type'
 
 import './PokemonResultsGrid.css'
-
-type PokemonResultsGridProps = {
-    items: PokeList[]
-    favorites: string[]
-    viewMode: 'grid' | 'list'
-    onToggleFavorite: (name: string) => void
-    onTypesLoaded: (name: string, types: string[]) => void
-}
 
 export const PokemonResultsGrid = (props: PokemonResultsGridProps) => (
     <div className={`pokemon-grid${props.viewMode === 'list' ? ' is-list' : ''}`}>
@@ -24,3 +17,5 @@ export const PokemonResultsGrid = (props: PokemonResultsGridProps) => (
         ))}
     </div>
 )
+
+export default PokemonResultsGrid

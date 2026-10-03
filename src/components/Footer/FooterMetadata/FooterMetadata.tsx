@@ -16,3 +16,5 @@ export const FooterMetadata = () => (
         ))}
     </section>
 )
+
+export default FooterMetadata

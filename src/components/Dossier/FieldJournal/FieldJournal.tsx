@@ -53,3 +53,5 @@ export const FieldJournal = ({ pokemon, species }: FieldJournalProps) => {
         </section>
     )
 }
+
+export default FieldJournal

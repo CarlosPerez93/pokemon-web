@@ -24,3 +24,5 @@ export const ArchiveTelemetry = ({
         </section>
     )
 }
+
+export default ArchiveTelemetry

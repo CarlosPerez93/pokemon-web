@@ -1,1 +1,0 @@
-export { DossierMorphometrics } from './DossierMorphometrics'

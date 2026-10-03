@@ -1,1 +1,1 @@
-export { FeatureMetrics } from './FeatureMetrics'
+export { FeatureMetrics, default } from './FeatureMetrics'

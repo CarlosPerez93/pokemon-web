@@ -1,9 +1,11 @@
 import { RadarChart, Tooltip } from 'recharts'
 
-import { useElementWidth } from '../../hooks/useElementWidth'
-import { CombatRadarProps } from './CombatRadar.type'
 import { CombatRadarAxes } from './CombatRadarAxes'
 import { CombatRadarSeries } from './CombatRadarSeries'
+
+import { CombatRadarProps } from './CombatRadar.type'
+import { useElementWidth } from '@hooks/useElementWidth'
+
 import './CombatRadar.css'
 
 export const CombatRadar = ({ stats, size = 'default' }: CombatRadarProps) => {
@@ -40,3 +42,5 @@ export const CombatRadar = ({ stats, size = 'default' }: CombatRadarProps) => {
         </div>
     )
 }
+
+export default CombatRadar

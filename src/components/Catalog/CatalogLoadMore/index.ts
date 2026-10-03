@@ -1,1 +1,1 @@
-export { CatalogLoadMore } from './CatalogLoadMore'
+export { CatalogLoadMore, default } from './CatalogLoadMore'

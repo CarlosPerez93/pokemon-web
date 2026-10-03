@@ -1,1 +1,1 @@
-export { PokemonCardDetails } from './PokemonCardDetails'
+export { PokemonCardDetails, default } from './PokemonCardDetails'

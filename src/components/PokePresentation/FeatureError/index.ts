@@ -1,1 +1,1 @@
-export { FeatureError } from './FeatureError'
+export { FeatureError, default } from './FeatureError'

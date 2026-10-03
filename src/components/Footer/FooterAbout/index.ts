@@ -1,1 +1,1 @@
-export { FooterAbout } from './FooterAbout'
+export { FooterAbout, default } from './FooterAbout'

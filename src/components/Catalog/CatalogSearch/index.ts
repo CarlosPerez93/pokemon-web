@@ -1,1 +1,1 @@
-export { CatalogSearch } from './CatalogSearch'
+export { CatalogSearch, default } from './CatalogSearch'

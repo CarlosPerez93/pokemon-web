@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import './FeatureArtwork.css'
 import { FeatureArtworkProps } from './FeatureArtwork.type'
+
+import './FeatureArtwork.css'
 
 export const FeatureArtwork = ({ name, artwork }: FeatureArtworkProps) => (
     <div className='feature-slide__art' aria-label={`${name} official artwork`}>
@@ -13,3 +14,5 @@ export const FeatureArtwork = ({ name, artwork }: FeatureArtworkProps) => (
         </Link>
     </div>
 )
+
+export default FeatureArtwork

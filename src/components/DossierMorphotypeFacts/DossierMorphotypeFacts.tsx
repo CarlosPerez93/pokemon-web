@@ -1,5 +1,6 @@
-import { formatGenderRate } from '@utils/functions/formatGenderRate'
 import { DossierMorphotypeFactCard } from '@components/DossierMorphotypeFactCard'
+
+import { formatGenderRate } from '@utils/functions/formatGenderRate'
 import { DossierMorphotypeFactsProps } from './DossierMorphotypeFacts.type'
 
 import './DossierMorphotypeFacts.css'

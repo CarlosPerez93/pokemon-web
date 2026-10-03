@@ -1,1 +1,1 @@
-export { PokemonLoadingGrid } from './PokemonLoadingGrid'
+export { PokemonLoadingGrid, default } from './PokemonLoadingGrid'

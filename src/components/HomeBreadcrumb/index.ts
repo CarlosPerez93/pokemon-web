@@ -1,1 +1,1 @@
-export { HomeBreadcrumb } from './HomeBreadcrumb'
+export { HomeBreadcrumb, default } from './HomeBreadcrumb'

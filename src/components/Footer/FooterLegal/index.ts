@@ -1,1 +1,1 @@
-export { FooterLegal } from './FooterLegal'
+export { FooterLegal, default } from './FooterLegal'

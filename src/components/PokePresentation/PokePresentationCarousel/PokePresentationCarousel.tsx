@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
 import { Carousel } from 'antd'
+import { useRef, useState } from 'react'
 import type { CarouselRef } from 'antd/es/carousel'
 import {
     LeftOutlined,

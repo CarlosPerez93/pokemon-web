@@ -14,3 +14,5 @@ export const DossierBreadcrumb = () => (
         </span>
     </nav>
 )
+
+export default DossierBreadcrumb

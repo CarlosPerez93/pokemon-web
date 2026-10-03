@@ -13,3 +13,5 @@ export const DossierIdentity = ({ pokemon }: DossierIdentityProps) => {
         </div>
     )
 }
+
+export default DossierIdentity

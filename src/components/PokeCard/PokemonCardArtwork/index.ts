@@ -1,1 +1,1 @@
-export { PokemonCardArtwork } from './PokemonCardArtwork'
+export { PokemonCardArtwork, default } from './PokemonCardArtwork'

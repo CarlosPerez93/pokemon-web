@@ -7,3 +7,5 @@ export const PokemonLoadingGrid = () => (
         ))}
     </div>
 )
+
+export default PokemonLoadingGrid

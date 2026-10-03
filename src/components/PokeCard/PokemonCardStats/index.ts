@@ -1,1 +1,1 @@
-export { PokemonCardStats } from './PokemonCardStats'
+export { PokemonCardStats, default } from './PokemonCardStats'

@@ -1,1 +1,1 @@
-export { FooterReferences } from './FooterReferences'
+export { FooterReferences, default } from './FooterReferences'

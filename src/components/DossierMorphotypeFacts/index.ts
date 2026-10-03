@@ -1,1 +1,1 @@
-export { default, DossierMorphotypeFacts } from './DossierMorphotypeFacts'
+export { DossierMorphotypeFacts, default } from './DossierMorphotypeFacts'

@@ -1,3 +1,1 @@
-export type FeatureErrorProps = {
-    onRetry: () => void
-}
+export type FeatureErrorProps = { onRetry: () => void }

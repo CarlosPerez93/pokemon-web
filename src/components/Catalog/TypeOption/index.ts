@@ -1,1 +1,1 @@
-export { TypeOption } from './TypeOption'
+export { TypeOption, default } from './TypeOption'

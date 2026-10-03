@@ -1,11 +1,9 @@
-import { SearchOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { SearchOutlined } from '@ant-design/icons'
+
+import type { SearchTriggerProps } from './SearchTrigger.type'
 
 import './SearchTrigger.css'
-
-type SearchTriggerProps = {
-    shortcut: string
-}
 
 export const SearchTrigger = ({ shortcut }: SearchTriggerProps) => (
     <Link
@@ -19,3 +17,5 @@ export const SearchTrigger = ({ shortcut }: SearchTriggerProps) => (
         <kbd>{shortcut}</kbd>
     </Link>
 )
+
+export default SearchTrigger

@@ -1,1 +1,1 @@
-export { CatalogTitle } from './CatalogTitle'
+export { CatalogTitle, default } from './CatalogTitle'

@@ -19,3 +19,5 @@ export const CombatStatList = ({ stats }: CombatStatListProps) => (
         ))}
     </div>
 )
+
+export default CombatStatList

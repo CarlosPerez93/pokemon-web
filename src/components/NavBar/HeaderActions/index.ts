@@ -1,1 +1,1 @@
-export { HeaderActions } from './HeaderActions'
+export { HeaderActions, default } from './HeaderActions'

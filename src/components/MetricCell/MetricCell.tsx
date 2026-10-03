@@ -2,8 +2,6 @@ import type { MetricsCellProps } from './MetricsCellProps.type'
 
 import './MetricCell.css'
 
-import './MetricCell.css'
-
 export const MetricCell = ({
     value,
     label,
@@ -28,3 +26,5 @@ export const MetricCell = ({
         )}
     </div>
 )
+
+export default MetricCell

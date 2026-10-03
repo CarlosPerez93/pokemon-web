@@ -22,3 +22,5 @@ export const TypeOption = ({
         <span>{name}</span>
     </button>
 )
+
+export default TypeOption

@@ -9,3 +9,5 @@ export const DossierLoadingState = () => (
         />
     </main>
 )
+
+export default DossierLoadingState

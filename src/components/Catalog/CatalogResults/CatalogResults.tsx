@@ -1,9 +1,9 @@
-import { CatalogResultsProps } from './CatalogResults.type'
+import { CatalogLoadMore } from '../CatalogLoadMore'
 import { CatalogEmptyState } from '../CatalogEmptyState'
 import { CatalogErrorState } from '../CatalogErrorState'
-import { CatalogLoadMore } from '../CatalogLoadMore'
 import { PokemonLoadingGrid } from '../PokemonLoadingGrid'
 import { PokemonResultsGrid } from '../PokemonResultsGrid'
+import { CatalogResultsProps } from './CatalogResults.type'
 
 import './CatalogResults.css'
 import './CatalogResultsState.css'
@@ -35,3 +35,5 @@ export const CatalogResults = (props: CatalogResultsProps) => (
         )}
     </section>
 )
+
+export default CatalogResults

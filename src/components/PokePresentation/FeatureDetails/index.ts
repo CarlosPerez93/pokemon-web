@@ -1,1 +1,1 @@
-export { FeatureDetails } from './FeatureDetails'
+export { FeatureDetails, default } from './FeatureDetails'

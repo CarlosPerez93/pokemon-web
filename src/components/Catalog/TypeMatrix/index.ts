@@ -1,1 +1,1 @@
-export { TypeMatrix } from './TypeMatrix'
+export { TypeMatrix, default } from './TypeMatrix'

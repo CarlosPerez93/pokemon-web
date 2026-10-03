@@ -1,5 +1,6 @@
-import { DossierMorphotypeProps } from './DossierMorphotype.type'
 import { Badges } from '../../Badges/Badges'
+
+import { DossierMorphotypeProps } from './DossierMorphotype.type'
 
 import './DossierMorphotype.css'
 

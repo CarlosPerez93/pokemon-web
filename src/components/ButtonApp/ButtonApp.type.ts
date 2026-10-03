@@ -1,1 +1,7 @@
-export type ButtonAppProps = import('./Button.type').PropsBtn
+import { ReactNode } from 'react'
+
+export type ButtonAppProps = {
+    className?: string
+    onClick?: () => void
+    children: ReactNode
+}

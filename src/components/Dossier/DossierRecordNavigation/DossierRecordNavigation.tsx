@@ -1,8 +1,9 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
+
+import { DossierRecordNavigationProps } from './DossierRecordNavigation.type'
 
 import './DossierRecordNavigation.css'
-import { DossierRecordNavigationProps } from './DossierRecordNavigation.type'
 
 export const DossierRecordNavigation = ({ id }: DossierRecordNavigationProps) => (
     <nav className='dossier-record-nav' aria-label='Adjacent specimen records'>
@@ -22,3 +23,5 @@ export const DossierRecordNavigation = ({ id }: DossierRecordNavigationProps) =>
         </Link>
     </nav>
 )
+
+export default DossierRecordNavigation

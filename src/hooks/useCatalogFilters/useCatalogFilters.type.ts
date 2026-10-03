@@ -1,4 +1,4 @@
-import { ResponseFetch } from '../../utils/api/pokemon-list.types'
+import { ResponseFetch } from '@utils/api/pokemon-list.types'
 
 export type CatalogFiltersInput = {
     data: ResponseFetch | undefined

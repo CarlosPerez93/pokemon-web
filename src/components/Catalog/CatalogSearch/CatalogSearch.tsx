@@ -1,5 +1,6 @@
-import { SearchOutlined } from '@ant-design/icons'
 import { FormEvent } from 'react'
+import { SearchOutlined } from '@ant-design/icons'
+
 import { CatalogSearchProps } from './CatalogSearch.type'
 
 import './CatalogSearch.css'
@@ -34,3 +35,5 @@ export const CatalogSearch = ({ value, inputRef, onChange }: CatalogSearchProps)
         </form>
     )
 }
+
+export default CatalogSearch

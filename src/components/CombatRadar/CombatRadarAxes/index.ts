@@ -1,1 +1,1 @@
-export { CombatRadarAxes } from './CombatRadarAxes'
+export { CombatRadarAxes, default } from './CombatRadarAxes'

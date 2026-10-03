@@ -15,3 +15,5 @@ export const HeaderActions = () => {
         </div>
     )
 }
+
+export default HeaderActions

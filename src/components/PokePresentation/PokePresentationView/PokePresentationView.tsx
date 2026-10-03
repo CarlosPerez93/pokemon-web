@@ -1,4 +1,5 @@
 import { CSSProperties } from 'react'
+import { Skeleton } from 'antd'
 
 import { FeatureError } from '@components/PokePresentation/FeatureError'
 import { FeatureMetrics } from '@components/PokePresentation/FeatureMetrics'
@@ -9,17 +10,20 @@ import { useFeaturedPokemon } from '@hooks/useFeaturedPokemon'
 import { PokePresentationProps } from './PokePresentationView.type'
 
 import './PokePresentationView.css'
-import '../FeatureError/FeatureError.css'
 
 export const PokePresentationView = ({ name }: PokePresentationProps) => {
     const record = useFeaturedPokemon(name)
     if (record.loading || (!record.pokemon?.id && !record.error)) {
         return (
-            <div
-                className='feature-skeleton'
+            <article
+                className='feature-slide feature-slide--loading'
                 aria-busy='true'
                 aria-label='Loading specimen'
-            />
+            >
+                <Skeleton active title={{ width: '45%' }} paragraph={{ rows: 5 }} />
+                <Skeleton.Image active style={{ width: '100%', height: 220 }} />
+                <Skeleton active paragraph={{ rows: 4 }} />
+            </article>
         )
     }
     if (record.error || !record.pokemon?.id)

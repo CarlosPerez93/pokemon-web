@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Skeleton } from 'antd'
 import { ArrowRightOutlined } from '@ant-design/icons'
 
 import { DossierEvolutionChainProps } from './DossierEvolutionChain.type'
@@ -13,7 +14,27 @@ export const DossierEvolutionChain = ({
     loading,
     currentId,
 }: DossierEvolutionChainProps) => {
-    if (loading || stages.length < 2) return null
+    if (loading) {
+        return (
+            <section
+                className='dossier-evolution-chain'
+                aria-label='Evolutionary line'
+                aria-busy='true'
+            >
+                <div className='section-kicker'>EVOLUTIONARY TREE</div>
+                <div className='dossier-evolution-chain__grid'>
+                    {Array.from({ length: 3 }, (_, index) => (
+                        <Skeleton.Image
+                            active
+                            key={index}
+                            style={{ width: 128, height: 128 }}
+                        />
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    if (stages.length < 2) return null
 
     return (
         <section className='dossier-evolution-chain' aria-label='Evolutionary line'>

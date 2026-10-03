@@ -50,7 +50,10 @@ export const Home = () => {
 
     return (
         <main className='home-page page-container'>
-            <HomeBreadcrumb speciesCount={speciesCount ?? undefined} />
+            <HomeBreadcrumb
+                speciesCount={speciesCount ?? undefined}
+                loading={speciesRequest.loading && speciesCount === null}
+            />
             <div className='home-favorites-access'>
                 <Link to='/favorites'>
                     <HeartOutlined /> Saved favorites

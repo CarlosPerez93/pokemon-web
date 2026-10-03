@@ -21,6 +21,7 @@ export const CatalogResults = (props: CatalogResultsProps) => (
         ) : props.items.length ? (
             <>
                 <PokemonResultsGrid {...props} />
+                {props.loadingMore && <PokemonLoadingGrid count={4} />}
                 <CatalogLoadMore
                     hasMore={props.hasMore}
                     loadingMore={props.loadingMore}

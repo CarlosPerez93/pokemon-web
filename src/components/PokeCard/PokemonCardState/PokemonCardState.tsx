@@ -1,4 +1,5 @@
 import { ReloadOutlined } from '@ant-design/icons'
+import { Skeleton } from 'antd'
 
 import { PokemonCardStateProps } from './PokemonCardState.type'
 
@@ -6,12 +7,16 @@ import './PokemonCardState.css'
 
 export const PokemonCardSkeleton = ({
     name,
-}: Pick<PokemonCardStateProps, 'name'>) => (
-    <div
-        className='pokemon-card-skeleton'
+}: Partial<Pick<PokemonCardStateProps, 'name'>>) => (
+    <article
+        className='pokemon-card pokemon-card--loading'
         aria-busy='true'
-        aria-label={`Loading ${name}`}
-    />
+        aria-label={name ? `Loading ${name}` : undefined}
+    >
+        <Skeleton.Input active size='small' block />
+        <Skeleton.Image active style={{ width: '100%', height: 108 }} />
+        <Skeleton active title={{ width: '60%' }} paragraph={{ rows: 3 }} />
+    </article>
 )
 
 export const PokemonCardState = ({ name, onRetry }: PokemonCardStateProps) => (

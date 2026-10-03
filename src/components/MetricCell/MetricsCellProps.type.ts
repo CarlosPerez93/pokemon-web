@@ -4,4 +4,5 @@ export type MetricsCellProps = {
     detail?: string
     unit?: string
     variant?: 'morphometric' | 'telemetry'
+    loading?: boolean
 }

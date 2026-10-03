@@ -5,29 +5,35 @@ export const metrics = ({
     typeCount,
     apiStatus,
     favoriteCount,
-}: KeyMetrics): Metrics[] => [
-    {
-        value: speciesCount?.toLocaleString() ?? '—',
-        label: 'REGISTERED SPECIES',
-        detail: 'LIVE POKÉAPI INDEX',
-        variant: 'telemetry',
-    },
-    {
-        value: typeCount?.toLocaleString() ?? '—',
-        label: 'API TYPE RECORDS',
-        detail: 'INCLUDES SPECIAL TYPES',
-        variant: 'telemetry',
-    },
-    {
-        value: apiStatus ?? '—',
-        label: 'POKÉAPI STATUS',
-        detail: 'SPECIES + TYPE ENDPOINTS',
-        variant: 'telemetry',
-    },
-    {
-        value: favoriteCount ?? '—',
-        label: 'ARCHIVED FAVORITES',
-        detail: 'SAVED ON THIS DEVICE',
-        variant: 'telemetry',
-    },
-]
+}: KeyMetrics): Metrics[] => {
+    const syncing = apiStatus === 'SYNCING'
+
+    return [
+        {
+            value: speciesCount?.toLocaleString() ?? '—',
+            label: 'REGISTERED SPECIES',
+            detail: 'LIVE POKÉAPI INDEX',
+            variant: 'telemetry',
+            loading: syncing && speciesCount === undefined,
+        },
+        {
+            value: typeCount?.toLocaleString() ?? '—',
+            label: 'API TYPE RECORDS',
+            detail: 'INCLUDES SPECIAL TYPES',
+            variant: 'telemetry',
+            loading: syncing && typeCount === undefined,
+        },
+        {
+            value: apiStatus ?? '—',
+            label: 'POKÉAPI STATUS',
+            detail: 'SPECIES + TYPE ENDPOINTS',
+            variant: 'telemetry',
+        },
+        {
+            value: favoriteCount ?? '—',
+            label: 'ARCHIVED FAVORITES',
+            detail: 'SAVED ON THIS DEVICE',
+            variant: 'telemetry',
+        },
+    ]
+}

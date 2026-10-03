@@ -23,6 +23,11 @@
     }
 }
 
+.feature-slide--loading .ant-skeleton-element {
+    display: block;
+    width: 100%;
+}
+
 @media (max-width: 620px) {
     .feature-slide {
         grid-template-columns: 1fr;

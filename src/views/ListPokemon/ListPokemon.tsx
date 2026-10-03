@@ -22,7 +22,7 @@ export const ListPokemon = () => {
 
     return (
         <main className='pokemon-page page-container'>
-            <CatalogTitle data={request.data} />
+            <CatalogTitle data={request.data} loading={request.loading} />
             <CatalogToolbar
                 filters={filters}
                 favorites={favorites}

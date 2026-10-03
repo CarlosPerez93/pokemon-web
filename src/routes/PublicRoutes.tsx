@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react'
+import { Skeleton } from 'antd'
 import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom'
 
 import NavBar from '@components/NavBar'
@@ -19,8 +20,13 @@ export const PublicRoutes = () => {
             <NavBar>
                 <Suspense
                     fallback={
-                        <main className='route-loading page-container' role='status'>
-                            Loading field records...
+                        <main
+                            className='route-loading page-container'
+                            role='status'
+                            aria-busy='true'
+                            aria-label='Loading field records'
+                        >
+                            <Skeleton active paragraph={{ rows: 10 }} />
                         </main>
                     }
                 >

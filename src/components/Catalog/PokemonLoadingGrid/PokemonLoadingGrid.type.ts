@@ -1,1 +1,1 @@
-export type PokemonLoadingGridProps = Record<string, never>
+export type PokemonLoadingGridProps = { count?: number }

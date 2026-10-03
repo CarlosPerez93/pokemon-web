@@ -1,5 +1,16 @@
-.pokemon-card-skeleton {
-    min-height: 410px;
+.pokemon-card--loading {
+    gap: 10px;
+}
+
+.pokemon-card--loading .ant-skeleton-element {
+    display: block;
+    width: 100%;
+}
+
+.pokemon-grid.is-list .pokemon-card.pokemon-card--loading {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .pokemon-card--error {

@@ -40,6 +40,7 @@ export const DossierPage = (props: DossierRecordProps) => {
                     <DossierActions
                         name={props.pokemon.name}
                         isFavorite={props.isFavorite}
+                        cries={props.pokemon.cries}
                         onToggleFavorite={props.onToggleFavorite}
                     />
                 </div>

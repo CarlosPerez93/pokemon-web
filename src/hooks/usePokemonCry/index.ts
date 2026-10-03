@@ -1,0 +1,1 @@
+export { usePokemonCry } from './usePokemonCry'

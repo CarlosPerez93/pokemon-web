@@ -3,13 +3,18 @@ import {
     FireOutlined,
     HeartOutlined,
     AudioOutlined,
+    SoundOutlined,
     RadarChartOutlined,
 } from '@ant-design/icons'
+
 import { ButtonsGroupProps } from './ButtonsGroup.type'
 
 export const ButtonsGroup = ({
     isFavorite,
     name,
+    hasCry,
+    isCryPlaying,
+    onPlayCry,
     onToggleFavorite,
 }: ButtonsGroupProps) => [
     {
@@ -28,9 +33,10 @@ export const ButtonsGroup = ({
         action: () => console.log('Shiny Variant clicked'),
     },
     {
-        label: 'Cry Audio',
-        icon: <AudioOutlined />,
-        action: () => console.log('Cry Audio clicked'),
+        label: isCryPlaying ? 'Playing cry...' : 'Cry Audio',
+        icon: isCryPlaying ? <SoundOutlined /> : <AudioOutlined />,
+        action: onPlayCry,
+        disabled: !hasCry,
     },
     {
         label: 'Thermal Scan',

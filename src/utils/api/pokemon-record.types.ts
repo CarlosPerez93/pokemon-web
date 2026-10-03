@@ -19,10 +19,15 @@ export interface PokemonMoveSlot {
     move: { name: string; url: string }
 }
 
+export interface PokemonCries {
+    latest?: string | null
+    legacy?: string | null
+}
+
 export interface ResponsePoke<T = unknown> {
     abilities: PokemonAbilitySlot[]
     base_experience: number
-    cries: T
+    cries?: PokemonCries
     forms: T
     game_indices: T
     height: number

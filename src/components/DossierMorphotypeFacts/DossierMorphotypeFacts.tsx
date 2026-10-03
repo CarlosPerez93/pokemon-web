@@ -7,6 +7,7 @@ import './DossierMorphotypeFacts.css'
 export const DossierMorphotypeFacts = ({
     pokemon,
     species,
+    speciesLoading,
 }: DossierMorphotypeFactsProps) => {
     const habitat = species?.habitat?.name.replace('-', ' ') ?? 'Volcanic Crags'
     const facts = [
@@ -24,11 +25,13 @@ export const DossierMorphotypeFacts = ({
             label: 'GENDER RATIO',
             value: formatGenderRate(species?.gender_rate),
             detail: 'Field population estimate',
+            loading: speciesLoading,
         },
         {
             label: 'NATURAL BIOME',
             value: habitat,
             detail: 'Montane thermal shifts',
+            loading: speciesLoading,
         },
     ]
 

@@ -4,6 +4,7 @@ import { ResponsePoke } from '../api/pokemon-record.types'
 export type DossierRecordProps = {
     pokemon: ResponsePoke
     species?: PokemonSpecies
+    speciesLoading?: boolean
     isFavorite: boolean
     onToggleFavorite: (name: string) => void
 }

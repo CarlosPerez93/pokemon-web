@@ -1,8 +1,40 @@
+import { Skeleton } from 'antd'
+
 import { FieldJournalProps } from './FieldJournal.type'
 
 import './FieldJournal.css'
 
-export const FieldJournal = ({ pokemon, species }: FieldJournalProps) => {
+export const FieldJournal = ({ pokemon, species, loading }: FieldJournalProps) => {
+    if (loading) {
+        return (
+            <section
+                className='field-journal'
+                aria-label='Naturalist field journal'
+                aria-busy='true'
+            >
+                <div className='field-journal__heading'>
+                    <h2>Naturalist Field Journal & Morphological Records</h2>
+                    <Skeleton.Input
+                        active
+                        size='small'
+                        style={{ width: 200, minWidth: 200 }}
+                    />
+                </div>
+                <div className='field-journal__grid'>
+                    {Array.from({ length: 3 }, (_, index) => (
+                        <Skeleton
+                            active
+                            key={index}
+                            title={{ width: '60%' }}
+                            paragraph={{ rows: 3 }}
+                        />
+                    ))}
+                </div>
+                <Skeleton active title={false} paragraph={{ rows: 2 }} />
+            </section>
+        )
+    }
+
     const habitat = species?.habitat?.name.replace('-', ' ') ?? 'Volcanic crags'
     const genus =
         species?.genera?.find(({ language }) => language.name === 'en')?.genus ??

@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom'
 
-import { useFavorites } from '../../hooks/useFavorites'
+import { DossierPage } from './DossierPage/DossierPage'
 import { DossierErrorState } from '@components/Dossier/DossierErrorState'
 import { DossierLoadingState } from '@components/Dossier/DossierLoadingState'
-import { DossierPage } from './DossierPage/DossierPage'
+
+import { useFavorites } from '../../hooks/useFavorites'
 import { useDossierRecord } from '../../hooks/useDossierRecord'
 
 import './Dossier.css'
@@ -33,6 +34,7 @@ export const Dossier = () => {
             <DossierPage
                 pokemon={record.pokemon}
                 species={record.species}
+                speciesLoading={record.speciesLoading}
                 isFavorite={favorites.includes(record.pokemon.name)}
                 onToggleFavorite={toggleFavorite}
             />

@@ -1,1 +1,1 @@
-export { DossierRecordNavigation } from './DossierRecordNavigation'
+export { DossierRecordNavigation, default } from './DossierRecordNavigation'

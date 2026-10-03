@@ -1,12 +1,13 @@
 import { useRef } from 'react'
 
-import { useFavorites } from '../../hooks/useFavorites'
-import { CatalogResults } from '@components/Catalog/CatalogResults'
 import { CatalogTitle } from '@components/Catalog/CatalogTitle'
+import { CatalogResults } from '@components/Catalog/CatalogResults'
 import { CatalogToolbar } from '@components/Catalog/CatalogToolbar'
-import { useCatalogFilters } from '../../hooks/useCatalogFilters'
-import { usePokemonTypeIndex } from '../../hooks/usePokemonTypeIndex'
-import { usePokemonCatalog } from '../../hooks/usePokemonCatalog'
+
+import { useFavorites } from '@hooks/useFavorites'
+import { useCatalogFilters } from '@hooks/useCatalogFilters'
+import { usePokemonCatalog } from '@hooks/usePokemonCatalog'
+import { usePokemonTypeIndex } from '@hooks/usePokemonTypeIndex'
 
 import './ListPokemon.css'
 

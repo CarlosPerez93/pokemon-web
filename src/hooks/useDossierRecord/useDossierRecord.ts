@@ -19,6 +19,7 @@ export const useDossierRecord = (name: string) => {
     return {
         pokemon: record.data,
         species: species.data,
+        speciesLoading: species.loading,
         loading: record.loading,
         error: record.error,
         refetch: record.refetch,

@@ -1,1 +1,1 @@
-export { DossierPage } from './DossierPage'
+export { DossierPage, default } from './DossierPage'

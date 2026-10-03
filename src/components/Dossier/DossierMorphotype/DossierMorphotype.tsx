@@ -1,10 +1,16 @@
-import { Badges } from '../../Badges/Badges'
+import { Skeleton } from 'antd'
+
+import { Badges } from '@components/Badges'
 
 import { DossierMorphotypeProps } from './DossierMorphotype.type'
 
 import './DossierMorphotype.css'
 
-export const DossierMorphotype = ({ pokemon, species }: DossierMorphotypeProps) => {
+export const DossierMorphotype = ({
+    pokemon,
+    species,
+    speciesLoading,
+}: DossierMorphotypeProps) => {
     const genus =
         species?.genera?.find(({ language }) => language.name === 'en')?.genus ??
         'Flame Pokémon'
@@ -15,7 +21,17 @@ export const DossierMorphotype = ({ pokemon, species }: DossierMorphotypeProps) 
                 <div>
                     <span className='section-kicker'>SPECIES MORPHOTYPE</span>
                     <h2>{pokemon.name}</h2>
-                    <span className='dossier-morphotype__genus'>{genus}</span>
+                    <span className='dossier-morphotype__genus'>
+                        {speciesLoading ? (
+                            <Skeleton.Input
+                                active
+                                size='small'
+                                style={{ width: 110, minWidth: 110, height: 14 }}
+                            />
+                        ) : (
+                            genus
+                        )}
+                    </span>
                 </div>
                 <span className='dossier-conservation'>CONSERVATION: STABLE</span>
             </div>

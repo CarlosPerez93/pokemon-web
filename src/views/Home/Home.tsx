@@ -3,17 +3,18 @@ import { HeartOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { HomeBreadcrumb } from '@components/HomeBreadcrumb'
 import PokePresentation from '@components/PokePresentation'
+import { ArchiveTelemetry } from '@components/ArchiveTelemetry'
+import { ExpeditionBanner } from '@components/ExpeditionBanner'
+import { PrioritySpecimens } from '@components/PrioritySpecimens'
+
 import api from '../../api'
 import { useGet } from '@hooks/api'
 import { useFavorites } from '@hooks/useFavorites'
 import { ResponseFetch } from '@utils/api/pokemon-list.types'
-import { ArchiveTelemetry } from '@components/ArchiveTelemetry'
-import { ExpeditionBanner } from '@components/ExpeditionBanner'
-import { HomeBreadcrumb } from '@components/HomeBreadcrumb'
-import { PrioritySpecimens } from '@components/PrioritySpecimens'
-import { PRIORITY_SPECIMENS } from '@utils/constants/PrioritySpecimens.constants'
 import { setTotalSpecies } from '@services/SpeciesIndex/speciesIndex.slice'
+import { PRIORITY_SPECIMENS } from '@utils/constants/PrioritySpecimens.constants'
 
 import './Home.css'
 

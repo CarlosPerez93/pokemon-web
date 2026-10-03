@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import { ArrowRightOutlined, HeartOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { ArrowRightOutlined, HeartOutlined } from '@ant-design/icons'
 
+import { CatalogLoadMore } from '@components/Catalog/CatalogLoadMore'
 import { PokemonResultsGrid } from '@components/Catalog/PokemonResultsGrid'
+
 import { useFavorites } from '@hooks/useFavorites'
 import { usePokemonTypeIndex } from '@hooks/usePokemonTypeIndex'
 
 import './Favorites.css'
-import { CatalogLoadMore } from '@components/Catalog/CatalogLoadMore'
 
 const PAGE_SIZE = 20
 

@@ -1,22 +1,23 @@
 import { CSSProperties } from 'react'
 
-import { POKEMON_TYPE_COLORS } from '../../../utils/constants/pokemon-type.constants'
-import { DossierRecordProps } from '../../../utils/types/dossier.types'
-import { useEvolutionChain } from '../../../hooks/useEvolutionChain'
 import { CombatTelemetry } from '@components/CombatTelemetry'
-
-import './DossierPage.css'
-import { DossierBreadcrumb } from '@components/Dossier/DossierBreadcrumb'
-import { DossierIdentity } from '@components/Dossier/DossierIdentity'
+import { FieldJournal } from '@components/Dossier/FieldJournal'
 import { DossierActions } from '@components/Dossier/DossierActions'
 import { DossierArtwork } from '@components/Dossier/DossierArtwork'
-import { DossierEvolutionChain } from '@components/Dossier/DossierEvolutionChain'
-import { DossierMoveArsenal } from '@components/Dossier/DossierMoveArsenal'
-import { DossierRecordNavigation } from '@components/Dossier/DossierRecordNavigation'
-import { FieldJournal } from '@components/Dossier/FieldJournal'
-import { DossierMorphotype } from '@components/Dossier/DossierMorphotype'
+import { DossierIdentity } from '@components/Dossier/DossierIdentity'
 import { DossierTraitPanel } from '@components/Dossier/DossierTraitPanel'
+import { DossierBreadcrumb } from '@components/Dossier/DossierBreadcrumb'
+import { DossierMorphotype } from '@components/Dossier/DossierMorphotype'
+import { DossierMoveArsenal } from '@components/Dossier/DossierMoveArsenal'
+import { DossierEvolutionChain } from '@components/Dossier/DossierEvolutionChain'
+import { DossierRecordNavigation } from '@components/Dossier/DossierRecordNavigation'
 import DossierMorphotypeFacts from '@components/DossierMorphotypeFacts/DossierMorphotypeFacts'
+
+import { useEvolutionChain } from '@hooks/useEvolutionChain'
+import { DossierRecordProps } from '@utils/types/dossier.types'
+import { POKEMON_TYPE_COLORS } from '@utils/constants/pokemon-type.constants'
+
+import './DossierPage.css'
 
 export const DossierPage = (props: DossierRecordProps) => {
     const primaryType = props.pokemon.types[0]?.type.name ?? 'normal'
@@ -49,14 +50,20 @@ export const DossierPage = (props: DossierRecordProps) => {
                 </div>
             </section>
 
-            <FieldJournal pokemon={props.pokemon} species={props.species} />
+            <FieldJournal
+                pokemon={props.pokemon}
+                species={props.species}
+                loading={props.speciesLoading}
+            />
             <CombatTelemetry pokemon={props.pokemon} />
             <DossierEvolutionChain
                 stages={evolution.stages}
-                loading={evolution.loading}
+                loading={evolution.loading || Boolean(props.speciesLoading)}
                 currentId={props.pokemon.id}
             />
             <DossierMoveArsenal pokemon={props.pokemon} />
         </main>
     )
 }
+
+export default DossierPage

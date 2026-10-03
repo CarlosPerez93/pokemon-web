@@ -1,9 +1,10 @@
 import { useState } from 'react'
 
+import { ButtonApp } from '@components/ButtonApp/ButtonApp'
+
 import { DossierMoveArsenalProps } from './DossierMoveArsenal.type'
 
 import './DossierMoveArsenal.css'
-import { ButtonApp } from '@components/ButtonApp/ButtonApp'
 
 const PREVIEW_COUNT = 24
 

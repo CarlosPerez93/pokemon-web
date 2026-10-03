@@ -99,11 +99,13 @@
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 760px) {
     .pokemon-grid.is-list {
         grid-template-columns: minmax(0, 1fr);
     }
+}
 
+@media (max-width: 410px) {
     .pokemon-grid.is-list .pokemon-card {
         min-height: 104px;
         grid-template-columns: 88px minmax(0, 1fr);

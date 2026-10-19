@@ -1,6 +1,6 @@
 import { Query } from './core'
-import { URL_API } from '../utils/constants/environment.constant'
 import { PokemonListParams } from './pokemon.type'
+import { URL_API } from '../utils/constants/environment.constant'
 
 const typeList = () => Query({ url: '/type?limit=100' })
 

@@ -1,1 +1,1 @@
-export type PokePresentationProps = { name: string }
+export type PokePresentationProps = { name: string; actions?: boolean }

@@ -25,7 +25,7 @@ export const DossierActions = ({
                     <HeartOutlined /> Saved favorites
                 </Button>
             </Link>
-            <ButtonGroup>
+            <ButtonGroup className='dossier-action-button-group'>
                 {ButtonsGroup({
                     isFavorite,
                     name,

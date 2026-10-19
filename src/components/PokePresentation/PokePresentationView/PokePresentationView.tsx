@@ -10,9 +10,15 @@ import { useFeaturedPokemon } from '@hooks/useFeaturedPokemon'
 import { PokePresentationProps } from './PokePresentationView.type'
 
 import './PokePresentationView.css'
+import DossierActions from '@components/Dossier/DossierActions'
+import { useFavorites } from '@hooks/useFavorites'
 
-export const PokePresentationView = ({ name }: PokePresentationProps) => {
+export const PokePresentationView = ({
+    name,
+    actions = false,
+}: PokePresentationProps) => {
     const record = useFeaturedPokemon(name)
+    const { favorites, toggleFavorite } = useFavorites()
     if (record.loading || (!record.pokemon?.id && !record.error)) {
         return (
             <article
@@ -40,6 +46,16 @@ export const PokePresentationView = ({ name }: PokePresentationProps) => {
                 genus={record.genus}
                 fieldNote={record.fieldNote}
             />
+            {actions && (
+                <div className='dossier-hero-left'>
+                    <DossierActions
+                        name={record.pokemon.name}
+                        isFavorite={favorites.includes(record.pokemon.name)}
+                        cries={record.pokemon.cries}
+                        onToggleFavorite={toggleFavorite}
+                    />
+                </div>
+            )}
             <FeatureArtwork name={record.pokemon.name} artwork={record.artwork} />
             <FeatureMetrics stats={record.pokemon.stats} />
         </article>
